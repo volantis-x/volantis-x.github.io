@@ -155,6 +155,163 @@ info:
 如果你把对应的文件上传到自己的 CDN 服务器，可以把对应的链接改为自己的 CDN 链接。
 
 
+## 安装 Service Worker 服务
+
+```yaml blog/_config.yml
+# 全局导入
+import:
+  script:
+    - <script>"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js").then(function(n){n.onupdatefound=function(){var e=n.installing;e.onstatechange=function(){switch(e.state){case"installed":navigator.serviceWorker.controller?console.log("Updated serviceWorker."):console.log("serviceWorker Sucess!");break;case"redundant":console.log("The installing service worker became redundant.")}}}}).catch(function(e){console.log("Error during service worker registration:",e)}); </script>
+```
+
+在`blog/source`中创建`sw.js`文件。
+
+内容如下：
+
+```js
+importScripts('https://cdn.jsdelivr.net/npm/workbox-cdn@5.1.3/workbox/workbox-sw.js');
+
+workbox.setConfig({
+    modulePathPrefix: 'https://cdn.jsdelivr.net/npm/workbox-cdn@5.1.3/workbox/'
+});
+
+const { core, precaching, routing, strategies, expiration, cacheableResponse, backgroundSync } = workbox;
+const { CacheFirst, NetworkFirst, NetworkOnly, StaleWhileRevalidate } = strategies;
+const { ExpirationPlugin } = expiration;
+const { CacheableResponsePlugin } = cacheableResponse;
+
+const cacheSuffixVersion = '-000010', // 缓存版本号 极端重要，修改静态文件后发布网页一定要修改缓存版本号
+    maxEntries = 100;
+
+self.addEventListener('activate', (event) => {
+    event.waitUntil(
+        caches.keys().then((keys) => {
+            return Promise.all(keys.map((key) => {
+                if (!key.includes(cacheSuffixVersion)) return caches.delete(key);
+            }));
+        })
+    );
+});
+
+
+core.setCacheNameDetails({
+    prefix: 'volantis', // 极端重要 自己拟定一个名字
+    suffix: cacheSuffixVersion
+});
+
+core.skipWaiting();
+core.clientsClaim();
+precaching.cleanupOutdatedCaches();
+
+/*
+ * Precache
+ * - Static Assets
+ */
+precaching.precacheAndRoute( // 极端重要 定义首次缓存的静态文件
+    [
+        { url: '/css/first.css', revision: null },
+        { url: '/css/style.css', revision: null },
+        { url: '/js/app.js', revision: null },
+    ],
+);
+
+/*
+ * Cache File From CDN
+ *
+ * Method: CacheFirst
+ * cacheName: static-immutable
+ * cacheTime: 30d
+ */
+
+// cdn.jsdelivr.net - cors enabled
+routing.registerRoute(
+    /.*cdn\.jsdelivr\.net/,
+    new CacheFirst({
+        cacheName: 'static-immutable' + cacheSuffixVersion,
+        fetchOptions: {
+            mode: 'cors',
+            credentials: 'omit'
+        },
+        plugins: [
+            new ExpirationPlugin({
+                maxAgeSeconds: 30 * 24 * 60 * 60,
+                purgeOnQuotaError: true
+            })
+        ]
+    })
+);
+
+// m7.music.126.net - cors enabled
+routing.registerRoute(
+    /.*m7\.music\.126\.net/,
+    new CacheFirst({
+        cacheName: 'static-immutable' + cacheSuffixVersion,
+        fetchOptions: {
+            mode: 'cors',
+            credentials: 'omit'
+        },
+        plugins: [
+            new ExpirationPlugin({
+                maxAgeSeconds: 30 * 24 * 60 * 60,
+                purgeOnQuotaError: true
+            })
+        ]
+    })
+);
+
+/*
+ *  No Cache
+ *
+ * Method: networkOnly
+ */
+routing.registerRoute(
+    /.*baidu\.com.*/,
+    new NetworkOnly()
+);
+/*
+ * Others img fonts
+ * Method: staleWhileRevalidate
+ */
+routing.registerRoute(
+    // Cache image fonts files
+    /.*\.(?:png|jpg|jpeg|svg|gif|webp|ico|eot|ttf|woff|woff2|mp3)/,
+    new StaleWhileRevalidate()
+);
+
+/*
+ * Static Assets
+ * Method: staleWhileRevalidate
+ */
+routing.registerRoute(
+    // Cache CSS files
+    /.*\.(css|js)/,
+    // Use cache but update in the background ASAP
+    new StaleWhileRevalidate()
+);
+
+/*
+ * sw.js - Revalidate every time
+ * staleWhileRevalidate
+ */
+routing.registerRoute(
+    '/sw.js', // 本文件名
+    new StaleWhileRevalidate()
+);
+
+/*
+ * Default - Serve as it is
+ * networkFirst
+ */
+routing.setDefaultHandler(
+    new NetworkFirst({
+        networkTimeoutSeconds: 3
+    })
+);
+
+```
+
+{% note info, 修改静态文件后发布网页一定要修改缓存版本号。 %}
+
 ## 安装「相关文章」插件
 
 1. 安装插件
