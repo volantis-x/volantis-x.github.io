@@ -79,9 +79,6 @@ author: Jon
 
 - 访问具有动态特效背景（如雪花、粒子等）的网站时，手机很快会发烫变卡，笔记本很快会风扇狂转并且浏览器提示建议关闭此页面。如果你希望网站有好的使用体验请尽量不要安装这类插件。
 
-<!--
-- 强烈推荐安装 [hexo-offline](https://github.com/JLHwung/hexo-offline) 插件，初次加载速度不变，后期切换页面和刷新网页速度越来越快。
--->
 
 
 ## 优化 SEO
@@ -118,10 +115,37 @@ seo:
 
 对于大部分将博客 deploy 到 GitHub 的用户来说，直接加载本地资源速度比较慢，可以使用 jsdelivr 为开源项目提供的 CDN 服务。
 
+对于`4.1.4+`版本，JS文件默认使用 https://cdn.jsdelivr.net/npm/hexo-theme-volantis/source/js/ 的CDN压缩版本文件。
+
+例如: `https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.1.4/source/js/app.min.js`
+
 ### 开启方法
 
-```yaml blog/_config.yml
+```yaml blog/_config.volantis.yml
 use_cdn: true
+```
+
+重要说明：
+
+1. 开发者注意 `use_cdn` 设置为 `false`。
+2. 注意CDN文件的版本号:
+```yaml blog/_config.volantis.yml
+info:
+  theme_version: '4.1.4' # This is theme's version.
+```
+3. 仅JS文件默认提供CDN。
+4. 关于CSS文件CDN：
+```yaml blog/_config.volantis.yml
+info:
+  theme_name: Volantis # This is theme's name.
+  theme_version: '4.1.4' # This is theme's version.
+  theme_docs: https://volantis.js.org/ # This is theme's URL.
+  theme_repo: https://github.com/volantis-x/hexo-theme-volantis
+  cdn:
+    js: # 默认为 https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.1.4/source/js/app.min.js
+    css:
+      first: # 默认不提供CDN，first.css 中为首屏渲染的样式，内含 cover navbar search 的样式。
+      style: # 默认不提供CDN，style.css 为延迟加载的样式。
 ```
 
 {% note info, 如果你需要对样式进行 DIY，可以只关闭 style 文件的 CDN。 %}
