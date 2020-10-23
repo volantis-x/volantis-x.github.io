@@ -63,8 +63,6 @@ author: Jon
 
 ### 加载速度
 
-- 尝试安装 [hexo-neat](https://github.com/rozbo/hexo-neat) 插件来压缩文件。
-
 - 减少不必要的 js 插件，例如字数统计、动态背景。
 
 - 查找并解决拖慢速度的资源，以 Chrome 浏览器为例：
@@ -154,6 +152,75 @@ info:
 
 如果你把对应的文件上传到自己的 CDN 服务器，可以把对应的链接改为自己的 CDN 链接。
 
+## 尝试使用 Terser 压缩 ES6
+
+### 安装压缩工具
+
+```shell
+npm install -g gulp
+npm install --save gulp
+npm install --save gulp-html-minifier-terser
+npm install --save gulp-htmlclean
+npm install --save gulp-htmlmin
+npm install --save gulp-minify-css
+npm install gulp-terser --save-dev
+```
+
+### gulp 配置文件
+
+```js blog/gulpfile.js
+var gulp = require('gulp');
+var minifycss = require('gulp-minify-css');
+var htmlmin = require('gulp-html-minifier-terser');
+var htmlclean = require('gulp-htmlclean');
+var terser = require('gulp-terser');
+
+// 压缩css文件
+const minify_css = () => (
+    gulp.src(['./public/**/*.css'])
+        .pipe(minifycss())
+        .pipe(gulp.dest('./public'))
+);
+
+// 压缩html文件
+const minify_html = () => (
+    gulp.src(['./public/**/*.html','!./public/{lib,lib/**}'])
+        .pipe(htmlclean())
+        .pipe(htmlmin({
+            removeComments: true,
+            minifyJS: true,
+            minifyCSS: true,
+            minifyURLs: true,
+        }))
+        .pipe(gulp.dest('./public'))
+)
+
+// 压缩js文件
+const minify_js = () => (
+    gulp.src(['./public/**/*.js', '!./public/**/*.min.js','!./public/{lib,lib/**}'])
+        .pipe(terser())
+        .pipe(gulp.dest('./public'))
+)
+
+module.exports = {
+    minify_html: minify_html,
+    minify_css: minify_css,
+    minify_js: minify_js
+};
+gulp.task('one', gulp.parallel(
+    minify_html,
+    minify_css,
+    minify_js
+))
+
+gulp.task('default', gulp.series('one'));
+```
+
+### 运行压缩
+
+```shell
+gulp
+```
 
 ## 安装 Service Worker 服务
 
