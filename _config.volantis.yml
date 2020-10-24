@@ -29,7 +29,7 @@ navbar:
       icon: fad fa-ellipsis-v
       rows:
         - name: Site source code
-          url: https://github.com/volantis-x/volantis-docs/
+          url: https://github.com/volantis-x/volantis-x.github.io
         - name: Theme source code
           url: https://github.com/volantis-x/hexo-theme-volantis/
         - name: hr
@@ -38,7 +38,7 @@ navbar:
         - name: Blog post
           url: archives/
         - name: hr
-        - name: Legacy doc v4
+        - name: Latest doc v4
           url: /v4/getting-started/
         - name: Legacy doc v3
           url: /v3/getting-started/
@@ -90,14 +90,36 @@ article:
     # show readmore button
     readmore: auto # auto, always
   body:
+    footer_widget:
+      references:
+        title: Reference
+        icon: fas fa-quote-left
+      related_posts:
+        enable: false
+        title: related articles
+        icon: fas fa-bookmark
+        max_count: 5
+        placeholder_img: data:image/png;base64,666
+      copyright:
+        enable: true
+        permalink: 'The permanent link to this article is:'
+        content:
+          - 'The content of the blog follows the attribution-non-commercial use-share in the same way 4.0 International (CC BY-NC-SA 4.0) agreement'
+          - permalink
     meta_library:
       author:
         avatar: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png
         name: Volantis Team
         url: https://github.com/volantis-x/
+      date:
+        icon: fas fa-calendar-alt
+        title: 'posted on:'
+        format: 'll'
       updated:
         title: 'The document on this page was last updated at:'
-
+      counter:
+        icon: fas fa-eye
+        unit: 'views'
 
 comments:
   title: <i class='fas fa-comments'></i> User Exchange Area
@@ -316,19 +338,19 @@ rightmenu:
   help:
     name: FAQ
     icon: fa fa-question
-    url: https://volantis.js.org/faqs/
+    url: /faqs/
   examples:
     name: sample blog
     icon: fa fa-rss
-    url: https://volantis.js.org/examples/
+    url: /examples/
   contributors:
     name: Join the community
     icon: fa fa-fan fa-spin
-    url: https://volantis.js.org/contributors/
+    url: /contributors/
   source_docs:
     name: site source code
     icon: fa fa-code-branch
-    url: https://github.com/volantis-x/volantis-docs/
+    url: https://github.com/volantis-x/volantis-x.github.io
   source_theme:
     name: theme source code
     icon: fa fa-code-branch

@@ -13,3 +13,9 @@
 ## Help
 
 [FAQ](https://volantis-x.github.io/faqs/) | [Feedback to developers](https://github.com/volantis-x/hexo-theme-volantis/issues/) | [User Forum](https://github.com/volantis-x/community/issues/)
+
+## Local
+
+```shell
+git clone --recursive https://github.com/volantis-x/volantis-x.github.io.git && cd volantis-x.github.io && npm i && hexo s
+```
