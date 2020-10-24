@@ -32,9 +32,9 @@ You can also directly view the wording of the site configuration file in the sou
 
 ## Unable to run local preview successfully
 
--There may be no installation dependencies. Please follow the steps on the "Start" page to install and install the required dependencies.
--If some third-party services are enabled, please check whether the installation of plug-ins is required in the documentation.
--If the error message has `lastIndex`, you can try to find `highlight` in the blog root directory configuration file and set ʻauto_detect` to `false`.
+- There may be no installation dependencies. Please follow the steps on the "Start" page to install and install the required dependencies.
+- If some third-party services are enabled, please check whether the installation of plug-ins is required in the documentation.
+- If the error message has `lastIndex`, you can try to find `highlight` in the blog root directory configuration file and set ʻauto_detect` to `false`.
 
 
 ## Theme configuration modification does not take effect
@@ -53,13 +53,13 @@ If you install the "Related Article Recommendations" plugin, you need to re-`hex
 
 ## The style is messy after turning off the CDN
 
--Please go to the "Start" page of the document to check whether the necessary dependencies are installed.
+- Please go to the "Start" page of the document to check whether the necessary dependencies are installed.
 
 ## Search is not available
 
--Please go to the "Start" page of the document to check whether the necessary dependencies are installed.
--Check the root directory configuration file for conflicts with `search` fields.
--If the problem cannot be found in the above two steps, please download the sample source code for comparison.
+- Please go to the "Start" page of the document to check whether the necessary dependencies are installed.
+- Check the root directory configuration file for conflicts with `search` fields.
+- If the problem cannot be found in the above two steps, please download the sample source code for comparison.
 
 ## The search result link is incorrect
 

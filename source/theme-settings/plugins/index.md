@@ -164,6 +164,11 @@ plugins:
     # color3: #Talk about font color
   #################################
   # Dark Mode
+  # Style：source/css/_plugins/dark.styl
+  # Switch button: add in navbar.menu:
+  # - name: Dark Mode # Customizable
+  #   icon: fas fa-moon # Customizable
+  #   toggle: darkmode
   darkmodejs:
     enable: #true
 ```

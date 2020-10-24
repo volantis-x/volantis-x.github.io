@@ -27,9 +27,9 @@ disqus:
 
 These three types of pages are the same, but have the following subtle differences:
 
--When the post article has a title, scroll down the web page, the navigation bar will move up and out of the screen to display the article title, but page and docs will not.
--post At the end of the article, up to four modules can be displayed: "Reference", "Related Article", "Copyright Mark", and "Reward".
--At most one module of "reference" can be displayed at the end of the docs article.
+- When the post article has a title, scroll down the web page, the navigation bar will move up and out of the screen to display the article title, but page and docs will not.
+- post At the end of the article, up to four modules can be displayed: "Reference", "Related Article", "Copyright Mark", and "Reward".
+- At most one module of "reference" can be displayed at the end of the docs article.
 
 
 Except that the archive page is automatically generated, other independent pages need to be created manually.
@@ -122,9 +122,9 @@ pages:
 ```
 
 Three layout schemes are currently provided:
--simple: Simple layout, only avatar and title.
--traditional: Traditional layout, the style of the old version of Volantis.
--sites: site card layout, which is the new style of website card tags added in Volantis 4.x.
+- simple: Simple layout, only avatar and title.
+- traditional: Traditional layout, the style of the old version of Volantis.
+- sites: site card layout, which is the new style of website card tags added in Volantis 4.x.
 
 ### Set data source
 
@@ -194,8 +194,8 @@ For details on how to use the issues tag, see this article:
 
 {% noteblock idea, suggest %}
 
--Both can be used at the same time. It is recommended to open the issues friend chain to everyone, and save it to the static friend chain if you contact yourself frequently.
--The actual speed and stability of the GitHub API is not as good as Gitee. If you pursue stability, it is recommended to use Gitee.
+- Both can be used at the same time. It is recommended to open the issues friend chain to everyone, and save it to the static friend chain if you contact yourself frequently.
+- The actual speed and stability of the GitHub API is not as good as Gitee. If you pursue stability, it is recommended to use Gitee.
 
 {% endnoteblock %}
 

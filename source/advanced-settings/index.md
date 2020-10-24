@@ -62,9 +62,9 @@ author: Jon
 
 ### Loading speed
 
--Reduce unnecessary js plugins, such as word count, dynamic background.
+- Reduce unnecessary js plugins, such as word count, dynamic background.
 
--Find and solve the slow down resources, take Chrome browser as an example:
+- Find and solve the slow down resources, take Chrome browser as an example:
   1. Right-click on the page and select "Check".
   2. In the right window, "Network" tab, and check "Disable cache".
   3. Refresh the web page to view resources that load slowly.
@@ -74,7 +74,7 @@ author: Jon
 
 ### Running speed
 
--When visiting a website with dynamic special effects backgrounds (such as snowflakes, particles, etc.), the phone will soon become hot and get stuck, the notebook will soon fan out and the browser prompts to close this page. If you want the website to have a good experience, please try not to install such plug-ins.
+- When visiting a website with dynamic special effects backgrounds (such as snowflakes, particles, etc.), the phone will soon become hot and get stuck, the notebook will soon fan out and the browser prompts to close this page. If you want the website to have a good experience, please try not to install such plug-ins.
 
 
 
@@ -97,15 +97,15 @@ seo:
 
 In front-matter, you can set `keywords`, `description`, `robots` and `seo_title`. Among them, `seo_title` is only used as the title of the webpage and has a higher priority than `title`.
 
--Do not use H1 headings inside articles.
+- Do not use H1 headings inside articles.
 
--Check and delete the inaccessible links through the dead link detection tool.
+- Check and delete the inaccessible links through the dead link detection tool.
 
--Install SEO optimization plugin:
+- Install SEO optimization plugin:
   {% link hexo-autonofollow, https://github.com/liuzc/hexo-autonofollow %}
   {% link hexo-generator-seo-friendly-sitemap, https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap %}
 
--Don't pile up keywords on the page and don't change the path frequently.
+- Don't pile up keywords on the page and don't change the path frequently.
 
 ## Use CDN
 

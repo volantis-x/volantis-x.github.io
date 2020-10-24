@@ -167,19 +167,14 @@ plugins:
     # color2: #说说背景颜色2&按钮颜色2
     # color3: #说说字体颜色
   ##################################
-  # 暗黑模式 darkmodejs
-  # https://darkmodejs.learn.uno
-  # 暗黑模式样式：https://github.com/volantis-x/hexo-theme-volantis/blob/master/source/css/_third-party/darkmode.styl
+  # 暗黑模式 darkmode
+  # 样式：source/css/_plugins/dark.styl
+  # 开关按钮：在 navbar.menu 中添加：
+  # - name: 暗黑模式 # 可自定义
+  #   icon: fas fa-moon # 可自定义
+  #   toggle: darkmode
   darkmodejs:
     enable: #true
-    js: https://cdn.jsdelivr.net/npm/darkmode-js@1.5/lib/darkmode-js.min.js
-    button: # button 使用默认或自行开发
-      enable: true
-      left: '16px'
-      bottom: '32px'
-      buttonDark: '#333'
-      buttonLight: '#ddd'
-    compatible: true # 卡片兼容性处理，如果未发现卡片出现兼容问题设置为false
 ```
 
 

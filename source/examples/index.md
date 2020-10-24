@@ -63,5 +63,5 @@ Come back and refresh to take effect.
 
 {% p h2, how to update my blog link %}
 
--If the issue is created by yourself, you can modify it yourself.
--If it was created by the administrator, please create a new one by yourself, and then ask the administrator to delete the old one.
+- If the issue is created by yourself, you can modify it yourself.
+- If it was created by the administrator, please create a new one by yourself, and then ask the administrator to delete the old one.
