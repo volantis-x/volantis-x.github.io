@@ -1,19 +1,19 @@
 ---
 layout: docs
-title: 选择评论系统
+title: Select comment system
 group: docs-volantis-latest
 order: 308
-short_title: 3-8 选择评论系统
+short_title: 3-8 Select comment system
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-目前支持的评论系统有： Valine, MiniValine, Disqus, Gitalk, Vssue, Livere, Isso, Hashover
+The currently supported comment systems are: Valine, MiniValine, Disqus, Gitalk, Vssue, Livere, Isso, Hashover
 
 ```yaml blog/_config.volantis.yml
 comments:
-  title: <i class='fas fa-comments'></i> 评论
+  title: <i class='fas fa-comments'></i> Comments
   subtitle:
   service: valine # valine, minivaline, disqus, gitalk, vssue, livere, isso, hashover
 ```
@@ -22,7 +22,7 @@ comments:
 
 <!-- tab Valine -->
 
-<i class='fas fa-comment-dots fa-fw'></i> 一款快速、简洁且高效的无后端评论系统
+<i class='fas fa-comment-dots fa-fw'></i> A fast, concise and efficient no back-end comment system
 <i class='fas fa-globe fa-fw'></i> [https://valine.js.org](https://valine.js.org)
 
 ```yaml blog/_config.volantis.yml
@@ -34,19 +34,19 @@ comments:
     appId: # your appId
     appKey: # your appKey
     js: https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js
-    ... 可选配置项详见源码
+    ... See the source code for optional configuration items
 ```
 
-其中，`placeholder` 支持在 front-matter 中设置。
+Among them, `placeholder` supports setting in front-matter.
 
 ```yaml front-matter
 ---
 valine:
-  placeholder: 你觉得xxx怎么样呢？
+  placeholder: What do you think of xxx?
 ---
 ```
 
-也可以通过设置 `valine.path` 实现多个页面共用一个评论框。
+You can also share a comment box for multiple pages by setting `valine.path`.
 
 ```yaml front-matter
 ---
@@ -59,7 +59,7 @@ valine:
 
 <!-- tab MiniValine -->
 
-<i class='fas fa-comment-dots fa-fw'></i> 一款快速、简洁且高效的无后端评论系统
+<i class='fas fa-comment-dots fa-fw'></i> A fast, concise and efficient no back-end comment system
 <i class='fas fa-globe fa-fw'></i> [https://github.com/MiniValine/MiniValine/](https://github.com/MiniValine/MiniValine/)
 
 ```yaml blog/_config.volantis.yml
@@ -70,14 +70,14 @@ comments:
   minivaline:
     appId: # Your leancloud application appid
     appKey: # Your leancloud application appkey
-    ... 可选配置项详见源码
+    ... See source code for optional configuration items
 ```
 
 <!-- endtab -->
 
 <!-- tab Vssue -->
 
-<i class='fas fa-comment-dots fa-fw'></i> Vue 驱动的、基于 Issue 的评论插件
+<i class='fas fa-comment-dots fa-fw'></i> Vue-driven, Issue-based comment plugin
 <i class='fas fa-globe fa-fw'></i> [https://vssue.js.org/zh/](https://vssue.js.org/zh/)
 
 ```yaml blog/_config.volantis.yml
@@ -112,15 +112,15 @@ comments:
     admin: # []
 ```
 
-clientID 和 clientSecret 的获取方法可自行搜索教程，这里仅简单描述一下步骤：
-1. 点击 GitHub -> Settings `https://github.com/settings/profile`
-2. 点击 Developer settings `https://github.com/settings/developers`
-3. 点击 New OAuth App `https://github.com/settings/applications/new`
-4. 填写信息：
-**Application name** 随便填，我的是：`xaoxuu.com`
-**Homepage URL** 和 **Authorization callback URL** 都写你的网址，我的是：`https://xaoxuu.com`
+The method of obtaining clientID and clientSecret can be searched for the tutorial by yourself, here is only a brief description of the steps:
+1. Click GitHub -> Settings `https://github.com/settings/profile`
+2. Click Developer settings `https://github.com/settings/developers`
+3. Click New OAuth App `https://github.com/settings/applications/new`
+4. Fill in the information:
+**Application name** Fill in whatever you want, mine is: `xaoxuu.com`
+**Homepage URL** and **Authorization callback URL** both write your URL, mine is: `https://xaoxuu.com`
 
-**可以通过设置 gitalk.id 实现多个页面共用一个评论框。**
+**You can share a comment box on multiple pages by setting gitalk.id. **
 
 ```yaml front-matter
 ---
@@ -133,7 +133,7 @@ gitalk:
 
 <!-- tab Disqus -->
 
-<i class='fas fa-comment-dots fa-fw'></i> Disqus - The #1 way to build an audience on your website.
+<i class='fas fa-comment-dots fa-fw'></i> Disqus-The #1 way to build an audience on your website.
 <i class='fas fa-globe fa-fw'></i> [https://disqus.com/](https://disqus.com/)
 
 ```yaml blog/_config.volantis.yml
@@ -158,14 +158,14 @@ comments:
   service: livere
   ...
   livere:
-    uid: #你的livere的uid
+    uid: #Your livere's uid
 ```
 
-在这里查看你的 uid：`https://livere.com/insight/myCode`，在【代码管理 -> 一般网站】中找到如下这段代码，其中 `data-uid` 中的内容就是你的 `livere_uid`。
+Check your uid here: `https://livere.com/insight/myCode`, find the following code in [Code Management -> General Website], where the content in `data-uid` is yours` livere_uid`.
 
 ```html
-<!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="你的livere的uid">
+<!-- Labilee City version installation code -->
+<div id="lv-container" data-id="city" data-uid="Your livere’s uid">
 ...
 ```
 
@@ -182,8 +182,8 @@ comments:
   service: isso
   ...
   isso:
-    url: https://example.com/(path/)
-    src: https://example.com/(path/)js/embed.min.js
+    url: https://example.com/[path/)
+    src: https://example.com/[path/)js/embed.min.js
 ```
 
 <!-- endtab -->
@@ -200,7 +200,7 @@ comments:
   service: hashover
   ...
   hashover:
-    src: https://example.com/(path/)comments.php
+    src: https://example.com/[path/)comments.php
 ```
 
 <!-- endtab -->
@@ -208,15 +208,15 @@ comments:
 <!-- tab ... -->
 
 
-```plain blog/themes/volantis/layout/_third-party/comments/评论系统名称/layout.ejs
-这里写布局代码
+```plain blog/themes/volantis/layout/_third-party/comments/comment system name/layout.ejs
+Write layout code here
 ```
 
-```plain blog/themes/volantis/layout/_third-party/comments/评论系统名称/script.ejs
-这里要写加载 js 的代码
+```plain blog/themes/volantis/layout/_third-party/comments/comment system name/script.ejs
+Here to write the code to load js
 ```
 
-{% btn large center, 收录更多评论系统, https://github.com/volantis-x/ , fas fa-plus %}
+{% btn large center, contains more comment systems, https://github.com/volantis-x/, fas fa-plus %}
 
 <!-- endtab -->
 

@@ -1,85 +1,85 @@
 ---
 layout: docs
-title: 页面布局模板
+title: page layout template
 group: docs-volantis-latest
 order: 401
-short_title: 4-1 页面布局模板
+short_title: 4-1 page layout template
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-## 布局模板
+## Layout template
 
 {% table %}
-| 取值  | 含义  |
-| :----- | :----  |
-| page | 独立页面 |
-| post | 文章页面 |
-| docs | 文档页面 |
-| category | 分类页面 |
-| tag | 标签页面 |
-| friends | 友链页面 |
-| list | 列表页面 |
+| Value | Meaning |
+| :----- | :---- |
+| page | Independent page |
+| post | Article page |
+| docs | Documentation page |
+| category | Category page |
+| tag | Tag page |
+| friends | Friends link page |
+| list | List page |
 {% endtable %}
 
 ## page & post & docs
 
-这三种页面相同，但是有以下细微区别：
+These three types of pages are the same, but have the following subtle differences:
 
-- post 文章有 title 时，向下滚动网页，导航栏会向上移出屏幕显出文章标题，而 page 和 docs 不会。
-- post 文章末尾最多可以显示「参考资料」、「相关文章」、「版权标识」、「打赏」四个模块。
-- docs 文章末尾最多可以显示「参考资料」一个模块。
+-When the post article has a title, scroll down the web page, the navigation bar will move up and out of the screen to display the article title, but page and docs will not.
+-post At the end of the article, up to four modules can be displayed: "Reference", "Related Article", "Copyright Mark", and "Reward".
+-At most one module of "reference" can be displayed at the end of the docs article.
 
 
-除了归档页面是自动生成的，其它独立页面都需要手动创建 md 文件。
+Except that the archive page is automatically generated, other independent pages need to be created manually.
 
-## 归档页面
+## Archive page
 
-归档页面是自动生成的，并且初始化的时候已经生成，路径如下：
+The archive page is automatically generated and has been generated during initialization. The path is as follows:
 
 ```yaml blog/_config.yml
 # Directory
 archive_dir: archives
 ```
 
-## 关于页面
+## About page
 
 ```yaml Create file if not exists: source/about/index.md
 ---
 layout: docs
-seo_title: 关于
+seo_title: About
 bottom_meta: false
 sidebar: []
 valine:
-  placeholder: 有什么想对我说的呢？
+  placeholder: What do you want to tell me?
 ---
 
-下面写关于自己的内容
+Write about yourself below
 
 ```
 
-## 分类页面
+## Category page
 
 ```yaml Create file if not exists: source/categories/index.md
 ---
 layout: category
 index: true
-title: 所有分类
+title: All categories
 ---
 ```
 
-## 标签页面
+## Tag page
 
 ```yaml Create file if not exists: source/tags/index.md
 ---
 layout: tag
 index: true
-title: 所有标签
+title: all tags
 ---
 ```
 
-## 列表页面
+## List page
 
 ```yaml Create file if not exists: source/mylist/index.md
 ---
@@ -89,88 +89,88 @@ index: true
 ---
 ```
 
-结果就是筛选出所有文章中 `front-matter` 部分含有 `group: mylist` 的文章。
+The result is to filter out all articles that contain `group: mylist` in the `front-matter` section.
 
 
-## 友链页面
+## Friends link page
 
-### 创建页面文件
+### Create page file
 
 ```yaml Create file if not exists: source/friends/index.md
 ---
-layout: friends # 必须
-title: 我的朋友们 # 可选，这是友链页的标题
+layout: friends # required
+title: My friends # Optional, this is the title of the friend link page
 ---
 
-这里写友链上方的内容。
+Write the content above the friend chain here.
 
 <!-- more -->
 
-这里可以写友链页面下方的文字备注，例如自己的友链规范、示例等。
+Here you can write text notes at the bottom of the friend chain page, such as your own friend chain specifications, examples, etc.
 
 ```
 
-### 选择布局方案
+### Choose a layout
 
-在主题配置文件中找到以下内容：
+Find the following in the theme configuration file:
 
 ```yaml
 pages:
-  # 友链页面配置
+  # Friends link page configuration
   friends:
-    layout_scheme: traditional # simple: 简单布局, traditional: 传统布局,  sites: 网站卡片布局
+    layout_scheme: traditional # simple: simple layout, traditional: traditional layout, sites: website card layout
 ```
 
-目前提供三种布局方案：
-- simple: 简单布局，只有头像和标题。
-- traditional: 传统布局，是 Volantis 旧版本的风格。
-- sites: 网站卡片布局，是 Volantis 4.x 新增的网站卡片标签的样式。
+Three layout schemes are currently provided:
+-simple: Simple layout, only avatar and title.
+-traditional: Traditional layout, the style of the old version of Volantis.
+-sites: site card layout, which is the new style of website card tags added in Volantis 4.x.
 
-### 设置数据源
+### Set data source
 
 
 {% tabs about, 1 %}
 
-<!-- tab 静态数据源 -->
+<!-- tab static data source -->
 
-友链的数据源写在以下路径，如果没有请自行创建：
+The data source of Friends Chain is written in the following path, if not, please create it yourself:
 ```
 blog/source/_data/friends.yml
 ```
-内容格式为：
+The content format is:
 ```yaml blog/source/_data/friends.yml
-- group: # 分组标题
-  description:  # 分组描述
+-group: # Group title
+  description: # Group description
   items:
-    - title: # 名称
-      avatar: # 头像
-      url: # 链接
-      screenshot: # 截图
-      keywords: # 关键词
-      description: # 描述
-    - title: # 名称
-      avatar: # 头像
-      url: # 链接
-      screenshot: # 截图
-      keywords: # 关键词
-      description: # 描述
+    -title: # name
+      avatar: # Avatar
+      url: # link
+      screenshot: # Screenshot
+      keywords: # Keywords
+      description: # description
+    -title: # name
+      avatar: # Avatar
+      url: # link
+      screenshot: # Screenshot
+      keywords: # Keywords
+      description: # description
 ```
 
-不同的布局方式，会用到一部分的字段，一般来说，`title`、`avatar` 和 `url` 都是必须的。这些数据被转成 HTML 标签插入到友链页面的 `<!-- more -->` 部分。
+Different layout methods will use some fields. Generally speaking, `title`, ʻavatar` and ʻurl` are all required. These data are converted into HTML tags and inserted into the `<!-- more -->` part of the friend link page.
 
 <!-- endtab -->
 
-<!-- tab 动态数据源 -->
+<!-- tab dynamic data source -->
 
-使用 issues 标签可以从 issues 中获取 JSON 数据解析并生成 HTML 填充到页面中，使用方法如下：
+Use the issues tag to get JSON data from issues to parse and generate HTML to fill in the page. The usage is as follows:
 
 ```
 {% issues sites | api=https://api.github.com/repos/xaoxuu/friends/issues?sort=updated&state=open&page=1&per_page=100&labels=active %}
 ```
 
-这样添加友链的方式就变成了：对方提 Issue ，自己审核，然后添加 `active` 标签，然后刷新网页就生效了。更新友链内容也变得十分方便， Issue 的创建者拥有修改和关闭的权限。
+In this way, the way to add a friend chain becomes: the other party raises an Issue, reviews it by yourself, then adds the ʻactive` tag, and then refreshes the webpage to take effect. It is also very convenient to update the content of the friend chain. The creator of the issue has the right to modify and close it.
 
-新建一个 GitHub 或者 Gitee 仓库，创建 Issues 模板，如下：
+Create a new GitHub or Gitee repository and create the Issues template as follows:
 
 ```json
 {
@@ -183,23 +183,23 @@ blog/source/_data/friends.yml
 }
 ```
 
-关于如何使用 issues 标签，详见这篇文章：
+For details on how to use the issues tag, see this article:
 
-{% link 静态博客使用 Issues API 发布动态、友链、书签, https://xaoxuu.com/blog/2020-08-23-issues-api/ %}
+{% link static blog uses the Issues API to post updates, friend links, and bookmarks, https://xaoxuu.com/blog/2020-08-23-issues-api/ %}
 
 
 <!-- endtab -->
 
 {% endtabs %}
 
-{% noteblock idea, 建议 %}
+{% noteblock idea, suggest %}
 
-- 两者是可以同时使用的哦，建议开放 issues 友链给大家，常联系的自己再保存到静态友链。
-- 实测 GitHub API 速度和稳定性不如 Gitee ，如果追求稳定建议使用 Gitee。
+-Both can be used at the same time. It is recommended to open the issues friend chain to everyone, and save it to the static friend chain if you contact yourself frequently.
+-The actual speed and stability of the GitHub API is not as good as Gitee. If you pursue stability, it is recommended to use Gitee.
 
 {% endnoteblock %}
 
-## 404页面
+## 404 page
 
 ```yaml Create file if not exists: source/404.md
 ---
@@ -211,11 +211,11 @@ bottom_meta: false
 sidebar: []
 valine:
   path: /404.html
-  placeholder: 请留言告诉我您要访问哪个页面找不到了
+  placeholder: Please leave a message and tell me which page you want to visit is not found
 ---
 
 {% p logo center huge, 404 %}
-{% p center bold, 很抱歉，您访问的页面不存在 %}
-{% p center small, 可能是输入地址有误或该地址已被删除 %}
+{% p center bold, sorry, the page you visited does not exist %}
+{% p center small, the address may be entered incorrectly or the address has been deleted %}
 
 ```

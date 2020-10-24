@@ -3,80 +3,80 @@ layout: docs
 group: docs-volantis-latest
 order: 515
 short_title: false
-title: 'tag-plugins: noteblock'
+title:'tag-plugins: noteblock'
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-NoteBlock 是 Blockquote 的增强版，在左边显示图标，并且可以自定颜色。而 Note 是 NoteBlock 的简便写法。
+NoteBlock is an enhanced version of Blockquote, with icons displayed on the left and colors can be customized. Note is a simple way of writing NoteBlock.
 
-```md 最后更新于 <u>4.0</u> 版本
-{% noteblock 样式参数（可选）, 标题（可选） %}
-文本段落
+```md was last updated in version <u>4.0</u>
+{% noteblock style parameter (optional), title (optional) %}
+Text paragraph
 {% endnoteblock %}
 ```
 
-## 演示效果
+## Demo effect
 
-可以在区块中放置一些复杂的结构，支持嵌套。
+Some complicated structures can be placed in the block, and nesting is supported.
 
-{% noteblock, 标题（可选） %}
+{% noteblock, title (optional) %}
 
-Windows 10不是為所有人設計,而是為每個人設計
+Windows 10 is not designed for everyone, but for everyone
 
 {% noteblock done %}
-嵌套测试： 请坐和放宽，我正在帮你搞定一切...
+Nested test: Please sit down and relax, I'm doing everything for you...
 {% endnoteblock %}
 
-{% folding yellow, Folding 测试： 点击查看更多 %}
+{% folding yellow, Folding test: Click to see more %}
 
-{% note warning, 不要说我们没有警告过你 %}
+{% note warning, don't say we haven't warned you %}
 {% noteblock bug red %}
-我们都有不顺利的时候
+We all have troubles
 {% endnoteblock %}
 
 {% endfolding %}
 {% endnoteblock %}
 
-## 上述示例的源码
+## Source code of the above example
 
 ```md example:
-{% noteblock, 标题（可选） %}
+{% noteblock, title (optional) %}
 
-Windows 10不是為所有人設計,而是為每個人設計
+Windows 10 is not designed for everyone, but for everyone
 
 {% noteblock done %}
-嵌套测试： 请坐和放宽，我正在帮你搞定一切...
+Nested test: Please sit down and relax, I'm helping you with everything...
 {% endnoteblock %}
 
-{% folding yellow, Folding 测试： 点击查看更多 %}
+{% folding yellow, Folding test: click to see more %}
 
-{% note warning, 不要说我们没有警告过你 %}
+{% note warning, don't say we haven't warned you %}
 {% noteblock bug red %}
-我们都有不顺利的时候
+We all have troubles
 {% endnoteblock %}
 
 {% endfolding %}
 {% endnoteblock %}
 ```
 
-## 可以支持的参数
+## Supportable parameters
 
-样式参数位置可以写图标和颜色，多个样式参数用空格隔开。
+The position of style parameters can be written with icons and colors. Multiple style parameters are separated by spaces.
 
-### 图标
+### icon
 
-```md 彩色的
+```md color
 quote, info, warning, done/success, error/danger
 ```
 
-```md 灰色的，也可以指定颜色
+```md gray, color can also be specified
 radiation, bug, idea, link, paperclip, todo, message, guide, download, up, undo
 ```
 
-### 颜色
+### colour
 
-```md 指定颜色
+```md specify color
 clear, light, gray, red, yellow, green, cyan, blue
 ```

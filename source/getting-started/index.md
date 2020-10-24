@@ -1,11 +1,11 @@
 ---
 layout: docs
-seo_title: 一个功能丰富、高度模块化的 Hexo 博客主题。支持多人协作、wiki文档等复杂系统，支持大量的标签插件。
-short_title: 1-1 安装与版本更新
+seo_title: A feature-rich and highly modular Hexo blog theme. Supports complex systems such as multi-person collaboration and wiki documents, and supports a large number of tag plugins.
+short_title: 1-1 Installation and version update
 group: docs-volantis-latest
 order: 1
 sidebar: [docs-volantis-latest, toc]
-description: Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益于其强大的模块化特性，您可以轻松搭建一个极简风格的博客，也可以仿照官网搭建一个多人协作的、包含文档模块的大体量综合型博客。
+description: Volantis is a feature-rich and highly modular Hexo blog theme. Thanks to its powerful modularity, you can easily build a minimalist style blog, or you can build a large-scale comprehensive blog with multi-person collaboration and document modules based on the official website.
 ---
 
 <p>
@@ -14,39 +14,39 @@ description: Volantis 是一个功能丰富、高度模块化的 Hexo 博客主�
 </p>
 <br>
 
-**[Volantis](https://volantis.js.org) 是一个功能丰富、高度模块化的 Hexo 博客主题。得益于其强大的模块化特性，您可以轻松搭建一个极简风格的博客，也可以仿照官网搭建一个多人协作的、包含文档模块的大体量综合型博客。**
+**[Volantis](https://volantis.js.org) is a feature-rich and highly modular Hexo blog theme. Thanks to its powerful modularity, you can easily build a minimalist style blog, or you can build a large-scale comprehensive blog with multi-person collaboration and document modules based on the official website.**
 
-{% link 示例博客, https://volantis.js.org/examples/ %}
+{% link example blog, https://volantis.js.org/examples/ %}
 
-所有的 Volantis 用户都可以按照格式自行创建 [**Issue**](https://github.com/volantis-x/examples/issues/) 来将自己的博客添加到官网的示例博客页面中。
+All Volantis users can create their own [**Issue**](https://github.com/volantis-x/examples/issues/) according to the format to add their blog to the sample blog page of the official website.
 
-## 准备工作
+## Ready to work
 
 
 {% tabs prepare, 1 %}
 
-<!-- tab 能力条件 -->
+<!-- tab ability conditions -->
 
-自建博客需要一定的相关知识，在开始前，请{% u 务必 %}确保您会使用 [markdown](https://www.runoob.com/markdown/md-tutorial.html) 语法，掌握简单的 git 知识，最最重要的是，遇到困难知道该怎么寻求解决：
+Self-built blog requires certain relevant knowledge. Before you start, please {% u must%} make sure you can use the [markdown](https://www.runoob.com/markdown/md-tutorial.html) grammar, simple to master My git knowledge, and most importantly, know how to seek solutions when encountering difficulties:
 
-1. 翻阅和搜索文档
-2. 搜索 issues 中是否有解决办法
-3. 新建 issue 并按照要求进行操作，详尽地描述您遇到的问题
+1. Scroll through and search documents
+2. Search whether there is a solution in issues
+3. Create a new issue and follow the requirements to describe the problem you encountered in detail
 
-如果您没有使用过 Hexo 也不要着急，可以先通读一遍 [Hexo](https://hexo.io/zh-cn/docs/) 中文文档，要想使用地得心应手，最好参照团队提供的开源项目的源码进行搭建：
+If you haven’t used Hexo before, don’t worry, you can read through the [Hexo](https://hexo.io/zh-cn/docs/) Chinese document. If you want to use it handily, it’s best to refer to the open source project provided by the team. The source code to build:
 
-[Demo 源码](https://github.com/volantis-x/demo) ｜ [官网源码](https://github.com/volantis-x/volantis-docs)
+[Demo source code](https://github.com/volantis-x/demo) ｜ [Official website source code](https://github.com/volantis-x/volantis-x.github.io)
 
 <!-- endtab -->
 
-<!-- tab 环境配置条件 -->
+<!-- tab environment configuration conditions -->
 
-如果您从旧版本更新或着其它主题迁移，请确保环境版本不要太低，否则会产生兼容性问题。
+If you are updating from an old version or migrating with other themes, please make sure that the environment version is not too low, otherwise compatibility problems will occur.
 
 ```yaml
 Hexo: 4.2 ~ 5.x
 hexo-cli: 3.1 ~ 4.x
-node.js: 12.16 ~ latest # 推荐使用 LTS 版
+node.js: 12.16 ~ latest # LTS version is recommended
 npm: 6.13 ~ latest
 ```
 
@@ -55,24 +55,24 @@ npm: 6.13 ~ latest
 {% endtabs %}
 
 
-## 快速体验
+## Quick experience
 
-如果您已经具备环境配置条件，可以在终端中输入下面这行代码，稍等片刻即可尝鲜体验：
+If you already have the environment configuration conditions, you can enter the following line of code in the terminal, and you can try the experience after a while:
 
 ```bash
 git clone https://github.com/volantis-x/demo.git && cd demo && npm i && hexo s
 ```
 
 
-## 下载与安装
+## Download and install
 
 {% tabs install, 1 %}
 
-<!-- tab 全新博客安装 -->
+<!-- tab new blog installation -->
 
-{% timenode 第 1/2 步：修改站点配置文件 %}
+{% timenode Step 1/2: Modify the site configuration file %}
 
-在 `blog/_config.yml` 文件中找到并修改：
+Find and modify in the `blog/_config.yml` file:
 
 ```
 theme: volantis
@@ -80,9 +80,9 @@ theme: volantis
 
 {% endtimenode %}
 
-{% timenode 第 2/2 步：下载主题 %}
+{% timenode Step 2/2: Download themes %}
 
-在终端中输入：
+Type in the terminal:
 
 ```
 npm i hexo-theme-volantis
@@ -90,26 +90,26 @@ npm i hexo-theme-volantis
 
 {% endtimenode %}
 
-{% folding, 如果您是 Mac 用户，可以使用脚本完成全部流程 %}
+{% folding, if you are a Mac user, you can use scripts to complete the entire process %}
 
-在博客路径打开终端，下载安装并应用主题：
+Open the terminal in the blog path, download, install and apply the theme:
 
 ```
 curl -s https://volantis.js.org/start | bash
 ```
 
-这行命令将会自动检测并安装所需环境，初始化博客，然后下载安装并应用主题。
-脚本详细使用方法：[#hexo.sh](https://xaoxuu.com/wiki/hexo.sh/)
+This command will automatically detect and install the required environment, initialize the blog, then download, install and apply the theme.
+Detailed usage of the script: [#hexo.sh](https://xaoxuu.com/wiki/hexo.sh/)
 
 {% endfolding %}
 
 <!-- endtab -->
 
-<!-- tab 从其它主题迁移 -->
+<!-- tab migration from other themes -->
 
-{% timenode 第 1/3 步：修改站点配置文件 %}
+{% timenode Step 1/3: Modify the site configuration file %}
 
-在 `blog/_config.yml` 文件中找到并修改：
+Find and modify in the `blog/_config.yml` file:
 
 ```
 theme: volantis
@@ -117,21 +117,21 @@ theme: volantis
 
 {% endtimenode %}
 
-{% timenode 第 2/3 步：下载主题 %}
+{% timenode Step 2/3: Download theme %}
 
-如果您已经升级到 `Hexo 5.0.2` 及以上，可以直接使用 `npm` 命令安装：
+If you have already upgraded to `Hexo 5.0.2` and above, you can directly use the `npm` command to install:
 
 ```
 npm i hexo-theme-volantis
 ```
 
-对于旧版本，需要下载主题源码到 `themes/` 文件夹：
+For the old version, you need to download the theme source code to the `themes/` folder:
 
 ```
 git clone https://github.com/volantis-x/hexo-theme-volantis themes/volantis
 ```
 
-如果您无法访问 GitHub 可以使用国内镜像源：
+If you cannot access GitHub, you can use the domestic mirror source:
 
 ```
 git clone https://e.coding.net/volantis/volantis/volantis.git themes/volantis
@@ -139,15 +139,15 @@ git clone https://e.coding.net/volantis/volantis/volantis.git themes/volantis
 
 {% endtimenode %}
 
-{% timenode 第 3/3 步：检查并安装依赖 %}
+{% timenode Step 3/3: Check and install dependencies %}
 
-安装 Hexo 搜索的依赖包：
+Install Hexo search dependencies:
 
 ```
 npm i hexo-generator-search hexo-generator-json-content
 ```
 
-安装 Stylus 渲染器：
+Install the Stylus renderer:
 
 ```
 npm i hexo-renderer-stylus
@@ -161,47 +161,47 @@ npm i hexo-renderer-stylus
 
 
 
-## 版本更新
+## new version update
 
-请对照 {% btn, 更新日志, https://github.com/volantis-x/hexo-theme-volantis/releases %} 进行更新，下面是更新之后需要注意的事项：
+Please refer to {% btn, update log, https://github.com/volantis-x/hexo-theme-volantis/releases %} to update, the following are the things to note after the update:
 
 {% timeline %}
 
 {% timenode 2020-09-26 [3.0.0 -> 4.0.0](https://github.com/volantis-x/hexo-theme-volantis/releases/tag/4.0.0) %}
 
-{% u 4.0.0 的配置文件改动非常大，强烈建议不要在旧的配置文件上改。 %}
+{% u The configuration file of 4.0.0 has changed a lot. It is strongly recommended not to change the old configuration file. %}
 
-1. 原数据文件中的配置项不再支持，请在配置文件中进行设置。
-2. 主题配置文件进行了重新设计，需要「完全」重新配置一遍。
-3. 友链使用数据文件，并支持 issues 标签实现动态自助友链。
-4. 原 meta 自定义布局现在只支持文章内部的 top_meta 和 bottom_meta 。
-5. 文章列表页面布局现在只能在有限范围内进行自定义。
-6. 侧边栏组件现在只支持侧边栏位置；文章末尾有专用的组件。
-7. 如果安装了懒加载插件，需要卸载掉，使用主题内置的懒加载（和插件冲突）。
-8. 如果想要关闭评论，需要改为 `comments: false` 。
-9. 如果要隐藏文章顶部或者底部的 meta 标签，需设置 `top_meta: false` 或者 `bottom_meta: false` 。
-10. 如果需要同时隐藏标题和顶部的 meta 标签也可以把 `title: xxx` 改为 `seo_title: xxx` 。
-11. 多作者的信息使用数据文件进行定义，文章中只需要写 `author: xxx` 而不需要重复写作者的信息了。
-12. 现在只有 gallery 标签的图片支持放大。
-13. 友链页面 `layout: links` 改为 `layout: friends`。
+1. The configuration items in the original data file are no longer supported, please set in the configuration file.
+2. The theme configuration file has been redesigned and needs to be reconfigured "completely".
+3. Friends chain uses data files and supports issues tags to realize dynamic self-help friends chain.
+4. The original meta custom layout now only supports top_meta and bottom_meta inside the article.
+5. The layout of the article list page can only be customized within a limited range.
+6. The sidebar component now only supports the sidebar position; there is a dedicated component at the end of the article.
+7. If the lazy loading plugin is installed, you need to uninstall it and use the lazy loading built into the theme (which conflicts with the plugin).
+8. If you want to close the comments, you need to change it to `comments: false`.
+9. If you want to hide the meta tag at the top or bottom of the article, you need to set `top_meta: false` or `bottom_meta: false`.
+10. If you need to hide the title and the meta tag at the top at the same time, you can also change `title: xxx` to `seo_title: xxx`.
+11. The information of multiple authors is defined using a data file. You only need to write ʻauthor: xxx` in the article instead of repeating the author's information.
+12. Now only the pictures with the gallery tag support zooming.
+13. The friend link page `layout: links` is changed to `layout: friends`.
 
 {% endtimenode %}
 
 {% endtimeline %}
 
-## 许可协议
+## agreement
 
-本主题采用 [MIT开源许可协议](https://cdn.jsdelivr.net/gh/theme-volantis/hexo-theme-volantis/LICENSE) ，永久无限制免费使用。
+This theme adopts the [MIT Open Source License Agreement](https://cdn.jsdelivr.net/gh/theme-volantis/hexo-theme-volantis/LICENSE), which is free forever and unlimited use.
 
 {% noteblock quote theme %}
-**MIT开源许可协议**
+**MIT Open Source License Agreement**
 
-被授权人有权利使用、复制、修改、合并、出版发行、散布、再授权及贩售软件及软件的副本。
-被授权人可根据程式的需要修改授权条款为适当的内容。
-在软件和软件的所有副本中都必须包含版权声明和许可声明。
+The authorized person has the right to use, copy, modify, merge, publish, distribute, sublicense and sell the software and copies of the software.
+The licensee can modify the license terms as appropriate according to the needs of the program.
+The software and all copies of the software must include a copyright notice and a license notice.
 {% endnoteblock %}
 
 
-## 配置与使用
+## Configuration and use
 
-{% link 配置与使用, /wiki/volantis/site-settings/configuration/, https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/2439351-arrows/005-arrows.svg %}
+{% link Configuration and use, /wiki/volantis/site-settings/configuration/, https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/2439351-arrows/005-arrows .svg %}

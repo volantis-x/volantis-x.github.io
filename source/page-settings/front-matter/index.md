@@ -11,150 +11,150 @@ disqus:
 
 ## front-matter
 
-front-matter 是文件最上方以 `---` 分隔的区域，用于指定个别文件的变量。更多请见 Hexo 官方文档：[#front-matter](https://hexo.io/zh-cn/docs/front-matter)
+The front-matter is the area at the top of the file separated by `---`, used to specify the variables of individual files. For more information, please refer to Hexo official document: [#front-matter](https://hexo.io/zh-cn/docs/front-matter)
 
 {% table %}
-| 字段        | 含义         | 值类型        | 默认值 |
+| Field | Meaning | Value Type | Default Value |
 | :----------- | :------------ | :------------- | :------ |
-| layout      | 布局模版     | String        | -      |
-| title       | 页面标题         | String        | -      |
-| seo_title       | 网页标题         | String        | page.title   |
-| short_title       | 页面标题（在group列表中显示）         | String        | page.title   |
-| date        | 创建时间     | Date          | 文件创建时间 |
-| updated     | 更新日期     | Date          | 文件修改时间 |
-| link   | 外部文章网址 | String        | -      |
-| music       | 内部音乐控件 | [Object] | -      |
-| robots    | robots   | String        | -      |
-| keywords    | 页面关键词   | String        | -      |
-| description | 页面描述、摘要     | String        | -      |
-| cover | 是否显示封面     | Bool        | true      |
-| top_meta | 是否显示文章或页面顶部的meta信息     | Bool        | true      |
-| bottom_meta | 是否显示文章或页面底部的meta信息     | Bool        | true      |
-| sidebar | 页面侧边栏     | Bool, Array        | theme.layout.*.sidebar      |
-| body | 页面主体元素     | Array        | theme.layout.on_page.body      |
-| mathjax           | 是否渲染公式 | Bool, String  | false  |
-| thumbnail           | 缩略图 | String | false  |
-| icons           | 图标 | Array | []  |
-| pin           | 是否置顶 | Bool  | false  |
+| layout | Layout template | String |-|
+| title | Page title | String |-|
+| seo_title | Page title | String | page.title |
+| short_title | Page title (displayed in the group list) | String | page.title |
+| date | Creation time | Date | File creation time |
+| updated | Update date | Date | File modification time |
+| link | External article URL | String |-|
+| music | Internal music controls | [Object] |-|
+| robots | robots | String |-|
+| keywords | Page keywords | String |-|
+| description | Page description, abstract | String |-|
+| cover | Whether to show the cover | Bool | true |
+| top_meta | Whether to display the meta information at the top of the article or page | Bool | true |
+| bottom_meta | Whether to display the meta information at the bottom of the article or page | Bool | true |
+| sidebar | Page sidebar | Bool, Array | theme.layout.*.sidebar |
+| body | Page body elements | Array | theme.layout.on_page.body |
+| mathjax | Whether to render formulas | Bool, String | false |
+| thumbnail | Thumbnail | String | false |
+| icons | icons | Array | [] |
+| pin | whether to top | Bool | false |
 {% endtable %}
 
-`layout:post` 时特有的字段：
+Fields unique to `layout:post`:
 
 {% table %}
-| 字段              | 含义         | 值类型        | 默认值 |
-| :----------------- | :------------ | :------------- | :------ |
-| author            | 文章作者     | [Object]        | config.author      |
-| categories        | 分类         | String, Array | -      |
-| tags               | 标签         | String, Array | -      |
-| toc               | 是否生成目录 | Bool          | true   |
+| Field | Meaning | Value Type | Default Value |
+| :----------------- | :------------ | :------------- |: ------ |
+| author | Article author | [Object] | config.author |
+| categories | Categories | String, Array |-|
+| tags | Tags | String, Array |-|
+| toc | Whether to generate a directory | Bool | true |
 {% endtable %}
 
 author
 
 {% table %}
-| 字段              | 含义         | 值类型        | 默认值 |
-| :----------------- | :------------ | :------------- | :------ |
-| name            | 作者名     | String        | config.author      |
-| avatar        | 头像         | String | config.avatar      |
-| url               | 链接         | String | config.url      |
+| Field | Meaning | Value Type | Default Value |
+| :----------------- | :------------ | :------------- |: ------ |
+| name | Author name | String | config.author |
+| avatar | Avatar | String | config.avatar |
+| url | Link | String | config.url |
 {% endtable %}
 
 music
 
 {% table %}
-| 字段              | 是否必须         | 值类型      |
-| :----------------- | :------------ | :----------------- |
-| server            | 是     | netease, tencent, kugou, xiami, baidu           |
-| type        | 是         | song, playlist, album, search, artist  |
-| id               | 是         | song id / playlist id / album id / search keyword   |
+| Field | Must | Value Type |
+| :----------------- | :------------ | :--------------- - |
+| server | yes | netease, tencent, kugou, xiami, baidu |
+| type | yes | song, playlist, album, search, artist |
+| id | yes | song id / playlist id / album id / search keyword |
 {% endtable %}
 
-### 文章置顶
+### Top article
 
-在 front-matter 中设置以下值：
+Set the following values ​​in front-matter:
 ```yaml front-matter
 pin: true
 ```
 
-### 文章分类
+### Article classification
 
-多个分类有两种关系，一种是层级（等同于文件夹），一种是并列（等同于标签）。
+Multiple categories have two relationships, one is hierarchy (equivalent to folders), and the other is juxtaposition (equivalent to tags).
 
-多级分类：
+Multi-level classification:
 ```yaml front-matter
 ---
-categories: [分类A, 分类B]
+categories: [category A, category B]
 ---
 ```
-或者
+or
 
 ```yaml front-matter
 ---
 categories:
-  - 分类A
-  - 分类B
+  -Category A
+  -Category B
 ---
 ```
 
-并列分类
+Parallel classification
 
 ```yaml front-matter
 categories:
-  - [分类A]
-  - [分类B]
+  -[Category A]
+  -[Category B]
 ```
 
-多级+并列分类
+Multi-level + parallel classification
 
 ```yaml front-matter
 categories:
-  - [分类A, 分类B]
-  - [分类C, 分类D]
+  -[Category A, Category B]
+  -[Category C, Category D]
 ```
 
-### 文章摘要
+### Article Summary
 
-在文章中插入 `<!-- more -->`，前面的部分即为摘要。
+Insert `<!-- more -->` in the article, the previous part is the abstract.
 
-```yml 某篇文章源码
+```yml source code of an article
 ---
 title: xxx
 date: 2020-02-21
 ---
 
-这是摘要
+This is a summary
 
 <!-- more -->
 
-这是正文
+This is the text
 ```
 
-{% note warning, **注意**： `<!-- more -->` 前后一定要有空行，不然可能导致显示错位。 %}
+{% note warning, **Note**: `<!-- more -->` There must be blank lines before and after `<!-- more -->`, otherwise it may cause display dislocation. %}
 
-### 设置文章作者
+### Set article author
 
-由于支持多作者共同维护一个博客，所以可以设置单独一篇文章的作者：
+With support for multi-author jointly maintain a blog, so you can set up a separate authors:
 ```yaml front-matter
 ---
 author:
-  name: 作者
+  name: Author
   avatar: https://img.vim-cn.com/a1/d53c11fb5d4fd69529bc805d385fe818feb3f6.png
   url: https://baidu.com
 ---
 ```
 
-## 引入外部文章
+## Import external articles
 
-利用 `link`，搭配自定义的文章作者信息，你可以在文章列表中显示外部文章或者网址，例如：
+Using `link`, with customized article author information, you can display external articles or URLs in the article list, for example:
 
 ```yaml front-matter
 ---
-layout:     post
-date:       2017-07-05
-title:      [转]如何搭建基于Hexo的独立博客
+layout: post
+date: 2017-07-05
+title: [转] How to build an independent blog based on Hexo
 categories: [Dev, Hexo]
 tags:
-  - Hexo
+  -Hexo
 author:
   name: xaoxuu
   avatar: https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
@@ -166,9 +166,9 @@ link: https://xaoxuu.com/blog/2017-07-05-hexo-blog/
 
 ```
 
-## 置顶
+## Top
 
-对于任何文章或者页面，设置 `pin: true` 即可置顶在首页。
+For any article or page, set `pin: true` to put it on the top page.
 
 ```yaml front-matter
 ---
@@ -176,11 +176,11 @@ pin: true
 ---
 ```
 
-这会导致一个小问题：首页 post 卡片数量多于设定值，如果有强迫症希望每一个分页数量一致，可以安装插件来实现，详见：[#421](https://github.com/volantis-x/hexo-theme-volantis/issues/421)
+This will cause a small problem: the number of post cards on the homepage is more than the set value. If you have obsessive-compulsive disorder and want the number of each page to be the same, you can install a plug-in to achieve it, see: [#421](https://github.com/ volantis-x/hexo-theme-volantis/issues/421)
 
-## 不归档
+## Do not archive
 
-存放在 `_posts` 文件夹下的文章一般都会出现在归档页，如果某篇文章不希望出现在归档页面：
+Articles stored in the `_posts` folder will generally appear on the archive page. If a post does not want to appear on the archive page:
 
 ```yaml front-matter
 ---

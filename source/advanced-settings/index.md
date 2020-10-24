@@ -2,17 +2,16 @@
 layout: docs
 group: docs-volantis-latest
 order: 601
-title: 进阶设定
-short_title: 6-1 进阶设定
+title: advanced settings
+short_title: 6-1 advanced settings
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
+## Set up submodule
 
-## 设置子模块
-
-{% folding yellow open, 将主题添加为子模块 %}
+{% folding yellow open, add the theme as a submodule %}
 
 ```sh
 git submodule add https://github.com/volantis-x/hexo-theme-volantis.git themes/volantis
@@ -20,12 +19,12 @@ git submodule add https://github.com/volantis-x/hexo-theme-volantis.git themes/v
 
 {% endfolding %}
 
-## 多人协同
+## Multiplayer collaboration
 
-默认的作者信息在主题配置文件中设置：
+The default author information is set in the theme configuration file:
 
 ```yaml blog/themes/volantis/_config.yml
-# 文章布局
+# Article layout
 article:
   ...
   body:
@@ -33,11 +32,11 @@ article:
     meta_library:
       author:
         avatar:
-        name: 请设置文章作者
+        name: Please set the author of the article
         url: /
 ```
 
-Volantis 支持多作者，其他作者信息需要写在数据文件中，例如：
+Volantis supports multiple authors, other author information needs to be written in the data file, for example:
 
 ```yaml blog/source/_data/author.yml
 Jon:
@@ -50,7 +49,7 @@ Dany:
   url: https://gameofthrones.fandom.com/wiki/Daenerys_Targaryen
 ```
 
-在文章的 front-matter 中新增 `author` 即可：
+Just add ʻauthor` to the front-matter of the article:
 
 ```md
 ---
@@ -59,27 +58,27 @@ author: Jon
 ---
 ```
 
-## 为网站提速
+## Speed ​​up the website
 
-### 加载速度
+### Loading speed
 
-- 减少不必要的 js 插件，例如字数统计、动态背景。
+-Reduce unnecessary js plugins, such as word count, dynamic background.
 
-- 查找并解决拖慢速度的资源，以 Chrome 浏览器为例：
-  1. 页面中点击右键，选择「检查」。
-  2. 在右边的窗口中「Network」选项卡，并勾选「Disable cache」。
-  3. 刷新网页，查看加载速度慢的资源。
-    3.1. 加载缓慢的图片，建议使用 CDN。
-    3.2. 加载缓慢的可以不用的 js 插件，建议舍弃。
-    3.3. 加载缓慢却必须使用的 js 插件，建议下载并自己上传至 jsdelivr。
+-Find and solve the slow down resources, take Chrome browser as an example:
+  1. Right-click on the page and select "Check".
+  2. In the right window, "Network" tab, and check "Disable cache".
+  3. Refresh the web page to view resources that load slowly.
+    3.1. For slow loading pictures, CDN is recommended.
+    3.2. It is recommended to discard the js plugins that load slowly and do not need to.
+    3.3. The js plug-in that is slow to load but must be used is recommended to download and upload to jsdelivr.
 
-### 运行速度
+### Running speed
 
-- 访问具有动态特效背景（如雪花、粒子等）的网站时，手机很快会发烫变卡，笔记本很快会风扇狂转并且浏览器提示建议关闭此页面。如果你希望网站有好的使用体验请尽量不要安装这类插件。
+-When visiting a website with dynamic special effects backgrounds (such as snowflakes, particles, etc.), the phone will soon become hot and get stuck, the notebook will soon fan out and the browser prompts to close this page. If you want the website to have a good experience, please try not to install such plug-ins.
 
 
 
-## 优化 SEO
+## Optimize SEO
 
 ```yaml blog/_config.volantis.yml
 seo:
@@ -96,43 +95,41 @@ seo:
     # robots can be written in front-matter
 ```
 
-在 front-matter 中，可以设置 `keywords`、`description`、`robots` 和 `seo_title`。其中 `seo_title` 仅仅用作网页标题，优先级高于 `title`。
+In front-matter, you can set `keywords`, `description`, `robots` and `seo_title`. Among them, `seo_title` is only used as the title of the webpage and has a higher priority than `title`.
 
-- 文章内部不要使用 H1 标题。
+-Do not use H1 headings inside articles.
 
-- 通过死链检测工具检查并删除无法访问的链接。
+-Check and delete the inaccessible links through the dead link detection tool.
 
-- 安装 SEO 优化插件：
+-Install SEO optimization plugin:
   {% link hexo-autonofollow, https://github.com/liuzc/hexo-autonofollow %}
   {% link hexo-generator-seo-friendly-sitemap, https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap %}
 
-- 页面不要堆砌关键词，不要频繁更改路径。
+-Don't pile up keywords on the page and don't change the path frequently.
 
+## Use CDN
 
-## 使用 CDN
+For most users who deploy blogs to GitHub, it is relatively slow to load local resources directly. You can use the CDN service provided by jsdelivr for open source projects.
 
-对于大部分将博客 deploy 到 GitHub 的用户来说，直接加载本地资源速度比较慢，可以使用 jsdelivr 为开源项目提供的 CDN 服务。
+For the `4.1.4+` version, the JS file uses the CDN compressed version of https://cdn.jsdelivr.net/npm/hexo-theme-volantis/source/js/ by default.
 
-对于`4.1.4+`版本，JS文件默认使用 https://cdn.jsdelivr.net/npm/hexo-theme-volantis/source/js/ 的CDN压缩版本文件。
-
-例如: `https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.1.4/source/js/app.min.js`
-
-### 开启方法
+For example: `https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.1.4/source/js/app.min.js`
+### How to open
 
 ```yaml blog/_config.volantis.yml
 use_cdn: true
 ```
 
-重要说明：
+important:
 
-1. 开发者注意 `use_cdn` 设置为 `false`。
-2. 注意CDN文件的版本号:
+1. Developers note that ʻuse_cdn` is set to `false`.
+2. Pay attention to the version number of the CDN file:
 ```yaml blog/_config.volantis.yml
 info:
   theme_version: '4.1.4' # This is theme's version.
 ```
-3. 仅JS文件默认提供CDN。
-4. 关于CSS文件CDN：
+3. Only JS files provide CDN by default.
+4. About CSS file CDN:
 ```yaml blog/_config.volantis.yml
 info:
   theme_name: Volantis # This is theme's name.
@@ -140,21 +137,21 @@ info:
   theme_docs: https://volantis.js.org/ # This is theme's URL.
   theme_repo: https://github.com/volantis-x/hexo-theme-volantis
   cdn:
-    js: # 默认为 https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.1.4/source/js/app.min.js
+    js: # The default is https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.1.4/source/js/app.min.js
     css:
-      first: # 默认不提供CDN，first.css 中为首屏渲染的样式，内含 cover navbar search 的样式。
-      style: # 默认不提供CDN，style.css 为延迟加载的样式。
+      first: # CDN is not provided by default. First.css is the style rendered for the first screen, and contains the style of cover navbar search.
+      style: # CDN is not provided by default, and style.css is a delayed loading style.
 ```
 
-{% note info, 如果你需要对样式进行 DIY，可以只关闭 style 文件的 CDN。 %}
+{% note info, if you need to DIY the style, you can just turn off the CDN of the style file. %}
 
-### 自定义 CDN
+### Custom CDN
 
-如果你把对应的文件上传到自己的 CDN 服务器，可以把对应的链接改为自己的 CDN 链接。
+If you upload the corresponding file to your CDN server, you can change the corresponding link to your own CDN link.
 
-## 尝试使用 Terser 压缩 ES6
+## Try Terser to compress ES6
 
-### 安装压缩工具
+### Install compression tool
 
 ```shell
 npm install -g gulp
@@ -166,7 +163,7 @@ npm install --save gulp-minify-css
 npm install gulp-terser --save-dev
 ```
 
-### gulp 配置文件
+### gulp configuration file
 
 ```js blog/gulpfile.js
 var gulp = require('gulp');
@@ -175,14 +172,14 @@ var htmlmin = require('gulp-html-minifier-terser');
 var htmlclean = require('gulp-htmlclean');
 var terser = require('gulp-terser');
 
-// 压缩css文件
+// Compress the css file
 const minify_css = () => (
     gulp.src(['./public/**/*.css'])
         .pipe(minifycss())
         .pipe(gulp.dest('./public'))
 );
 
-// 压缩html文件
+// Compress html file
 const minify_html = () => (
     gulp.src(['./public/**/*.html','!./public/{lib,lib/**}'])
         .pipe(htmlclean())
@@ -195,9 +192,9 @@ const minify_html = () => (
         .pipe(gulp.dest('./public'))
 )
 
-// 压缩js文件
+// Compress the js file
 const minify_js = () => (
-    gulp.src(['./public/**/*.js', '!./public/**/*.min.js','!./public/{lib,lib/**}'])
+    gulp.src(['./public/**/*.js','!./public/**/*.min.js','!./public/{lib,lib/**}'] )
         .pipe(terser())
         .pipe(gulp.dest('./public'))
 )
@@ -215,39 +212,38 @@ gulp.task('one', gulp.parallel(
 
 gulp.task('default', gulp.series('one'));
 ```
-
-### 运行压缩
+### Run compression
 
 ```shell
 gulp
 ```
 
-## 安装 Service Worker 服务
+## Install Service Worker Service
 
 ```yaml blog/_config.yml
-# 全局导入
+# Global import
 import:
   script:
-    - <script>"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js").then(function(n){n.onupdatefound=function(){var e=n.installing;e.onstatechange=function(){switch(e.state){case"installed":navigator.serviceWorker.controller?console.log("Updated serviceWorker."):console.log("serviceWorker Sucess!");break;case"redundant":console.log("The installing service worker became redundant.")}}}}).catch(function(e){console.log("Error during service worker registration:",e)}); </script>
+    -<script>"serviceWorker"in navigator&&navigator.serviceWorker.register("/sw.js").then(function(n){n.onupdatefound=function(){var e=n.installing;e.onstatechange=function( ){switch(e.state){case"installed":navigator.serviceWorker.controller?console.log("Updated serviceWorker."):console.log("serviceWorker Sucess!");break;case"redundant":console .log("The installing service worker became redundant.")}}}}).catch(function(e){console.log("Error during service worker registration:",e)}); </script>
 ```
 
-在`blog/source`中创建`sw.js`文件。
+Create the `sw.js` file in `blog/source`.
 
-内容如下：
+The content is as follows:
 
 ```js
 importScripts('https://cdn.jsdelivr.net/npm/workbox-cdn@5.1.3/workbox/workbox-sw.js');
 
 workbox.setConfig({
-    modulePathPrefix: 'https://cdn.jsdelivr.net/npm/workbox-cdn@5.1.3/workbox/'
+    modulePathPrefix:'https://cdn.jsdelivr.net/npm/workbox-cdn@5.1.3/workbox/'
 });
 
-const { core, precaching, routing, strategies, expiration, cacheableResponse, backgroundSync } = workbox;
-const { CacheFirst, NetworkFirst, NetworkOnly, StaleWhileRevalidate } = strategies;
-const { ExpirationPlugin } = expiration;
-const { CacheableResponsePlugin } = cacheableResponse;
+const {core, precaching, routing, strategies, expiration, cacheableResponse, backgroundSync} = workbox;
+const {CacheFirst, NetworkFirst, NetworkOnly, StaleWhileRevalidate} = strategies;
+const {ExpirationPlugin} = expiration;
+const {CacheableResponsePlugin} = cacheableResponse;
 
-const cacheSuffixVersion = '-000010', // 缓存版本号 极端重要，修改静态文件后发布网页一定要修改缓存版本号
+const cacheSuffixVersion ='-000010', // The cache version number is extremely important. You must modify the cache version number when publishing web pages after modifying static files
     maxEntries = 100;
 
 self.addEventListener('activate', (event) => {
@@ -262,7 +258,7 @@ self.addEventListener('activate', (event) => {
 
 
 core.setCacheNameDetails({
-    prefix: 'volantis', // 极端重要 自己拟定一个名字
+    prefix:'volantis', // extremely important, draw up a name by yourself
     suffix: cacheSuffixVersion
 });
 
@@ -272,13 +268,13 @@ precaching.cleanupOutdatedCaches();
 
 /*
  * Precache
- * - Static Assets
+ *-Static Assets
  */
-precaching.precacheAndRoute( // 极端重要 定义首次缓存的静态文件
+precaching.precacheAndRoute( // Extremely important defines the static file to be cached for the first time
     [
-        { url: '/css/first.css', revision: null },
-        { url: '/css/style.css', revision: null },
-        { url: '/js/app.js', revision: null },
+        {url:'/css/first.css', revision: null },
+        {url:'/css/style.css', revision: null },
+        {url:'/js/app.js', revision: null },
     ],
 );
 
@@ -290,14 +286,14 @@ precaching.precacheAndRoute( // 极端重要 定义首次缓存的静态文件
  * cacheTime: 30d
  */
 
-// cdn.jsdelivr.net - cors enabled
+// cdn.jsdelivr.net-cors enabled
 routing.registerRoute(
     /.*cdn\.jsdelivr\.net/,
     new CacheFirst({
-        cacheName: 'static-immutable' + cacheSuffixVersion,
+        cacheName:'static-immutable' + cacheSuffixVersion,
         fetchOptions: {
-            mode: 'cors',
-            credentials: 'omit'
+            mode:'cors',
+            credentials:'omit'
         },
         plugins: [
             new ExpirationPlugin({
@@ -308,14 +304,14 @@ routing.registerRoute(
     })
 );
 
-// m7.music.126.net - cors enabled
+// m7.music.126.net-cors enabled
 routing.registerRoute(
     /.*m7\.music\.126\.net/,
     new CacheFirst({
-        cacheName: 'static-immutable' + cacheSuffixVersion,
+        cacheName:'static-immutable' + cacheSuffixVersion,
         fetchOptions: {
-            mode: 'cors',
-            credentials: 'omit'
+            mode:'cors',
+            credentials:'omit'
         },
         plugins: [
             new ExpirationPlugin({
@@ -327,7 +323,7 @@ routing.registerRoute(
 );
 
 /*
- *  No Cache
+ * No Cache
  *
  * Method: networkOnly
  */
@@ -357,16 +353,16 @@ routing.registerRoute(
 );
 
 /*
- * sw.js - Revalidate every time
+ * sw.js-Revalidate every time
  * staleWhileRevalidate
  */
 routing.registerRoute(
-    '/sw.js', // 本文件名
+    '/sw.js', // this file name
     new StaleWhileRevalidate()
 );
 
 /*
- * Default - Serve as it is
+ * Default-Serve as it is
  * networkFirst
  */
 routing.setDefaultHandler(
@@ -377,76 +373,76 @@ routing.setDefaultHandler(
 
 ```
 
-{% note info, 修改静态文件后发布网页一定要修改缓存版本号。 %}
+{% note info, after modifying the static file, you must modify the cached version number when publishing a web page. %}
 
-## 安装「相关文章」插件
+## Install the "Related Articles" plugin
 
-1. 安装插件
+1. Install the plugin
 ```sh
 npm i -S hexo-related-popular-posts
 ```
 
-2. 插件的自定义配置方法：
+2. Custom configuration method of plug-in:
 {% link hexo-related-popular-posts, https://github.com/tea3/hexo-related-popular-posts %}
 
-如果您使用了头图，可以在站点配置文件中添加以下设置来让相关文章显示正确的文章头图：
+If you use a header image, you can add the following settings in the site configuration file to make related articles display the correct article header image:
 
 ```yaml blog/_config.yml
 popularPosts:
   eyeCatchImageAttributeName: headimg
 ```
 
-{% noteblock warning up, 注意 %}
+{% noteblock warning up, note %}
 
-需要升级到 5.0.1 及以上版本才可以支持自定义头图，详见 [#29](https://github.com/tea3/hexo-related-popular-posts/issues/29)
+You need to upgrade to 5.0.1 and above to support custom header images, see [#29](https://github.com/tea3/hexo-related-popular-posts/issues/29)
 
 {% endnoteblock %}
 
-## 分析与统计
+## Analysis and Statistics
 
-默认支持 [不蒜子](http://busuanzi.ibruce.info/) 的访问统计，可以自行添加百度统计和 Google Analytics。
+By default, the visit statistics of [Bu Suanzi](http://busuanzi.ibruce.info/) are supported. You can add Baidu statistics and Google Analytics by yourself.
 
-### 字数和阅读时长
+### Word count and reading time
 
-1. 安装以下插件：
+1. Install the following plugins:
 ```
 npm i --save hexo-wordcount
 ```
-2. 修改配置文件，将 `wordcount` 插件打开
+2. Modify the configuration file and open the `wordcount` plugin
 ```yaml blog/_config.volantis.yml
 plugins:
   ...
-  # 文章字数统计、阅读时长，开启需要安装插件: npm i --save hexo-wordcount
+  # The word count of the article, the reading time, and the plug-in needs to be installed: npm i --save hexo-wordcount
   wordcount:
     enable: #true
 ```
-3. 然后修改配置文件，将 `wordcount` 写入需要显示的 meta 位置：
+3. Then modify the configuration file to write `wordcount` into the meta location that needs to be displayed:
 ```yaml blog/_config.volantis.yml
-# 文章布局
+# Article layout
 article:
   ...
-  # 文章详情页面的文章卡片本体布局方案
+  # The layout scheme of the article card body on the article details page
   body:
-    # 文章顶部信息
-    # 从 meta_library 中取
+    # Top of article information
+    # Take from meta_library
     top_meta: [..., wordcount, ...]
     ...
-    # 文章底部信息
-    # 从 meta_library 中取
+    # Information at the bottom of the article
+    # Take from meta_library
     bottom_meta: [..., wordcount, ...]
 ```
 
 
-### CNZZ 统计
+### CNZZ Statistics
 
-请参考 ZYMIN 的这篇教程：
-{% link Hexo hexo+ejs+material x 添加CNZZ统计代码, https://zymin.cn/arcticle/hexo+ejs+material.html %}
+Please refer to this tutorial by ZYMIN:
+{% link Hexo hexo+ejs+material x Add CNZZ statistical code, https://zymin.cn/arcticle/hexo+ejs+material.html %}
 
-## 更多进阶玩法
+## More advanced gameplay
 
-详见 [@TRHX](https://www.itrhx.com) 的这篇博客：
-{% link Hexo 博客主题个性化, https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/ %}
+For details, please refer to this blog of [@TRHX](https://www.itrhx.com):
+{% link Hexo blog topic personalization, https://www.itrhx.com/2018/08/27/A04-Hexo-blog-topic-personalization/ %}
 
-内含卡片半透明、增加卡通人物、自定义鼠标样式、鼠标特效、烟花特效、彩色滚动字体、网站运行时间、动态浏览器标题、雪花飘落特效等多种详细教程。
+Contains a variety of detailed tutorials such as translucent cards, adding cartoon characters, custom mouse styles, mouse special effects, firework special effects, color scrolling fonts, website running time, dynamic browser titles, and snowflakes falling special effects.
 
-{% link 主题官网 #进阶玩法, https://volantis.js.org/categories/进阶玩法/ %}
+{% link theme official website #Advanced gameplay, https://volantis.js.org/categories/Advanced gameplay/ %}

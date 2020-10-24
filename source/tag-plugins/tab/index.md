@@ -3,57 +3,57 @@ layout: docs
 group: docs-volantis-latest
 order: 531
 short_title: false
-title: 'tag-plugins: tab'
+title:'tag-plugins: tab'
 sidebar: [docs-volantis-latest, toc]
 disqus:
-  path: /wiki/volantis/
+   path: /wiki/volantis/
 ---
 
-此插件移植自 [NexT #tabs](https://theme-next.org/docs/tag-plugins/tabs)
+This plugin is ported from [NexT #tabs](https://theme-next.org/docs/tag-plugins/tabs)
 
-```md 最后更新于 <u>2.1</u> 版本
-{% tabs 页面内不重复的ID %}
-<!-- tab 栏目1 -->
-内容
+```md was last updated to version <u>2.1</u>
+{% tabs unique ID in the page %}
+<!-- tab column 1 -->
+content
 <!-- endtab -->
-<!-- tab 栏目2 -->
-内容
+<!-- tab column 2 -->
+content
 <!-- endtab -->
 {% endtabs %}
 ```
 
-## 演示效果
+## Demo effect
 
 {% tabs tab-id %}
 
-<!-- tab 栏目1 -->
+<!-- tab column 1 -->
 
-。。。
+. . .
 
 <!-- endtab -->
 
-<!-- tab 栏目2 -->
+<!-- tab column 2 -->
 
-！！！
+! ! !
 
 <!-- endtab -->
 
 {% endtabs %}
 
-## 上述示例的源码
+## Source code of the above example
 
 ```md example:
 {% tabs tab-id %}
 
-<!-- tab 栏目1 -->
+<!-- tab column 1 -->
 
-。。。
+. . .
 
 <!-- endtab -->
 
-<!-- tab 栏目2 -->
+<!-- tab column 2 -->
 
-！！！
+! ! !
 
 <!-- endtab -->
 

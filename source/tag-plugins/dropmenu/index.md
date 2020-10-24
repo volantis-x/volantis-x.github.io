@@ -3,129 +3,129 @@ layout: docs
 group: docs-volantis-latest
 order: 525
 short_title: false
-title: 'tag-plugins: dropmenu'
+title:'tag-plugins: dropmenu'
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-{% note warning, 这个页面的标签将会在不久后重构 %}
+{% note warning, the label of this page will be refactored soon %}
 
 
 
-## 下拉菜单
+## Drop-down menu
 
-请将您的 Volantis 升级至 <u>3.0</u> 版本以上使用。
+Please upgrade your Volantis to version <u>3.0</u> and above.
 
 {% tabs menu, 3 %}
 
-<!-- tab 语法格式 -->
+<!-- tab syntax format -->
 
-{% p subtitle, 容器 %}
+{% p subtitle, container %}
 
 ```md
-{% menu 前缀（可省略）, 标题, 后缀（可省略） %}
-菜单内容
+{% menu prefix (can be omitted), title, suffix (can be omitted) %}
+Menu content
 {% endmenu %}
 ```
 
-{% p subtitle, 菜单内容 %}
+{% p subtitle, menu content %}
 
-菜单项
+Menu Item
 
 ```md
-{% menuitem 文本, 链接, 图标 %}
+{% menuitem text, link, icon %}
 ```
 
-分割线
+Dividing line
 
 ```md
 {% menuitem hr %}
 ```
 
-子菜单
+Submenu
 
 ```md
-{% submenu 嵌套菜单, 图标 %}
-菜单内容
+{% submenu Nested menu, icon %}
+Menu content
 {% endsubmenu %}
 ```
 
 <!-- endtab -->
 
-<!-- tab 示例写法 -->
+<!-- Tab example writing -->
 
-{% p subtitle, 示例1 %}
+{% p subtitle, example 1 %}
 
 ```md
-{% menu 下拉菜单 %}
-{% menuitem 主题源码, https://github.com/volantis-x/hexo-theme-volantis/, fas fa-file-code %}
-{% menuitem 更新日志, https://github.com/volantis-x/hexo-theme-volantis/releases/, fas fa-clipboard-list %}
+{% menu drop-down menu %}
+{% menuitem theme source code, https://github.com/volantis-x/hexo-theme-volantis/, fas fa-file-code %}
+{% menuitem update log, https://github.com/volantis-x/hexo-theme-volantis/releases/, fas fa-clipboard-list %}
 {% menuitem hr %}
-{% submenu 有疑问？, fas fa-question-circle %}
-{% menuitem 看 FAQ, /faqs/ %}
-{% menuitem 看 本站源码, https://github.com/volantis-x/volantis-docs/ %}
-{% menuitem 提 Issue, https://github.com/volantis-x/hexo-theme-volantis/issues/ %}
+{% submenu Have questions? , fas fa-question-circle %}
+{% menuitem see FAQ, /faqs/ %}
+{% menuitem see the source code of this site, https://github.com/volantis-x/volantis-docs/ %}
+{% menuitem raise an Issue, https://github.com/volantis-x/hexo-theme-volantis/issues/ %}
 {% endsubmenu %}
 {% endmenu %}
 ```
 
-{% p subtitle, 示例2 %}
+{% p subtitle, example 2 %}
 
 ```md
-{% menu 这个是, 下拉菜单 %}
-（同上）
+{% menu this is, drop-down menu %}
+(Same as above)
 {% endmenu %}
 ```
 
-{% p subtitle, 示例3 %}
+{% p subtitle, example 3 %}
 
 ```md
-{% menu 这个是, 下拉菜单, 的示例效果。 %}
-（同上）
+{% menu This is the example effect of the drop-down menu. %}
+(Same as above)
 {% endmenu %}
 ```
 
 <!-- endtab -->
 
-<!-- tab 示例效果 -->
+<!-- tab example effect -->
 
-{% p subtitle, 示例1 %}
+{% p subtitle, example 1 %}
 
-{% menu 下拉菜单 %}
-{% menuitem 主题源码, https://github.com/volantis-x/hexo-theme-volantis/, fas fa-file-code %}
-{% menuitem 更新日志, https://github.com/volantis-x/hexo-theme-volantis/releases/, fas fa-clipboard-list %}
+{% menu drop-down menu %}
+{% menuitem theme source code, https://github.com/volantis-x/hexo-theme-volantis/, fas fa-file-code %}
+{% menuitem update log, https://github.com/volantis-x/hexo-theme-volantis/releases/, fas fa-clipboard-list %}
 {% menuitem hr %}
-{% submenu 有疑问？, fas fa-question-circle %}
-{% menuitem 看 FAQ, /faqs/ %}
-{% menuitem 看 本站源码, https://github.com/volantis-x/volantis-docs/ %}
-{% menuitem 提 Issue, https://github.com/volantis-x/hexo-theme-volantis/issues/ %}
+{% submenu Have questions? , fas fa-question-circle %}
+{% menuitem see FAQ, /faqs/ %}
+{% menuitem see the source code of this site, https://github.com/volantis-x/volantis-docs/ %}
+{% menuitem raise an Issue, https://github.com/volantis-x/hexo-theme-volantis/issues/ %}
 {% endsubmenu %}
 {% endmenu %}
 
-{% p subtitle, 示例2 %}
+{% p subtitle, example 2 %}
 
-{% menu 这个是, 下拉菜单 %}
-{% menuitem 主题源码, https://github.com/volantis-x/hexo-theme-volantis/, fas fa-file-code %}
-{% menuitem 更新日志, https://github.com/volantis-x/hexo-theme-volantis/releases/, fas fa-clipboard-list %}
+{% menu this is, drop-down menu %}
+{% menuitem theme source code, https://github.com/volantis-x/hexo-theme-volantis/, fas fa-file-code %}
+{% menuitem update log, https://github.com/volantis-x/hexo-theme-volantis/releases/, fas fa-clipboard-list %}
 {% menuitem hr %}
-{% submenu 有疑问？, fas fa-question-circle %}
-{% menuitem 看 FAQ, /faqs/ %}
-{% menuitem 看 本站源码, https://github.com/volantis-x/volantis-docs/ %}
-{% menuitem 提 Issue, https://github.com/volantis-x/hexo-theme-volantis/issues/ %}
+{% submenu Have questions? , fas fa-question-circle %}
+{% menuitem see FAQ, /faqs/ %}
+{% menuitem see the source code of this site, https://github.com/volantis-x/volantis-docs/ %}
+{% menuitem raise an Issue, https://github.com/volantis-x/hexo-theme-volantis/issues/ %}
 {% endsubmenu %}
 {% endmenu %}
 
-{% p subtitle, 示例3 %}
+{% p subtitle, example 3 %}
 
-{% menu 这个是, 下拉菜单, 的示例效果。 %}
-{% menuitem 主题源码, https://github.com/volantis-x/hexo-theme-volantis/, fas fa-file-code %}
-{% menuitem 更新日志, https://github.com/volantis-x/hexo-theme-volantis/releases/, fas fa-clipboard-list %}
+{% menu This is the example effect of the drop-down menu. %}
+{% menuitem theme source code, https://github.com/volantis-x/hexo-theme-volantis/, fas fa-file-code %}
+{% menuitem update log, https://github.com/volantis-x/hexo-theme-volantis/releases/, fas fa-clipboard-list %}
 {% menuitem hr %}
-{% submenu 有疑问？, fas fa-question-circle %}
-{% menuitem 看 FAQ, /faqs/ %}
-{% menuitem 看 本站源码, https://github.com/volantis-x/volantis-docs/ %}
-{% menuitem 提 Issue, https://github.com/volantis-x/hexo-theme-volantis/issues/ %}
+{% submenu Have questions? , fas fa-question-circle %}
+{% menuitem see FAQ, /faqs/ %}
+{% menuitem see the source code of this site, https://github.com/volantis-x/volantis-docs/ %}
+{% menuitem raise an Issue, https://github.com/volantis-x/hexo-theme-volantis/issues/ %}
 {% endsubmenu %}
 {% endmenu %}
 

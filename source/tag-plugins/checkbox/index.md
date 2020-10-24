@@ -3,59 +3,59 @@ layout: docs
 group: docs-volantis-latest
 order: 516
 short_title: false
-title: 'tag-plugins: checkbox'
+title:'tag-plugins: checkbox'
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-```md 最后更新于 <u>2.6</u> 版本
-{% checkbox 样式参数（可选）, 文本（支持简单md） %}
+```md was last updated in <u>2.6</u> version
+{% checkbox style parameter (optional), text (support simple md) %}
 ```
 
-## 演示效果
+## Demo effect
 
-{% checkbox 纯文本测试 %}
-{% checkbox checked, 支持简单的 [markdown](https://guides.github.com/features/mastering-markdown/) 语法 %}
-{% checkbox red, 支持自定义颜色 %}
-{% checkbox green checked, 绿色 + 默认选中 %}
-{% checkbox yellow checked, 黄色 + 默认选中 %}
-{% checkbox cyan checked, 青色 + 默认选中 %}
-{% checkbox blue checked, 蓝色 + 默认选中 %}
-{% checkbox plus green checked, 增加 %}
-{% checkbox minus yellow checked, 减少 %}
-{% checkbox times red checked, 叉 %}
+{% checkbox plain text test %}
+{% checkbox checked, supports simple [markdown](https://guides.github.com/features/mastering-markdown/) syntax %}
+{% checkbox red, support custom color %}
+{% checkbox green checked, green + default selected %}
+{% checkbox yellow checked, yellow + default selected %}
+{% checkbox cyan checked, cyan + default selected %}
+{% checkbox blue checked, blue + default selected %}
+{% checkbox plus green checked, increase %}
+{% checkbox minus yellow checked, reduce %}
+{% checkbox times red checked, cross %}
 
-## 上述示例的源码
+## Source code of the above example
 
 ```md example:
-{% checkbox 纯文本测试 %}
-{% checkbox checked, 支持简单的 [markdown](https://guides.github.com/features/mastering-markdown/) 语法 %}
-{% checkbox red, 支持自定义颜色 %}
-{% checkbox green checked, 绿色 + 默认选中 %}
-{% checkbox yellow checked, 黄色 + 默认选中 %}
-{% checkbox cyan checked, 青色 + 默认选中 %}
-{% checkbox blue checked, 蓝色 + 默认选中 %}
-{% checkbox plus green checked, 增加 %}
-{% checkbox minus yellow checked, 减少 %}
-{% checkbox times red checked, 叉 %}
+{% checkbox plain text test %}
+{% checkbox checked, supports simple [markdown](https://guides.github.com/features/mastering-markdown/) syntax %}
+{% checkbox red, support custom color %}
+{% checkbox green checked, green + default selected %}
+{% checkbox yellow checked, yellow + default selected %}
+{% checkbox cyan checked, cyan + default selected %}
+{% checkbox blue checked, blue + default selected %}
+{% checkbox plus green checked, increase %}
+{% checkbox minus yellow checked, reduce %}
+{% checkbox times red checked, cross %}
 ```
 
-## 可以支持的参数
+## Supportable parameters
 
-### 颜色
+### colour
 
 ```
 red, yellow, green, cyan, blue
 ```
 
-### 样式
+### Style
 
 ```
 plus, minus, times
 ```
 
-### 选中状态
+### Selected state
 
 ```
 checked

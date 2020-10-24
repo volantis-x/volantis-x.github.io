@@ -3,74 +3,74 @@ layout: docs
 group: docs-volantis-latest
 order: 542
 short_title: false
-title: 'tag-plugins: image'
+title:'tag-plugins: image'
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-Image 标签是一种针对单个图片应用场景的标签，支持图片描述文字和指定宽度。
+The Image tag is a tag for a single picture application scenario, supporting picture description text and specified width.
 
-```md 本插件最后更新于 <u>4.0</u> 版本
-{% image 链接, width=宽度（可选）, height=高度（可选）, alt=描述（可选）, bg=占位颜色（可选） %}
+```md This plugin was last updated in version <u>4.0</u>
+{% image link, width=width (optional), height=height (optional), alt=description (optional), bg=placeholder color (optional) %}
 ```
 
-## 演示效果
+## Demo effect
 
-添加描述：
+Add description:
 
-{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, alt=每天下课回宿舍的路，没有什么故事。 %}
+{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, alt=The way back to the dormitory after class every day, there is no story. %}
 
-指定宽度：
+Specify width:
 
 {% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=300px %}
 
-指定宽度并添加描述：
+Specify the width and add a description:
 
-{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=300px, alt=每天下课回宿舍的路，没有什么故事。 %}
+{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=300px, alt=The way back to the dormitory after class every day, there is no story. %}
 
-设置占位背景色：
+Set the background color of the placeholder:
 
-{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=414px, bg=#224855, alt=优化不同宽度浏览的观感 %}
+{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=414px, bg=#224855, alt=Optimize the look and feel of browsing in different widths %}
 
 
 
-## 上述示例的源码
+## Source code of the above example
 
 ```md example:
-添加描述：
+Add description:
 
-{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, alt=每天下课回宿舍的路，没有什么故事。 %}
+{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, alt=The way back to the dormitory after class every day, there is no story. %}
 
-指定宽度：
+Specify width:
 
 {% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=400px %}
 
-指定宽度并添加描述：
+Specify the width and add a description:
 
-{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=400px, alt=每天下课回宿舍的路，没有什么故事。 %}
+{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=400px, alt=The way back to the dormitory after class every day, there is no story. %}
 
-设置占位背景色：
+Set the placeholder background color:
 
-{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=400px, bg=#1D0C04, alt=优化不同宽度浏览的观感 %}
+{% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=400px, bg=#1D0C04, alt=Optimize the look and feel of browsing with different widths %}
 ```
 
-## 可以支持的参数
+## Supportable parameters
 
 
-### 图片宽高度
+### Picture width and height
 
 ```md example:
 width=300px, height=32px
 ```
 
-### 图片描述
+### image description
 
 ```md example:
-alt=图片描述
+alt=picture description
 ```
 
-### 占位背景色
+### Placeholder background color
 
 ```md example:
 bg=#f2f2f2

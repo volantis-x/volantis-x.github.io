@@ -3,36 +3,37 @@ layout: docs
 group: docs-volantis-latest
 order: 543
 short_title: false
-title: 'tag-plugins: gallery'
+title:'tag-plugins: gallery'
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-Gallery 标签是一种针对一组图片应用场景的标签。
+The Gallery tag is a tag for a set of picture application scenarios.
 
-```md 本插件最后更新于 <u>3.0</u> 版本
-{% gallery 参数, 列数 %}
-![图片描述](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/B18FCBB3-67FD-48CC-B4F3-457BA145F17A.jpeg)
+```md This plugin was last updated in version <u>3.0</u>
+{% gallery parameter, number of columns %}
+![Picture description](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/B18FCBB3-67FD-48CC-B4F3-457BA145F17A.jpeg)
 ![](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/67239FBB-E15D-4F4F-8EE8-0F1C9F3C4E7C.jpeg)
 {% endgallery %}
 ```
 
-## 演示效果
+## Demo effect
 
-一行一个图片
+One picture per line
 {% gallery %}
-![图片描述](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg)
+![Picture description](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg)
 {% endgallery %}
 
-一行多个图片（不换行）
+Multiple pictures in one line (no line break)
 {% gallery %}
-![图片描述](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/B18FCBB3-67FD-48CC-B4F3-457BA145F17A.jpeg)
-![图片描述](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/67239FBB-E15D-4F4F-8EE8-0F1C9F3C4E7C.jpeg)
-![图片描述](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/00E0F0ED-9F1C-407A-9AA6-545649D919F4.jpeg)
+![Picture description](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/B18FCBB3-67FD-48CC-B4F3-457BA145F17A.jpeg)
+![Picture description](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/67239FBB-E15D-4F4F-8EE8-0F1C9F3C4E7C.jpeg)
+![Picture description](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/00E0F0ED-9F1C-407A-9AA6-545649D919F4.jpeg)
 {% endgallery %}
 
-多行多个图片（每行2～8个图片）
+Multiple lines and multiple pictures (2-8 pictures per line)
+
 {% gallery stretch, 8 %}
 ![](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg)
 ![](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/002.jpg)
@@ -92,27 +93,27 @@ Gallery 标签是一种针对一组图片应用场景的标签。
 ![](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg)
 {% endgallery %}
 
-## 上述示例的源码
+## Source code of the above example
 
-一行一个图片
-
-```md example.md:
-{% gallery %}
-![图片描述](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg)
-{% endgallery %}
-```
-
-一行多个图片（不换行）
+One picture per line
 
 ```md example.md:
 {% gallery %}
-![图片描述](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/B18FCBB3-67FD-48CC-B4F3-457BA145F17A.jpeg)
-![图片描述](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/67239FBB-E15D-4F4F-8EE8-0F1C9F3C4E7C.jpeg)
-![图片描述](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/00E0F0ED-9F1C-407A-9AA6-545649D919F4.jpeg)
+![Picture description](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg)
 {% endgallery %}
 ```
 
-多行多个图片（每行2～8个图片）
+Multiple pictures in one line (no line break)
+
+```md example.md:
+{% gallery %}
+![Picture description](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/B18FCBB3-67FD-48CC-B4F3-457BA145F17A.jpeg)
+![Picture description](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/67239FBB-E15D-4F4F-8EE8-0F1C9F3C4E7C.jpeg)
+![Picture description](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/00E0F0ED-9F1C-407A-9AA6-545649D919F4.jpeg)
+{% endgallery %}
+```
+
+Multiple lines and multiple pictures (2-8 pictures per line)
 
 ```md example.md:
 {% gallery stretch, 4 %}
@@ -127,20 +128,20 @@ Gallery 标签是一种针对一组图片应用场景的标签。
 {% endgallery %}
 ```
 
-## 可以支持的参数
+## Supportable parameters
 
-### 对齐方向
+### Alignment direction
 
 ```
 left, center, right
 ```
 
-### 缩放
+### Zoom
 
 ```
 stretch
 ```
 
-### 列数
+### Number of columns
 
-逗号后面直接写列数，支持 2 ～ 8 列。设定列列数之后就是「多行多图」布局，此时图片默认左对齐。为了避免图片大小不一，建议搭配 `stretch` 来时图片放大填充。
+Write the number of columns directly after the comma, and support 2 to 8 columns. After setting the number of columns, it is the "multi-line and multi-image" layout. At this time, the image is aligned to the left by default. In order to avoid different sizes of pictures, it is recommended to use `stretch` to enlarge and fill the pictures.

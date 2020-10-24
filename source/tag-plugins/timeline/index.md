@@ -3,86 +3,86 @@ layout: docs
 group: docs-volantis-latest
 order: 518
 short_title: false
-title: 'tag-plugins: timeline'
+title:'tag-plugins: timeline'
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-```md 最后更新于 <u>3.0</u> 版本
-{% timeline 时间线标题（可选） %}
+```md was last updated in version <u>3.0</u>
+{% timeline title (optional) %}
 
-{% timenode 时间节点（标题） %}
+{% timenode time node (title) %}
 
-正文内容
+Text content
 
 {% endtimenode %}
 
-{% timenode 时间节点（标题） %}
+{% timenode time node (title) %}
 
-正文内容
+Text content
 
 {% endtimenode %}
 
 {% endtimeline %}
 ```
 
-## 演示效果
+## Demo effect
 
 {% timeline %}
 
 {% timenode 2020-07-24 [2.6.6 -> 3.0](https://github.com/volantis-x/hexo-theme-volantis/releases) %}
 
-1. 如果有 `hexo-lazyload-image` 插件，需要删除并重新安装最新版本，设置 `lazyload.isSPA: true`。
-2. 2.x 版本的 css 和 js 不适用于 3.x 版本，如果使用了 `use_cdn: true` 则需要删除。
-3. 2.x 版本的 fancybox 标签在 3.x 版本中被重命名为 gallery 。
-4. 2.x 版本的置顶 `top: true` 改为了 `pin: true`，并且同样适用于 `layout: page` 的页面。
-5. 如果使用了 `hexo-offline` 插件，建议卸载，3.0 版本默认开启了 pjax 服务。
+1. If there is a `hexo-lazyload-image` plugin, you need to delete and reinstall the latest version, set `lazyload.isSPA: true`.
+2. The 2.x version of css and js are not applicable to the 3.x version. If you use ʻuse_cdn: true`, you need to delete them.
+3. The fancybox tag of the 2.x version was renamed to gallery in the 3.x version.
+4. In the 2.x version, the top `top: true` is changed to `pin: true`, and it is also applicable to the page of `layout: page`.
+5. If you use the `hexo-offline` plug-in, it is recommended to uninstall it. The pjax service is enabled by default in version 3.0.
 
 {% endtimenode %}
 
 {% timenode 2020-05-15 [2.6.3 -> 2.6.6](https://github.com/volantis-x/hexo-theme-volantis/releases/tag/2.6.6) %}
 
-不需要额外处理。
+No additional processing is required.
 
 {% endtimenode %}
 
 {% timenode 2020-04-20 [2.6.2 -> 2.6.3](https://github.com/volantis-x/hexo-theme-volantis/releases/tag/2.6.3) %}
 
-1. 全局搜索 `seotitle` 并替换为 `seo_title`。
-2. group 组件的索引规则有变，使用 group 组件的文章内，`group: group_name` 对应的组件名必须是 `group_name`。
-2. group 组件的列表名优先显示文章的 `short_title` 其次是 `title`。
+1. Search globally for `seotitle` and replace with `seo_title`.
+2. The index rule of the group component has changed. In the article using the group component, the component name corresponding to `group: group_name` must be `group_name`.
+2. The list name of the group component first displays the article's `short_title` followed by `title`.
 
 {% endtimenode %}
 
 {% endtimeline %}
 
-## 上述示例的源码
+## Source code of the above example
 
 ```md example:
 {% timeline %}
 
 {% timenode 2020-07-24 [2.6.6 -> 3.0](https://github.com/volantis-x/hexo-theme-volantis/releases) %}
 
-1. 如果有 `hexo-lazyload-image` 插件，需要删除并重新安装最新版本，设置 `lazyload.isSPA: true`。
-2. 2.x 版本的 css 和 js 不适用于 3.x 版本，如果使用了 `use_cdn: true` 则需要删除。
-3. 2.x 版本的 fancybox 标签在 3.x 版本中被重命名为 gallery 。
-4. 2.x 版本的置顶 `top: true` 改为了 `pin: true`，并且同样适用于 `layout: page` 的页面。
-5. 如果使用了 `hexo-offline` 插件，建议卸载，3.0 版本默认开启了 pjax 服务。
+1. If there is a `hexo-lazyload-image` plugin, you need to delete and reinstall the latest version, set `lazyload.isSPA: true`.
+2. The 2.x version of css and js are not applicable to the 3.x version. If you use ʻuse_cdn: true`, you need to delete them.
+3. The 2.x version of the fancybox label was renamed to gallery in the 3.x version.
+4. In the 2.x version, the top `top: true` is changed to `pin: true`, and it is also applicable to the page of `layout: page`.
+5. If the `hexo-offline` plug-in is used, it is recommended to uninstall it. The pjax service is enabled by default in version 3.0.
 
 {% endtimenode %}
 
 {% timenode 2020-05-15 [2.6.3 -> 2.6.6](https://github.com/volantis-x/hexo-theme-volantis/releases/tag/2.6.6) %}
 
-不需要额外处理。
+No additional processing is required.
 
 {% endtimenode %}
 
 {% timenode 2020-04-20 [2.6.2 -> 2.6.3](https://github.com/volantis-x/hexo-theme-volantis/releases/tag/2.6.3) %}
 
-1. 全局搜索 `seotitle` 并替换为 `seo_title`。
-2. group 组件的索引规则有变，使用 group 组件的文章内，`group: group_name` 对应的组件名必须是 `group_name`。
-2. group 组件的列表名优先显示文章的 `short_title` 其次是 `title`。
+1. Search globally for `seotitle` and replace with `seo_title`.
+2. The indexing rules of the group component have changed. In articles using the group component, the component name corresponding to `group: group_name` must be `group_name`.
+2. The list name of the group component first displays the `short_title` of the article followed by `title`.
 
 {% endtimenode %}
 

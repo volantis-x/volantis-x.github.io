@@ -2,27 +2,27 @@
 layout: docs
 group: docs-volantis-latest
 order: 301
-title: 创建主题配置文件
-short_title: 3-1 创建主题配置文件
+title: Create a theme configuration file
+short_title: 3-1 Create theme profile
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-主题目录下的 `_config.yml` 文件通常负责主题相关配置，我们强烈建议您使用代替的主题配置文件以防止自己的配置丢失。那么如何使用代替主题配置文件呢？
+The `_config.yml` file in the theme directory is usually responsible for theme-related configuration. We strongly recommend that you use a replacement theme configuration file to prevent your configuration from being lost. So how to use instead of theme configuration files?
 
 {% timeline %}
 
-{% timenode 第 1/2 步：创建配置文件 %}
+{% timenode Step 1/2: Create configuration file %}
 
-在博客根目录的 `_config.yml` 文件旁边新建一个文件： `_config.volantis.yml` ，这个文件中的配置信息优先级高于主题文件夹中的配置文件。
+Create a new file next to the `_config.yml` file in the blog root directory: `_config.volantis.yml`, the configuration information in this file has priority over the configuration files in the theme folder.
 
 
 {% endtimenode %}
 
-{% timenode 第 2/2 步：覆盖自定义配置 %}
+{% timenode Step 2/2: Overwrite custom configuration %}
 
-当您需要修改某项内容时，例如导航栏菜单，那么您需要在主题配置文件中找到相关内容，复制进自己创建的配置文件中：
+When you need to modify something, such as the navigation bar menu, then you need to find the relevant content in the theme configuration file and copy it into the configuration file you created:
 
 ```yaml blog/_config.volantis.yml
 navbar:
@@ -32,15 +32,15 @@ navbar:
     icon:
     title:
   menu:
-    - name: 博客
+    -name: blog
       icon: fas fa-rss
       url: /
 ```
 
 {% noteblock idea yellow %}
-**小提示**
-使用「`npm i hexo-theme-volantis`」方式安装的主题，主题配置文件在「`blog/node_modules/hexo-theme-volantis/_config.yml`」
-使用传统方式安装的主题，主题配置文件在「`blog/themes/volantis/_config.yml`」
+**hint**
+For themes installed using "`npm i hexo-theme-volantis`", the theme configuration file is in "`blog/node_modules/hexo-theme-volantis/_config.yml`"
+The theme installed in the traditional way, the theme configuration file is in "`blog/themes/volantis/_config.yml`"
 {% endnoteblock %}
 
 {% endtimenode %}

@@ -3,36 +3,36 @@ layout: docs
 group: docs-volantis-latest
 order: 541
 short_title: false
-title: 'tag-plugins: inlineimage'
+title:'tag-plugins: inlineimage'
 sidebar: [docs-volantis-latest, toc]
 disqus:
-  path: /wiki/volantis/
+   path: /wiki/volantis/
 ---
 
-Inlineimage 标签是一种行内图片标签，可以用来在一段话中间插入表情。
+Inlineimage tag is a kind of inline image tag, which can be used to insert emoticons in the middle of a paragraph.
 
-```md 本插件最后更新于 <u>4.0</u> 版本
-{% inlineimage 图片链接, height=高度（可选） %}
+```md This plugin was last updated in version <u>4.0</u>
+{% inlineimage image link, height=height (optional) %}
 ```
 
-## 演示效果
+## Demo effect
 
-这是 {% inlineimage https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/0000.gif %} 一段话。
+This is a passage from {% inlineimage https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/0000.gif %}.
 
-这又是 {% inlineimage https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/5150.gif, height=40px %} 一段话。
+This is another paragraph of {% inlineimage https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/5150.gif, height=40px %}.
 
 
-## 上述示例的源码
+## Source code of the above example
 
 ```md example:
-这是 {% inlineimage https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/0000.gif %} 一段话。
+This is a passage from {% inlineimage https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/0000.gif %}.
 
-这又是 {% inlineimage https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/5150.gif, height=40px %} 一段话。
+This is another paragraph of {% inlineimage https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/5150.gif, height=40px %}.
 ```
 
-## 可以支持的参数
+## Supportable parameters
 
-### 高度
+### Height
 
 ```
 height=20px

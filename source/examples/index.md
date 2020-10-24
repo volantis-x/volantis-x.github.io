@@ -1,19 +1,17 @@
 ---
-seo_title: 示例博客
+seo_title: Sample blog
 cover: true
 sidebar: []
 
 ---
 
 <center>
-{% span large red, 示 %}
-{% span large yellow, 例 %}
-{% span large green, 博 %}
-{% span large blue, 客 %}
+{% span large yellow, Sample %}
+{% span large green, Blog %}
 </center>
 <br>
 
-## 团队成员的博客
+## Team member's blog
 
 {% sitegroup %}
 {% site xaoxuu, url=https://xaoxuu.com, screenshot=https://image.thum.io/get/width/1024/crop/768/https://xaoxuu.com/, avatar=https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png, description=简约风格 %}
@@ -26,7 +24,7 @@ sidebar: []
 
 <br>
 
-{% issues sites | api=https://api.github.com/repos/volantis-x/examples/issues?sort=updated&state=open&page=1&per_page=100 | group=version:版本：^4.0,版本：^3.0,版本：^2.0 %}
+{% issues sites | api=https://api.github.com/repos/volantis-x/examples/issues?sort=updated&state=open&page=1&per_page=100 | group=version:version：^4.0,version：^3.0,version：^2.0 %}
 
 <br>
 
@@ -35,36 +33,36 @@ sidebar: []
 
 <br><br>
 
-{% timeline 如何添加自己的博客链接 %}
+{% timeline how to add your own blog link %}
 
-{% timenode 第一步：新建 [Issue](https://github.com/volantis-x/examples/issues/) 按照格式填写并提交 %}
+{% timenode Step 1: Create a new [Issue](https://github.com/volantis-x/examples/issues/) Fill in and submit according to the format %}
 
 ```json
 {
-    "title": "",
-    "description": "",
-    "screenshot": "",
-    "url": "",
-    "avatar": "",
-    "version": "版本：^4.0"
+     "title": "",
+     "description": "",
+     "screenshot": "",
+     "url": "",
+     "avatar": "",
+     "version": "Version: ^4.0"
 }
 ```
 
-为了提高图片加载速度，建议优化图片尺寸：
-1. 打开 [压缩图](https://www.yasuotu.com/) 上传自己的截图，将图片的高度调整到 `360px` 后下载。
-2. 将压缩后的图片上传到 [去不图床](https://7bu.top/) 并使用此图片链接作为截图链接。
+In order to improve the image loading speed, it is recommended to optimize the image size:
+1. Open [compressed image](https://www.yasuotu.com/) to upload your own screenshot, adjust the height of the image to `360px` and download it.
+2. Upload the compressed picture to [去不图床](https://7bu.top/) and use the picture link as the screenshot link.
 
 {% endtimenode %}
 
-{% timenode 第二步：刷新 %}
+{% timenode Step 2: Refresh %}
 
-回来刷新即可生效。
+Come back and refresh to take effect.
 
 {% endtimenode %}
 
 {% endtimeline %}
 
-{% p h2, 如何更新自己的博客链接 %}
+{% p h2, how to update my blog link %}
 
-- 如果是自己创建的 issue ，可以自己修改。
-- 如果是管理员创建的，请自己重新创建一份，然后让管理员删掉旧的。
+-If the issue is created by yourself, you can modify it yourself.
+-If it was created by the administrator, please create a new one by yourself, and then ask the administrator to delete the old one.

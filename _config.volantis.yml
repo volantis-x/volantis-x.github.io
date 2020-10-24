@@ -1,46 +1,48 @@
 use_cdn: false
 navbar:
   menu:
-    - name: 文档
+    - name: Documentation
       icon: fad fa-book faa-tada
       url: /getting-started/
       target: _self
 
-    - name: 示例
+    - name: Example
       icon: fad fa-play-circle faa-tada
       url: examples/
 
-    - name: 帮助
+    - name: Help
       icon: fad fa-question-circle faa-tada
       url: faqs/
 
-    - name: 社区
+    - name: Community
       icon: fad fa-fan fa-spin
       url: contributors/
 
-    - name: 设置
+    - name: Set up
       icon: fad fa-cog
       rows:
-        - name: 暗黑模式
+        - name: Dark mode
           icon: fas fa-moon
           toggle: darkmode
 
-    - name: 更多
+    - name: More
       icon: fad fa-ellipsis-v
       rows:
-        - name: 本站源码
+        - name: Site source code
           url: https://github.com/volantis-x/volantis-docs/
-        - name: 主题源码
+        - name: Theme source code
           url: https://github.com/volantis-x/hexo-theme-volantis/
         - name: hr
-        - name: 更新日志
+        - name: Update log
           url: https://github.com/volantis-x/hexo-theme-volantis/releases/
-        - name: 博客文章
+        - name: Blog post
           url: archives/
         - name: hr
-        - name: 旧版文档 v3
+        - name: Legacy doc v4
+          url: /v4/getting-started/
+        - name: Legacy doc v3
           url: /v3/getting-started/
-        - name: 旧版文档 v2
+        - name: Legacy doc v2
           url: /v2/getting-started/
 
 
@@ -48,29 +50,29 @@ navbar:
 cover:
   # height_scheme: full # full, half
   title: 'Volantis'
-  subtitle: '开源社区主页'
+  subtitle: 'Open Source Community Homepage'
   background: https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg
   features:
-    - name: 文章
+    - name: Article
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg
       url: /
-    - name: 文档
+    - name: Documentation
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg
       url: /getting-started/
       target: _self
-    - name: 示例
+    - name: Example
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f396.svg
       url: /examples/
-    - name: 帮助
+    - name: Help
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4ac.svg
       url: faqs/
-    - name: 社区
+    - name: Community
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9e9.svg
       url: /contributors/
-    - name: 归档
+    - name: Archive
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg
       url: /archives/
-    - name: 源码
+    - name: Source code
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg
       url: https://github.com/volantis-x/hexo-theme-volantis/
       target: _self
@@ -94,12 +96,12 @@ article:
         name: Volantis Team
         url: https://github.com/volantis-x/
       updated:
-        title: '本页文档最后更新于：'
+        title: 'The document on this page was last updated at:'
 
 
 comments:
-  title: <i class='fas fa-comments'></i> 用户交流区
-  subtitle: 这里仅供用户之间进行交流，有任何疑问请前往GitHub提交Issue。在评论区进行提问将不会收到开发者的任何回复！
+  title: <i class='fas fa-comments'></i> User Exchange Area
+  subtitle: This is only for communication between users. If you have any questions, please go to GitHub to submit an issue. Asking questions in the comment area will not receive any response from the developer!
   service: disqus
   disqus:
     shortname: volantis
@@ -114,42 +116,51 @@ sidebar:
   for_page: [post, category, tagcloud]
   for_post: [toc]
   widget_library:
+    toc:
+      class: toc
+      display: [desktop, mobile] # [desktop, mobile]
+      header:
+        icon: fas fa-list
+        title: Table of Contents
+      list_number: false
+      min_depth: 2
+      max_depth: 5
     post:
       class: text
       display: [desktop, mobile] # [desktop, mobile]
       header:
         icon: fas fa-plus
-        title: 社区活动
+        title: Community Activity
         url: /contributors/
       content:
-        - '**如何让自己的文章收录到这里？**<br>官方网站是开源的，只要您的文章与 Hexo 博客搭建相关，就可以自助进行收录，详细的操作步骤请见：「[**发布与分享文章**](/contributors/#发布与分享文章)」。'
-    # 文档导航
+        - '**How to get your articles included here?**<br>The official website is open source. As long as your article is related to the Hexo blog construction, you can self-index it. For detailed steps, please see:「[**Publish and share articles**](/contributors/#发布与分享文章)」。'
+    # Document Navigation
     guide:
       class: grid
       display: [desktop, mobile] # [desktop, mobile]
       header:
         icon: fas fa-map-signs
-        title: 分类导航
-      fixed: true # 固定宽度
+        title: Category Navigation
+      fixed: true # fixed width
       rows:
-        - name: 常见问题
+        - name: FAQ
           icon: fas fa-question-circle
           url: faqs/
-        - name: 示例博客
+        - name: sample blog
           icon: fas fa-play-circle
           url: examples/
-        - name: 特别感谢
+        - name: special thanks
           icon: fas fa-handshake
           url: contributors/
-        - name: 测试博文
+        - name: test blog post
           icon: fas fa-file-alt
           url: archives/
-        - name: 主题源码
+        - name: theme source code
           icon: fas fa-file-code
           url: https://github.com/volantis-x/hexo-theme-volantis/
           rel: external nofollow noopener noreferrer
           target: _blank
-        - name: 更新日志
+        - name: update log
           icon: fas fa-tags
           url: https://github.com/volantis-x/hexo-theme-volantis/releases/
           rel: external nofollow noopener noreferrer
@@ -161,7 +172,7 @@ sidebar:
       seo_title: Volantis
       header:
         icon: fa fa-book
-        title: 文档导航 v4.0
+        title: Document navigation v5.0
 
     # qrcode widget
     qrcode:
@@ -169,7 +180,7 @@ sidebar:
       display: [desktop] # [desktop, mobile]
       header:
         icon: fas fa-mobile
-        title: 手机观看
+        title: Mobile watch
       height: #64px  # Automatic height if not set
       fancybox: #true
       images:
@@ -180,7 +191,7 @@ sidebar:
       display: [desktop, mobile]
       header:
         icon: fas fa-headset
-        title: 帮助
+        title: Help
       pid: faq
       content: excerpt # excerpt, more, content
 
@@ -189,35 +200,42 @@ sidebar:
       display: [desktop, mobile] # [desktop, mobile]
       header:
         icon: fas fa-exclamation-triangle
-        title: 近期公告
+        title: Recent announcement
       rows:
-        - name: 关于主题与文档的更新
+        - name: Updates on themes and documents
           icon: fas fa-info-circle
           url: https://github.com/volantis-x/hexo-theme-volantis/issues/215
-        - name: 升级小助手
+        - name: Upgrade Assistant
           icon: fas fa-angle-double-up
-          url: /v3/getting-started/#升级小助手
+          url: /getting-started/#new-version-update
 
     docs-v2:
       class: group
       display: [desktop, mobile] # [desktop, mobile]
       header:
         icon: fad fa-list-alt
-        title: 文档导航 v2
+        title: Document navigation v2
 
     docs-v3:
       class: group
       display: [desktop, mobile] # [desktop, mobile]
       header:
         icon: fad fa-list-alt
-        title: 文档导航 v3
+        title: Document navigation v3
+
+    docs-v4:
+      class: group
+      display: [desktop, mobile] # [desktop, mobile]
+      header:
+        icon: fad fa-list-alt
+        title: Document navigation v4
 
     docs-latest:
       class: group
       display: [desktop, mobile] # [desktop, mobile]
       header:
         icon: fad fa-book
-        title: 文档导航 v4.0
+        title: Document navigation v5.0
 
 
 
@@ -275,7 +293,7 @@ analytics:
   leancloud:
     app_id: GCYDRKI6XRkyC7EuEhJv90ia-MdYXbMMI
     app_key: 4xKBXGBj6BgecU62vff5rJHs
-    custom_api_server: # 一般不需要写，除非自定义了 API Server
+    custom_api_server: 
 
 style:
   font_smoothing: true
@@ -284,5 +302,34 @@ style:
   body:
     effect: [shadow] # [shadow, floatable, blur]
 
+# Customize the right-click menu
 rightmenu:
   enable: true
+  # hr: dividing line, music: music controller
+  layout: [home, help, examples, contributors, hr, source_docs, source_theme, hr, print, hr, music]
+  # Optional function item
+  print:
+    name: print page
+    icon: fa fa-print
+    onclick: document.execCommand('print')
+  # The format of the custom menu is as follows
+  help:
+    name: FAQ
+    icon: fa fa-question
+    url: https://volantis.js.org/faqs/
+  examples:
+    name: sample blog
+    icon: fa fa-rss
+    url: https://volantis.js.org/examples/
+  contributors:
+    name: Join the community
+    icon: fa fa-fan fa-spin
+    url: https://volantis.js.org/contributors/
+  source_docs:
+    name: site source code
+    icon: fa fa-code-branch
+    url: https://github.com/volantis-x/volantis-docs/
+  source_theme:
+    name: theme source code
+    icon: fa fa-code-branch
+    url: https://github.com/volantis-x/hexo-theme-volantis/

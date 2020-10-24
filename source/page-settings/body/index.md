@@ -1,32 +1,32 @@
 ---
 layout: docs
-title: 页面自定义布局
+title: page custom layout
 group: docs-volantis-latest
 order: 403
-short_title: 4-3 页面自定义布局
+short_title: 4-3 page custom layout
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-## 显示迷你音乐播放器
+## Show mini music player
 
-标题右边显示迷你音乐播放器，支持的字段有：`server`、`type`、`id`。
+The mini music player is displayed on the right side of the title. The supported fields are: `server`, `type`, ʻid`.
 
 ```yaml front-matter
 ---
 music:
- server: netease   # netease, tencent, kugou, xiami, baidu
- type: song        # song, playlist, album, search, artist
- id: 16846091      # song id / playlist id / album id / search keyword
+ server: netease # netease, tencent, kugou, xiami, baidu
+ type: song # song, playlist, album, search, artist
+ id: 16846091 # song id / playlist id / album id / search keyword
 ---
 ```
 
-{% note play, 实际效果见： [#contributors](/contributors/) %}
+{% note play, see the actual effect: [#contributors](/contributors/) %}
 
-## 显示 meta 标签
+## Show meta tags
 
-文章顶部和底部的日期、分类、更新日期、标签、分享等属于 meta 标签。
+The date, category, update date, tags, sharing, etc. at the top and bottom of the article are meta tags.
 
 ```yaml front-matter
 ---
@@ -34,18 +34,18 @@ top_meta: false
 bottom_meta: false
 ---
 ```
-如果一个页面没有 title 则不会显示 top_meta ，像404、关于页面就可以完全隐藏：
+If a page has no title, top_meta will not be displayed, like 404, about pages can be completely hidden:
 
 ```yaml front-matter
 ---
-seo_title: 关于
+seo_title: About
 top_meta: false
 bottom_meta: false
 ---
 ```
 
 
-## 标题右边显示缩略图
+## Thumbnails are shown on the right
 
 ```yaml front-matter
 ---
@@ -53,9 +53,9 @@ thumbnail: https://img.vim-cn.com/17/0c7b02722686d1527a1df807dae0794d995860.png
 ---
 ```
 
-缩略图仅在文章列表和文章页面显示，不会在归档页面显示。
+The thumbnail is only displayed on the article list and article page, not on the archive page.
 
-## 标题右边显示图标
+## The icon is displayed on the right side of the title
 
 ```yaml front-matter
 ---
@@ -63,14 +63,14 @@ icons: [fas fa-fire red, fas fa-star green]
 ---
 ```
 
-图标仅在归档页面中显示，可以用来标注热门文章。
+The icon is only displayed on the archive page and can be used to mark popular articles.
 
-{% note info, 可以通过 red / blue / green / yellow / orange / theme / accent 来设置图标的颜色 %}
+{% note info, you can set the color of the icon through red / blue / green / yellow / orange / theme / accent %}
 
 
-## 是否要显示封面
+## Do you want to show cover
 
-如果某个页面需要封面，可以这样写：
+If a page needs a cover, you can write it like this:
 ```yaml front-matter
 ---
 cover: true
@@ -78,25 +78,25 @@ cover: true
 ```
 
 
-## 显示侧边栏
+## Show sidebar
 
-通过自由设置边栏卡片来删减对应页面的冗余信息，提高有价值的信息在页面中的权重。
+By freely setting the sidebar card to delete the redundant information of the corresponding page, increase the weight of valuable information in the page.
 
-如果某个页面不需要侧边栏，可以这样写：
+If a page does not require a sidebar, you can write:
 ```yaml front-matter
 ---
 sidebar: []
 ---
 ```
 
-某个页面想指定显示某几个侧边栏，就这样写:
+If a certain page wants to display certain sidebars, just write:
 ```yaml front-matter
 ---
-sidebar: [grid, toc, tags] # 放置任何你想要显示的侧边栏部件
+sidebar: [grid, toc, tags] # Place any sidebar widgets you want to display
 ---
 ```
 
-## 关闭评论
+## Close comment
 
 ```yaml front-matter
 ---

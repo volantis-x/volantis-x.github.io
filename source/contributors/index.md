@@ -1,40 +1,39 @@
 ---
 layout: page
-title: 加入社区与团队
+title: Join the community and team
 cover: true
 sidebar: []
 music:
-  server: netease   # netease, tencent, kugou, xiami, baidu
-  type: song        # song, playlist, album, search, artist
-  id: 41630480      # song id / playlist id / album id / search keyword
+  server: netease # netease, tencent, kugou, xiami, baidu
+  type: song # song, playlist, album, search, artist
+  id: 41630480 # song id / playlist id / album id / search keyword
   autoplay: true
 ---
 
-开源项目越多人参与就越有生命力，希望有兴趣的小伙伴可以加入团队～
+The more people participating in an open source project, the more vital it is. I hope that interested partners can join the team~
 
-{% p subtitle, 那么如何成为团队的一员呢？ %}
+{% p subtitle, so how to become a member of the team? %}
 
-成为团队的一员，首先要满足的前置条件是：{% u 使用主题至少一个月 %}、{% u 长期活跃于社区 %}：「{% u 留言评论 %}」或者「{% u 解答 issues %}」或者「{% u 在 issues 提交有效的建议 %}」。
+To become a member of the team, the first prerequisites that must be met are: {% u use the theme for at least one month%}, {% u have been active in the community for a long time%}: "{% u comment%}" or "{% u Answer issues %}" or "{% u Submit valid suggestions in issues%}".
 
-在您满足了上述的前置条件后，并且根据情况做了自己力所能及的事情，例如：
+After you meet the above prerequisites, and do what you can according to the situation, for example:
 
-- 发现和解决问题如提 issue 或者解答 issue 或者提交 PR
-- 完善文档、纠正文档错误、语病、翻译问题等
-- 发布文章推荐主题
-- 发布相关文章并转载外链到官网或者直接在官网发布文章
+-Find and solve problems, such as raising or answering issues or submitting PR
+-Improve documents, correct document errors, language errors, translation problems, etc.
+-Post articles recommended topics
+-Publish related articles and repost the external link to the official website or publish the article directly on the official website
 
-则可以在{% btn, 论坛, https://github.com/volantis-x/forum/issues %}发帖申请加入团队。
+You can apply for joining the team by posting in {% btn, forum, https://github.com/volantis-x/forum/issues %}.
 
-{% image https://upimage.alexhchu.com/2020/08/09/22ec83d3de717.png, width=300px, alt=在 GitHub 页面可以看到团队成员 %}
-
+{% image https://upimage.alexhchu.com/2020/08/09/22ec83d3de717.png, width=300px, alt=You can see the team members on the GitHub page %}
 
 <!-- more -->
 
 <br><br>
 
-## 感谢项目贡献者
+## Thanks to the project contributors
 
-{% p subtitle, 非常感谢直接提交了 PR 的朋友！ %}
+{% p subtitle, thank you very much for those who directly submitted PR! %}
 
 {% btns circle grid5 %}
 {% cell xaoxuu, https://github.com/xaoxuu, https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png %}
@@ -46,81 +45,80 @@ music:
 {% cell ericclose, https://github.com/ericclose, https://avatars1.githubusercontent.com/u/34526560?s=60&v=4 %}
 {% cell Flexiston, https://github.com/Flexiston, https://avatars0.githubusercontent.com/u/62386802?s=60&v=4 %}
 {% cell CRainyDay, https://github.com/CRainyDay, https://avatars2.githubusercontent.com/u/46487957?s=60&v=4 %}
-{% cell 查看全部, https://github.com/volantis-x/hexo-theme-volantis/graphs/contributors, fab fa-github %}
+{% cell view all, https://github.com/volantis-x/hexo-theme-volantis/graphs/contributors, fab fa-github %}
 {% endbtns %}
 
-{% p subtitle, 同样感谢那些在评论和 Issue 中互相帮助的网友~ %}
+{% p subtitle, also thank those netizens who helped each other in comments and issues~ %}
 
-如果您有一个好点子或者解决了这里没有解决的问题，欢迎去 [GitHub](https://github.com/volantis-x/hexo-theme-volantis/) 贡献一下代码。👏
+If you have a good idea or solve a problem that is not solved here, please go to [GitHub](https://github.com/volantis-x/hexo-theme-volantis/) to contribute code. 👏
 
-## 发布与分享文章
+## Publish and share articles
 
-如果您有与 Hexo 博客搭建相关的原创文章，可以转载到 Volantis 官网，示例如下：
+If you have an original article related to Hexo blog construction, you can reprint it on the Volantis official website, an example is as follows:
 
 ```md _posts/blogs/2020-05-17-pjax.md
 ---
-title: Volantis 主题部署 Pjax
+title: Volantis theme deployment Pjax
 date: 2020-05-17
 updated: 2020-08-07
-categories: [开发心得]
+categories: [Development experience]
 author: inkss
 link: https://inkss.cn/article/other/76993423.html
-description: 本篇文章记录了我对 Volantis 主题做 Pjax 兼容的种种，大抵算是种记录吧~
-headimg: # 可以设置文章头图
+description: This article records all my Pjax compatibility with Volantis theme, it is probably a record~
+headimg: # You can set the article head image
 ---
 ```
 
-如果您是第一次在官网投稿，还需要在 `_data/author.yml` 文件中添加作者信息，例如：
+If you are submitting an article on the official website for the first time, you need to add author information in the `_data/author.yml` file, for example:
 
 ```yaml _data/author.yml
 ...
 inkss:
-  name: 枋柚梓
+  name: inkss
   avatar: https://cdn.jsdelivr.net/gh/inkss/common@1.4.2/hexo/img/static/avatar.jpg
   url: https://inkss.cn
 ```
 
 
 {% noteblock %}
-**要求**
-1. 文章存放在 `_posts/blogs/` 目录中，且文件名格式为「年-月-日-文章主题」。
-2. 必须是原创文章，摘要部分200字符以内。（也可以不写摘要）
-3. 最好选择一个文章分类，如果现有的分类中没有合适的，可以自己新增。
-4. 如果有文章头图，请确保图片内最多只有一个单词或短语。
+**Claim**
+1. The post is stored in the `_posts/blogs/` directory, and the file name format is "year-month-day-post subject".
+2. It must be an original article with an abstract within 200 characters. (You can also not write the summary)
+3. It is best to choose an article category. If there is no suitable one in the existing category, you can add it yourself.
+4. If there is a header image, please make sure that there is only one word or phrase in the image.
 {% endnoteblock %}
 
 <br>
 
-{% link 开始行动吧, https://github.com/volantis-x/volantis-docs/tree/master/source/_posts/blogs, https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1.3/icon/ui-interface-21/plus.svg  %}
+{% link Get started, https://github.com/volantis-x/volantis-docs/tree/master/source/_posts/blogs, https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1.3/icon/ui-interface-21/plus.svg  %}
 
+## Channels for communication
 
-## 可供交流的渠道
-
-{% p subtitle, 解决问题 %}
+{% p subtitle, solve the problem %}
 
 {% table %}
-| 渠道 | 方式 | 用途 |
+| Channel | Method | Use |
 | :-- | :-- | :-- |
-| Issues | [@volantis-x/hexo-theme-volantis](https://github.com/volantis-x/hexo-theme-volantis/issues/) | 和开发者沟通的唯一渠道，用于跟进和解决问题 |
+| Issues | [@volantis-x/hexo-theme-volantis](https://github.com/volantis-x/hexo-theme-volantis/issues/) | The only channel to communicate with developers for follow-up And solve problems |
 {% endtable %}
 
-{% noteblock error, 请不要发送邮件 %}
+{% noteblock error, please do not send mail %}
 
-开源项目的开发者很反感别人不通过正确的途径如 Issues 而是通过私人邮件询问开源项目问题，所以一般不会回复此类邮件。
+Developers of open source projects are disgusted that others do not use the correct channels such as Issues to ask questions about open source projects through private emails, so they generally do not reply to such emails.
 
 {% endnoteblock %}
 
-{% p subtitle, 交流 %}
+{% p subtitle, exchange %}
 {% table %}
-| 渠道 | 方式 | 用途 |
+| Channel | Method | Use |
 | :-- | :-- | :-- |
-| 论坛 | [@volantis-x/forum](https://github.com/volantis-x/forum/issues/) | 慢，相对正式，方便检索，可以给其他用户参考 |
-| QQ群 | 1146399464 (验证码: <psw>vlts-2020</psw>) | 非正式，即时通讯，易于斗图；不利于给其他用户参考 |
+| Forum | [@volantis-x/forum](https://github.com/volantis-x/forum/issues/) | Slow, relatively formal, easy to retrieve, and can be referenced by other users |
+| QQ Group | 1146399464 (Verification code: <psw>vlts-2020</psw>) | Informal, instant messaging, easy to fight pictures; not conducive to other users' reference |
 {% endtable %}
 
-{% p subtitle, 佛系互动 %}
+{% p subtitle, Buddhist interaction %}
 {% table %}
-| 渠道 | 方式 | 用途 |
+| Channel | Method | Use |
 | :-- | :-- | :-- |
-| 评论区 | 留言 | 可以测试、灌水、推广自己的博客。 |
+| Comment area | Message | You can test, irrigate, and promote your blog. |
 {% endtable %}

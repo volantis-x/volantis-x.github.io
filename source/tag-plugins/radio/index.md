@@ -3,47 +3,47 @@ layout: docs
 group: docs-volantis-latest
 order: 517
 short_title: false
-title: 'tag-plugins: radio'
+title:'tag-plugins: radio'
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-```md 最后更新于 <u>2.6</u> 版本
-{% checkbox 样式参数（可选）, 文本（支持简单md） %}
+```md was last updated in <u>2.6</u> version
+{% checkbox style parameter (optional), text (support simple md) %}
 ```
 
-## 演示效果
+## Demo effect
 
-{% radio 纯文本测试 %}
-{% radio checked, 支持简单的 [markdown](https://guides.github.com/features/mastering-markdown/) 语法 %}
-{% radio red, 支持自定义颜色 %}
-{% radio green, 绿色 %}
-{% radio yellow, 黄色 %}
-{% radio cyan, 青色 %}
-{% radio blue, 蓝色 %}
+{% radio plain text test %}
+{% radio checked, supports simple [markdown](https://guides.github.com/features/mastering-markdown/) syntax %}
+{% radio red, support custom color %}
+{% radio green, green %}
+{% radio yellow, yellow %}
+{% radio cyan, cyan %}
+{% radio blue, blue %}
 
-## 上述示例的源码
+## Source code of the above example
 
 ```md example:
-{% radio 纯文本测试 %}
-{% radio checked, 支持简单的 [markdown](https://guides.github.com/features/mastering-markdown/) 语法 %}
-{% radio red, 支持自定义颜色 %}
-{% radio green, 绿色 %}
-{% radio yellow, 黄色 %}
-{% radio cyan, 青色 %}
-{% radio blue, 蓝色 %}
+{% radio plain text test %}
+{% radio checked, supports simple [markdown](https://guides.github.com/features/mastering-markdown/) syntax %}
+{% radio red, support custom color %}
+{% radio green, green %}
+{% radio yellow, yellow %}
+{% radio cyan, cyan %}
+{% radio blue, blue %}
 ```
 
-## 可以支持的参数
+## Supportable parameters
 
-### 颜色
+### colour
 
 ```
 red, yellow, green, cyan, blue
 ```
 
-### 选中状态
+### Selected state
 
 ```
 checked

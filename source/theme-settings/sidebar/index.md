@@ -1,25 +1,25 @@
 ---
 layout: docs
-title: 侧边栏配置
+title: Sidebar configuration
 group: docs-volantis-latest
 order: 307
-short_title: 3-7 侧边栏配置
+short_title: 3-7 sidebar configuration
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-侧边栏小组件与 meta 库不同的是：除了现有的 widget ，您可以很轻易地创建自己的 widget ，然后放在需要的地方。此外，您还可以将 widget 写在单独的文件中。
+The sidebar widget is different from the meta library: In addition to the existing widget, you can easily create your own widget and place it where you need it. In addition, you can also write widgets in separate files.
 
-{% folding 查看所有相关配置 %}
+{% folding View all related configurations %}
 
 ```yaml blog/_config.volantis.yml
 sidebar:
-  # 主页、分类、归档等独立页面
+  # Home page, category, archive and other independent pages
   for_page: [blogger, category, tagcloud, qrcode]
-  # layout: docs/post 这类文章页面
+  # layout: docs/post such article pages
   for_post: [toc]
-  # 侧边栏组件库
+  # Sidebar component library
   widget_library:
     # ---------------------------------------
     # blogger info widget
@@ -40,7 +40,7 @@ sidebar:
       display: [desktop, mobile] # [desktop, mobile]
       header:
         icon: fas fa-list
-        title: 本文目录
+        title: Contents of this article
       list_number: false
       min_depth: 2
       max_depth: 5
@@ -51,7 +51,7 @@ sidebar:
       display: [desktop] # [desktop, mobile]
       header:
         icon: fas fa-folder-open
-        title: 文章分类
+        title: Article classification
         url: /blog/categories/
     # ---------------------------------------
     # tagcloud widget
@@ -60,23 +60,23 @@ sidebar:
       display: [desktop, mobile] # [desktop, mobile]
       header:
         icon: fas fa-tags
-        title: 热门标签
+        title: Popular tags
         url: /blog/tags/
       min_font: 14
       max_font: 24
       color: true
-      start_color: '#999'
-      end_color: '#555'
+      start_color:'#999'
+      end_color:'#555'
 
     # ---------------------------------------
     # qrcode widget
     donate:
       class: qrcode
       display: [desktop, mobile] # [desktop, mobile]
-      height: 64px  # Automatic height if not set
+      height: 64px # Automatic height if not set
       images:
-        - https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
-        - https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
+        -https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
+        -https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
     # ---------------------------------------
     # webinfo widget
     webinfo:
@@ -84,46 +84,46 @@ sidebar:
       display: [desktop]
       header:
         icon: fas fa-award
-        title: 站点信息
+        title: site information
       type:
         article:
           enable: true
-          text: '文章数目：'
-          unit: '篇'
+          text:'Number of articles:'
+          unit:'Article'
         runtime:
           enable: true
-          data: '2020/01/01'    # 填写建站日期
-          text: '已运行时间：'
-          unit: '天'
+          data: '2020/01/01' # Fill in the site construction date
+          text:'Elapsed time:'
+          unit:'day'
         wordcount:
           enable: true
-          text: '本站总字数：'   # 需要启用 wordcount
-          unit: '字'
+          text:'Total words on this site:' # Need to enable wordcount
+          unit:'word'
         siteuv:
           enable: true
-          text: '本站访客数：'   # 需要启用 busuanzi
-          unit: '人'
+          text:'Number of visitors to this site:' # Need to enable busuanzi
+          unit:'person'
         sitepv:
           enable: true
-          text: '本站总访问量：' # 需要启用 busuanzi
-          unit: '次'
+          text:'Total visits to this site:' # Need to enable busuanzi
+          unit:'time'
         lastupd:
           enable: true
-          friendlyShow: true    # 更友好的时间显示
-          text: '最后活动时间：'
-          unit: '日'
+          friendlyShow: true # More friendly time display
+          text:'Last activity time:'
+          unit:'day'
 ```
 {% endfolding %}
 
-每一个小部件都有 `class` 和 `display`，前者代表这个小部件是什么，后者代表这个小部件在什么桌面和移动平台中是否显示，如果在移动平台显示，由于屏幕宽度有限，侧边栏的小部件则会被移动到正文区域下方，因此部分侧边栏小部件便失去意义，建议设置为仅桌面端显示。
+Every widget has `class` and `display`. The former represents what the widget is, and the latter represents whether the widget is displayed on what desktop and mobile platform. The sidebar widgets will be moved to the bottom of the body area, so some sidebar widgets have no meaning. It is recommended to set it to display only on the desktop.
 
 ```yaml
-小部件名:
-  class: 小部件类别
-  display: [小部件在桌面端是否显示, 小部件在移动设备是否显示]
+Widget name:
+  class: widget category
+  display: [Whether the widget is displayed on the desktop, and whether the widget is displayed on the mobile device]
 ```
 
-## 博主信息部件
+## Blogger information widget
 ```yaml blog/_config.volantis.yml
 blogger:
   class: blogger
@@ -134,82 +134,82 @@ blogger:
   jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
   social: true
 ```
-其中，今日诗词 `jinrishici` 如果设置为一个字符串，这个字符串会变成占位文字，加载失败时显示。如果不需要，就请设置为 `jinrishici: false`。`social` 的具体内容请在网站页脚部分设置。
+Among them, if today's poem `jinrishici` is set to a string, this string will become a placeholder text and will be displayed when loading fails. If you don't need it, please set it to `jinrishici: false`. Please set the specific content of `social` in the footer of the website.
 
-## 文章目录部件
+## Article directory widget
 ```yaml blog/_config.volantis.yml
 toc:
   class: toc
   display: [desktop, mobile] # [desktop, mobile]
   header:
     icon: fas fa-list
-    title: 本文目录
+    title: Contents of this article
   list_number: false
   min_depth: 2
   max_depth: 5
 ```
-这个部件只能放置在侧边栏，并且在文章中有效。在移动设备中预览时，手指向上滑动时，导航栏右边会出现 TOC 按钮，点击即可展开 TOC 部件。如果您需要显示章节序号，请设置 `list_number`。 `min_depth` 和 `max_depth` 代表 TOC 支持的标题层级，最大范围是2～6。
+This widget can only be placed in the sidebar and is valid in the article. When previewing on a mobile device, the TOC button will appear on the right side of the navigation bar when you swipe your finger upwards, click to expand the TOC component. If you need to display the chapter number, please set `list_number`. `min_depth` and `max_depth` represent the header level supported by TOC, the maximum range is 2-6.
 
-## 文章分类部件
+## Article classification widget
 ```yaml blog/_config.volantis.yml
 category:
   class: category
   display: [desktop] # [desktop, mobile]
   header:
     icon: fas fa-folder-open
-    title: 文章分类
+    title: Article classification
     url: /blog/categories/
 ```
-这个部件可以直接显示所有文章分类，如果您希望有一个独立的页面来展示，需要自己创建一个文件，具体操作在「页面」部分文档中。
+This component can directly display all article categories. If you want a separate page to display, you need to create a file by yourself. The specific operation is in the "page" part of the document.
 
-## 标签云部件
+## Tag cloud widget
 ```yaml blog/_config.volantis.yml
 tagcloud:
   class: tagcloud
   display: [desktop] # [desktop, mobile]
   header:
     icon: fas fa-tags
-    title: 热门标签
+    title: Popular tags
     url: /blog/tags/
   min_font: 14
   max_font: 24
   color: true
-  start_color: '#999'
-  end_color: '#555'
+  start_color:'#999'
+  end_color:'#555'
 ```
-这个部件可以直接显示所有文章的标签，如果您希望有一个独立的页面来展示，需要自己创建一个文件，具体操作在「页面」部分文档中。
+This component can directly display the tags of all articles. If you want a separate page to display, you need to create a file by yourself. The specific operation is in the "page" part of the document.
 
 
-## 二维码部件
+## QR code parts
 ```yaml blog/_config.volantis.yml
 donate:
   class: qrcode
   display: [desktop, mobile] # [desktop, mobile]
-  height: 64px  # Automatic height if not set
+  height: 64px # Automatic height if not set
   images:
-    - https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
-    - https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
+    -https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
+    -https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
 ```
-您可以放置在文章页脚用于展示打赏图片，也可以放置在侧边栏。
+You can place it in the footer of the article to display rewarding pictures, or place it in the sidebar.
 
-## 通用文本部件
+## Universal text widget
 ```yaml blog/_config.volantis.yml
 repos:
   class: text
   display: [desktop] # [desktop, mobile]
   header:
     icon: fab fa-github
-    title: 点个赞吧
+    title: Like it
     url: https://github.com/xaoxuu/
   content:
-    - '您的赞对我来说很重要，如果您喜欢本主题，希望能够给下面的项目点个赞来支持一下。'
-    - '[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/logo.png" height="50px">](https://github.com/xaoxuu/ProHUD)'
-    - '[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/valuex/logo.png" height="50px">](https://github.com/xaoxuu/ValueX)'
-    - '[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" height="50px">](https://github.com/xaoxuu/Inspire)'
+    -'Your likes are very important to me. If you like this theme, I hope you can give me a like to support the items below. '
+    -'[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/prohud/logo.png" height="50px">](https://github.com/ xaoxuu/ProHUD)'
+    -'[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/valuex/logo.png" height="50px">](https://github.com/ xaoxuu/ValueX)'
+    -'[<img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/proj/inspire/logo.png" height="50px">](https://github.com/ xaoxuu/Inspire)'
 ```
-您可以创建用于展示任何文本内容的文本部件。
+You can create text widgets to display any text content.
 
-## 通用列表部件
+## Universal list widget
 ```yaml blog/_config.volantis.yml
 wiki-hexo-theme:
   class: list
@@ -219,16 +219,16 @@ wiki-hexo-theme:
     title: Hexo Themes
     url: /wiki/
   rows:
-    - name: Volantis for Hexo
+    -name: Volantis for Hexo
       url: /wiki/volantis/
-    - name: Resume for Hexo
+    -name: Resume for Hexo
       url: /wiki/resume/
 ```
-您可以创建用于展示任何链接列表的列表部件。列表的 `rows` 中的每一项支持的属性有： `name`、`url`、`icon`、`img`、`avatar`，其中 `img` 是方形图片的链接，`avatar` 是圆形图片的链接。
+You can create a list part to display any linked list. The attributes supported by each item in the list of `rows` are: `name`, ʻurl`, ʻicon`, ʻimg`, ʻavatar`, where ʻimg` is a link to a square image and ʻavatar` is a circle Link to the shape picture.
 
-### 组索引
+### Group Index
 
-这个部件的布局继承自 list 部件，用于展示文章所属的分组的文章列表。请将您的 Volantis 升级至 <u>2.5</u> 版本以上使用。
+The layout of this widget is inherited from the list widget and is used to display the grouped article list to which the article belongs. Please upgrade your Volantis to version <u>2.5</u> or higher.
 
 ```yaml blog/_config.volantis.yml
 group-1:
@@ -240,39 +240,39 @@ group-1:
     url: /wiki/git/
 ```
 
-在文章的 front-matter 中设置：
+Set in the front-matter of the article:
 ```yaml front-matter
 group: group-1
 order: 16
 sidebar: [group-1, toc]
 ```
 
-「group-1」卡片将会以列表的形式显示所有设置了 `group: group-1` 的文章，顺序按照 `order` 从小到大排列。
+The "group-1" card will display all the articles with `group: group-1` in the form of a list, sorted from small to large in the order of ʻorder`.
 
-## 通用网格部件
+## Universal grid widget
 ```yaml blog/_config.volantis.yml
 feedback:
   class: grid
   display: [desktop, mobile]
   header:
     icon: fas fa-headset
-    title: 联系开发者
+    title: Contact the developer
     url: https://github.com/volantis-x/hexo-theme-volantis
-  fixed: true # 固定宽度
+  fixed: true # fixed width
   rows:
-    - name: 反馈BUG
+    -name: feedback BUG
       icon: fas fa-bug
       url: https://github.com/volantis-x/hexo-theme-volantis/issues/
-    - name: 疑问求助
+    -name: ask for help
       icon: fas fa-question-circle
       url: https://github.com/volantis-x/hexo-theme-volantis/issues/
-    - name: 提个建议
+    -name: make a suggestion
       icon: fas fa-lightbulb
       url: https://github.com/volantis-x/hexo-theme-volantis/issues/
 ```
-您可以创建用于展示任何链接列表的网格部件。网格默认根据文字长度自动确定每一个格子的宽度，如果文字长短不一，建议通过设置 `fixed: true` 来固定宽度，此时文字过长的格子中的文字会换行显示。
+You can create a grid widget to display any list of links. By default, the grid automatically determines the width of each grid according to the text length. If the text length is different, it is recommended to set `fixed: true` to fix the width. At this time, the text in the grid with too long text will be displayed in a new line.
 
-## 通用页面部件
+## Universal page widget
 ```yaml blog/_config.volantis.yml
 test:
   class: page
@@ -280,4 +280,4 @@ test:
   pid: haha
   content: excerpt # excerpt, more, content
 ```
-您可以把整个页面的md内容作为一个小部件渲染显示出来。只需要设置小部件里的 `pid` 属性和文章的 `front-matter` 中设置一样的 `pid` 即可。 `content` 代表这个部件显示的内容，可选 `excerpt`，`more`，`content` 分别对应文章的摘要、摘要后面的内容、全文。
+You can render the md content of the entire page as a small part. Just set the `pid` property in the widget and the same `pid` in the article's `front-matter`. `content` represents the content displayed by this component, optional ʻexcerpt`, `more`, and `content` correspond to the abstract of the article, the content behind the abstract, and the full text respectively.

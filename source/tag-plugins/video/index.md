@@ -3,25 +3,25 @@ layout: docs
 group: docs-volantis-latest
 order: 545
 short_title: false
-title: 'tag-plugins: video'
+title:'tag-plugins: video'
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
 
-```md 本插件最后更新于 <u>2.3</u> 版本
-{% video 视频链接 %}
+```md This plugin was last updated in version <u>2.3</u>
+{% video video link %}
 ```
 
-## 演示效果
+## Demo effect
 
 
-100%宽度
+100% width
 
 {% video https://github.com/volantis-x/volantis-docs/releases/download/assets/IMG_0341.mov %}
 
-50%宽度
+50% width
 
 {% videos, 2 %}
 {% video https://github.com/volantis-x/volantis-docs/releases/download/assets/IMG_0341.mov %}
@@ -30,7 +30,7 @@ disqus:
 {% video https://github.com/volantis-x/volantis-docs/releases/download/assets/IMG_0341.mov %}
 {% endvideos %}
 
-25%宽度
+25% width
 
 {% videos, 4 %}
 {% video https://github.com/volantis-x/volantis-docs/releases/download/assets/IMG_0341.mov %}
@@ -43,15 +43,15 @@ disqus:
 {% video https://github.com/volantis-x/volantis-docs/releases/download/assets/IMG_0341.mov %}
 {% endvideos %}
 
-## 上述示例的源码
+## Source code of the above example
 
-100%宽度
+100% width
 
 ```md example.md:
 {% video https://github.com/volantis-x/volantis-docs/releases/download/assets/IMG_0341.mov %}
 ```
 
-50%宽度
+50% width
 
 ```md example.md:
 {% videos, 2 %}
@@ -62,7 +62,7 @@ disqus:
 {% endvideos %}
 ```
 
-25%宽度
+25% width
 
 ```md example.md:
 {% videos, 4 %}
@@ -77,15 +77,15 @@ disqus:
 {% endvideos %}
 ```
 
-## 可以支持的参数
+## Supportable parameters
 
 
-### 对齐方向
+### Alignment direction
 
 ```
 left, center, right
 ```
 
-### 列数
+### Number of columns
 
-逗号后面直接写列数，支持 1 ～ 4 列。
+Write the number of columns directly after the comma, and support 1 to 4 columns.

@@ -1,15 +1,15 @@
 ---
 layout: docs
-title: 自定义主题外观
+title: Custom theme appearance
 group: docs-volantis-latest
 order: 302
-short_title: 3-2 自定义主题外观
+short_title: 3-2 Custom theme appearance
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-## 最大布局宽度
+## Maximum layout width
 
 ```yaml blog/_config.volantis.yml
 custom_css:
@@ -17,9 +17,9 @@ custom_css:
   max_width: 1080px # Sum of body width and sidebar width
 ```
 
-网页所呈现的内容的最大宽度，即 body 和 sidebar 的宽度之和。
+The maximum width of the content presented on the web page, that is, the sum of the width of the body and sidebar.
 
-## 抗锯齿
+## Anti-aliasing
 
 ```yaml blog/_config.volantis.yml
 custom_css:
@@ -27,7 +27,7 @@ custom_css:
   font_smoothing: true # font-smoothing for webkit
 ```
 
-## 自定义光标样式
+## Custom cursor style
 
 ```yaml blog/_config.volantis.yml
 custom_css:
@@ -44,12 +44,12 @@ custom_css:
 ```
 
 
-## 导航栏样式
+## Navigation bar style
 
-您可以设置导航栏的高度以及视觉特效，视觉特效目前可选的有：
-- **shadow**：卡片阴影。
-- **floatable**：当鼠标移动到容器内时，呈现出浮起来的效果。
-- **blur**：背景模糊效果（毛玻璃），当浏览器不支持时显示为不透明。
+You can set the height of the navigation bar and visual effects. The currently available visual effects are:
+-**shadow**: Card shadow.
+-**floatable**: When the mouse moves into the container, it will appear to float.
+-**blur**: The background blur effect (frosted glass), displayed as opaque when the browser does not support it.
 
 ```yaml blog/_config.volantis.yml
 custom_css:
@@ -59,7 +59,7 @@ custom_css:
     effect: [shadow, blur] # [shadow, floatable, blur]
 ```
 
-## 滚动条样式
+## Scroll bar style
 
 ```yaml blog/_config.volantis.yml
 custom_css:
@@ -67,13 +67,13 @@ custom_css:
   scrollbar:
     size: 4px
     border: 2px
-    color: '#2196f3'
-    hover: '#ff5722'
+    color:'#2196f3'
+    hover:'#ff5722'
 ```
 
-## 侧边栏样式
+## Sidebar style
 
-视觉特效参数同上，值得注意的是：卡片的 `floatable` 效果和 `blur` 效果相冲突。
+The visual effects parameters are the same as above. It is worth noting that the card's `floatable` effect and `blur` effect conflict.
 ```yaml blog/_config.volantis.yml
 custom_css:
   ...
@@ -81,9 +81,9 @@ custom_css:
     effect: [shadow] # [shadow, floatable, blur]
 ```
 
-## 正文区域样式
+## Body area style
 
-视觉特效参数同上，值得注意的是：卡片的 `floatable` 效果和 `blur` 效果相冲突。您可以在 `language: true` 这里设置代码块显示语言名称。`text_align` 可以设置 h1/h2/h3/h4/p 的文字对齐方向。
+The visual effects parameters are the same as above. It is worth noting that the card's `floatable` effect and `blur` effect conflict. You can set the display language name of the code block in `language: true`. `text_align` can set the text alignment direction of h1/h2/h3/h4/p.
 ```yaml blog/_config.volantis.yml
 custom_css:
   ...
@@ -99,13 +99,13 @@ custom_css:
       h4: left
       p: justify
     note: # style for default note: {% note text %}
-      icon: '\f054'
-      color: ''
+      icon:'\f054'
+      color:''
 ```
 
-## 布局间距
+## Layout spacing
 
-您可以设置几种标题的布局间距 h2/h3/h4、段落间距 line、区块内部的段落间距 inline。
+You can set several heading layout spacing h2/h3/h4, paragraph spacing line, and paragraph spacing inline within blocks.
 ```yaml blog/_config.volantis.yml
 custom_css:
   ...
@@ -117,160 +117,159 @@ custom_css:
     row: .5rem # Paragraph spacing between other elements
 ```
 
-## 自定义字体
+## Custom font
 
-您可以自定义正文和代码字体。
+You can customize the body and code fonts.
 ```yaml blog/_config.volantis.yml
 custom_css:
   ...
   fontfamily:
     logofont:
-      fontfamily: '"Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
-      name: 'Varela Round'
+      fontfamily:'"Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
+      name:'Varela Round'
       url: https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/VarelaRound/VarelaRound-Regular.ttf
       weight: normal
       style: normal
     bodyfont:
-      fontfamily: 'UbuntuMono, "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
-      name: 'UbuntuMono'
+      fontfamily:'UbuntuMono, "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
+      name:'UbuntuMono'
       url: https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/UbuntuMono/UbuntuMono-Regular.ttf
       weight: normal
       style: normal
     codefont:
-      fontfamily: 'Menlo, Monaco'
-      name: 'Monaco'
+      fontfamily:'Menlo, Monaco'
+      name:'Monaco'
       url: https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts/Monaco/Monaco.ttf
       weight: normal
       style: normal
 ```
-
-## 自定义颜色
+## Custom color
 
 ```yaml blog/_config.volantis.yml
 color_scheme:
   # ------------
-  # 通用颜色
+  # Universal color
   common:
-    # 主题色
-    theme: '#44D7B6'
-    # 链接色
-    link: '#2196f3'
-    # 按钮色
-    button: '#44D7B6'
-    # 鼠标放到交互元素上时的色
-    hover: '#ff5722'
-    # 主题色块内部的文字颜色
-    inner: '#fff'
-    # 选中区域文字的背景颜色
-    selection: 'alpha(#2196f3, 0.2)'
+    # Theme color
+    theme:'#44D7B6'
+    # Link color
+    link:'#2196f3'
+    # Button color
+    button:'#44D7B6'
+    # The color when the mouse is placed on the interactive element
+    hover:'#ff5722'
+    # The color of the text inside the theme color block
+    inner:'#fff'
+    # The background color of the text in the selected area
+    selection:'alpha(#2196f3, 0.2)'
   # ------------
-  # 亮色主题（默认）
+  # Bright theme (default)
   light:
-    # 网站背景色
-    site_bg: '#f4f4f4'
-    # 网站背景上的文字
-    site_inner: '#fff'
-    # 网站页脚文字
-    site_footer: '#666'
+    # Website background color
+    site_bg:'#f4f4f4'
+    # Text on website background
+    site_inner:'#fff'
+    # Site footer text
+    site_footer:'#666'
 
-    # 卡片背景色
-    card: '#fff'
-    # 卡片上的普通文字
-    text: '#444'
+    # Card background color
+    card:'#fff'
+    # Normal text on the card
+    text:'#444'
 
-    # 区块和代码块背景色
-    block: '#f6f6f6'
-    # 代码块高亮时的背景色
-    codeblock: '#FFF7EA'
-    # 行内代码颜色
-    inlinecode: '#D56D28'
+    # Block and code block background color
+    block:'#f6f6f6'
+    # The background color when the code block is highlighted
+    codeblock:'#FFF7EA'
+    # Inline code color
+    inlinecode:'#D56D28'
 
-    # 文章部分
-    h1: '#444'
-    h2: '#444'
-    h3: '#444'
-    h4: '#444'
-    h5: '#444'
-    h6: '#444'
-    p: '#444'
+    # Article section
+    h1:'#444'
+    h2:'#444'
+    h3:'#444'
+    h4:'#444'
+    h5:'#444'
+    h6:'#444'
+    p:'#444'
 
-    # 列表文字
-    list: '#666'
-    # 列表 hover 时的文字
-    list_hl: 'mix($color-theme, #000, 80)'
-    # 辅助性文字
-    meta: '#888'
+    # List text
+    list:'#666'
+    # List the text when hover
+    list_hl:'mix($color-theme, #000, 80)'
+    # Supporting text
+    meta:'#888'
   # ------------
-  # 暗色主题
+  # Dark theme
   dark:
-    # 网站背景色
-    site_bg: '#222'
-    # 网站背景上的文字
-    site_inner: '#eee'
-    # 网站页脚文字
-    site_footer: '#aaa'
-    # 卡片背景色
-    card: '#444'
-    # 卡片上的普通文字
-    text: '#eee'
+    # Website background color
+    site_bg:'#222'
+    # Text on website background
+    site_inner:'#eee'
+    # Site footer text
+    site_footer:'#aaa'
+    # Card background color
+    card:'#444'
+    # Normal text on the card
+    text:'#eee'
 
-    # 区块和代码块背景色
-    block: '#3a3a3a'
-    # 代码块高亮时的背景色
-    codeblock: '#343a3c'
-    # 行内代码颜色
-    inlinecode: '#D56D28'
+    # Block and code block background color
+    block:'#3a3a3a'
+    # The background color when the code block is highlighted
+    codeblock:'#343a3c'
+    # Inline code color
+    inlinecode:'#D56D28'
 
-    # 文章部分
-    h1: '#eee'
-    h2: '#eee'
-    h3: '#ddd'
-    h4: '#ddd'
-    h5: '#ddd'
-    h6: '#ddd'
-    p: '#bbb'
+    # Article section
+    h1:'#eee'
+    h2:'#eee'
+    h3:'#ddd'
+    h4:'#ddd'
+    h5:'#ddd'
+    h6:'#ddd'
+    p:'#bbb'
 
-    # 列表文字
-    list: '#aaa'
-    # 列表 hover 时的文字
-    list_hl: 'mix($color-theme, #fff, 80)'
-    # 辅助性文字
-    meta: '#888'
-    # 夜间图片亮度
+    # List text
+    list:'#aaa'
+    # List the text when hover
+    list_hl:'mix($color-theme, #fff, 80)'
+    # Supporting text
+    meta:'#888'
+    # Night picture brightness
     brightness: 70%
 ```
 
-## 自定义右键菜单
+## Customize the right-click menu
 
 ```yaml blog/_config.volantis.yml
 rightmenu:
   enable: true
-  # hr: 分割线, music: 音乐控制器
+  # hr: dividing line, music: music controller
   layout: [home, help, examples, contributors, hr, source_docs, source_theme, hr, print, hr, music]
-  # 可选功能项
+  # Optional function item
   print:
-    name: 打印页面
+    name: print page
     icon: fa fa-print
     onclick: document.execCommand('print')
-  # 自定义菜单的格式如下
+  # The format of the custom menu is as follows
   help:
-    name: 常见问题
+    name: FAQ
     icon: fa fa-question
     url: https://volantis.js.org/faqs/
   examples:
-    name: 示例博客
+    name: sample blog
     icon: fa fa-rss
     url: https://volantis.js.org/examples/
   contributors:
-    name: 加入社区
+    name: Join the community
     icon: fa fa-fan fa-spin
     url: https://volantis.js.org/contributors/
   source_docs:
-    name: 本站源码
+    name: source code of this site
     icon: fa fa-code-branch
     url: https://github.com/volantis-x/volantis-docs/
   source_theme:
-    name: 主题源码
+    name: theme source code
     icon: fa fa-code-branch
     url: https://github.com/volantis-x/hexo-theme-volantis/
 ```

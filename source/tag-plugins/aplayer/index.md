@@ -3,18 +3,18 @@ layout: docs
 group: docs-volantis-latest
 order: 547
 short_title: false
-title: 'tag-plugins: aplayer'
+title:'tag-plugins: aplayer'
 sidebar: [docs-volantis-latest, toc]
 disqus:
-  path: /wiki/volantis/
+   path: /wiki/volantis/
 ---
 
-主题对 APlayer 插件的样式进行了兼容。安装插件：
+The theme is compatible with APlayer plug-in styles. Install the plugin:
 
 ```sh
 npm i -S hexo-tag-aplayer
 ```
 
-使用方法：
+Instructions:
 
 {% link hexo-tag-aplayer, https://github.com/MoePlayer/hexo-tag-aplayer %}

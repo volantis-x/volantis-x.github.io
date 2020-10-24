@@ -1,75 +1,75 @@
 ---
 layout: docs
-title: 渲染公式
+title: rendering formula
 group: docs-volantis-latest
 order: 404
-short_title: 4-4 渲染公式
+short_title: 4-4 rendering formula
 sidebar: [docs-volantis-latest, toc]
 mathjax: true
 disqus:
   path: /wiki/volantis/
 ---
 
-默认是不渲染的，如果文章内有公式，需要在 front-matter 中设置开启。即便开启了，文章列表中也不会进行渲染，请注意不要把公式写在文章开头。
+The default is not to render. If there is a formula in the article, it needs to be set to enable in front-matter. Even if it is turned on, the article list will not be rendered. Please be careful not to write the formula at the beginning of the article.
 
 <!-- more -->
 
 
 ```md example.md:
 ---
-title: 渲染公式（MathJax）
+title: Rendering formula (MathJax)
 date: 2020-02-23
-mathjax: true # false: 不渲染, true: 渲染
+mathjax: true # false: do not render, true: render
 ---
 
-添加一段描述性文字
+Add a descriptive text
 
 <!-- more -->
 
 $$t+1=2$$
 
 $$
-\mbox{积累因子}=\begin{cases}
-1+ni & \mbox{单利}\\\\
-(1+i)^n & \mbox{复利}
+\mbox{accumulation factor}=\begin{cases}
+1+ni & \mbox{simple interest}\\\\
+(1+i)^n & \mbox{compound interest}
 \end{cases}
 $$
 
 $$
 \begin{equation}
-\sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 )
+\sum_{i=0}^n F_i \cdot \phi (H, p_i)-\sum_{i=1}^n a_i \cdot (\tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2, \tilde{y_i}^2)
 \end{equation}
 $$
 $$
 \begin{equation}
-\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i))
+\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1-y_i f_{ \beta}(x_i))
 \end{equation}
 $$
 ```
 
-{% folding 查看公式渲染效果 %}
+{% folding View formula rendering effect %}
 $$t+1=2$$
 
 $$
-\mbox{积累因子}=\begin{cases}
-1+ni & \mbox{单利}\\\\
-(1+i)^n & \mbox{复利}
+\mbox{accumulation factor}=\begin{cases}
+1+ni & \mbox{simple interest}\\\\
+(1+i)^n & \mbox{compound interest}
 \end{cases}
 $$
 
 $$
 \begin{equation}
-\sum_{i=0}^n F_i \cdot \phi (H, p_i) - \sum_{i=1}^n a_i \cdot ( \tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2 , \tilde{y_i}^2 )
+\sum_{i=0}^n F_i \cdot \phi (H, p_i)-\sum_{i=1}^n a_i \cdot (\tilde{x_i}, \tilde{y_i}) + b_i \cdot ( \tilde{x_i}^2, \tilde{y_i}^2)
 \end{equation}
 $$
 $$
 \begin{equation}
-\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1 - y_i f_{\beta}(x_i))
+\beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2 + \sum_{i=1}^n max(0, 1-y_i f_{ \beta}(x_i))
 \end{equation}
 $$
 {% endfolding %}
 
 
-如果公式仍无法正确渲染可以阅读 [@MicDZ](https://www.micdz.cn) 的这篇文章：
+If the formula still cannot be rendered correctly, you can read this article by [@MicDZ](https://www.micdz.cn):
 
-{% link 在Material-X上使用KaTeX, https://www.micdz.cn/article/katex-on-volantis/, https://www.micdz.cn/img/h.jpeg %}
+{% link Use KaTeX on Material-X, https://www.micdz.cn/article/katex-on-volantis/, https://www.micdz.cn/img/h.jpeg %}

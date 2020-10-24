@@ -2,68 +2,68 @@
 layout: docs
 group: docs-volantis-latest
 order: 501
-title: 内置标签插件
-short_title: 5-1 内置标签插件 (x23)
+title: Built-in tag plugin
+short_title: 5-1 Built-in tag plugin (x23)
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-## Volantis 专用标签
+## Volantis dedicated label
 
-### 文本类
+### Text class
 
 {% linkgroup %}
-{% link 行内文本样式, text %}
-{% link 行内文本, span %}
-{% link 段落文本, p %}
-{% link 引用, note %}
-{% link 引用块, noteblock %}
-{% link 复选列表, checkbox %}
-{% link 单选列表, radio %}
-{% link 时间线, timeline %}
+{% link inline text style, text %}
+{% link inline text, span %}
+{% link paragraph text, p %}
+{% link quote, note %}
+{% link quote block, noteblock %}
+{% link check list, checkbox %}
+{% link single-selection list, radio %}
+{% link timeline, timeline %}
 {% endlinkgroup %}
 
-### 链接、按钮、菜单
+### Links, buttons, menus
 
 {% linkgroup %}
-{% link 链接卡片, link %}
-{% link 按钮, button %}
-{% link GitHub 卡片, ghcard %}
-{% link 网站卡片, site %}
-{% link 下拉菜单, dropmenu %}
-{% endlinkgroup %}
-
-
-### 容器类
-
-{% linkgroup %}
-{% link 分栏, tab %}
-{% link 折叠框, folding %}
+{% link link card, link %}
+{% link button, button %}
+{% link GitHub card, ghcard %}
+{% link website card, site %}
+{% link drop-down menu, dropmenu %}
 {% endlinkgroup %}
 
 
-### 多媒体类
+### Container Class
 
 {% linkgroup %}
-{% link 行内图片, inlineimage %}
-{% link 单张图片, image %}
-{% link 相册、组图, gallery %}
-{% link 音频, audio %}
-{% link 视频, video %}
-{% link 带框架的图片视频, frame %}
-{% link 音乐播放器, aplayer %}
+{% link column, tab %}
+{% link folding box, folding %}
 {% endlinkgroup %}
 
-### 数据集合类
+
+### Multimedia
+
+{% linkgroup %}
+{% link inline image, inlineimage %}
+{% link single image, image %}
+{% link album, gallery, gallery %}
+{% link audio, audio %}
+{% link video, video %}
+{% link Picture video with frame, frame %}
+{% link music player, aplayer %}
+{% endlinkgroup %}
+
+### Data collection class
 
 {% linkgroup %}
 {% link Issues API, issues %}
 {% endlinkgroup %}
 
 
-## Hexo 通用标签
+## Hexo General Tags
 
-在文章中使用 `<!-- more -->`，那么 `<!-- more -->` 之前的文字将会被视为摘要。首页中将只出现这部分文字，同时这部分文字也会出现在正文之中。详见 Hexo 官方文档：
+Use `<!-- more -->` in the article, then the text before `<!-- more -->` will be regarded as an abstract. Only this part of the text will appear on the homepage, and it will also appear in the main text. For details, see Hexo official documentation:
 
-{% link Hexo 官方文档 #标签插件, https://hexo.io/zh-cn/docs/tag-plugins %}
+{% link Hexo official document #tag-plugins, https://hexo.io/docs/tag-plugins %}

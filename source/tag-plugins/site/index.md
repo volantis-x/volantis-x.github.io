@@ -3,20 +3,20 @@ layout: docs
 group: docs-volantis-latest
 order: 524
 short_title: false
-title: 'tag-plugins: site'
+title:'tag-plugins: site'
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-```md 最后更新于 <u>4.0</u> 版本
+```md was last updated in version <u>4.0</u>
 {% sitegroup %}
-{% site 标题, url=链接, screenshot=截图链接, avatar=头像链接（可选）, description=描述（可选） %}
-{% site 标题, url=链接, screenshot=截图链接, avatar=头像链接（可选）, description=描述（可选） %}
+{% site title, url=link, screenshot=screenshot link, avatar=avatar link (optional), description=description (optional) %}
+{% site title, url=link, screenshot=screenshot link, avatar=avatar link (optional), description=description (optional) %}
 {% endsitegroup %}
 ```
 
-## 演示效果
+## Demo effect
 
 {% sitegroup %}
 {% site xaoxuu, url=https://xaoxuu.com, screenshot=https://i.loli.net/2020/08/21/VuSwWZ1xAeUHEBC.jpg, avatar=https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png, description=简约风格 %}
@@ -26,7 +26,7 @@ disqus:
 {% site Linhk1606, url=https://linhk1606.github.io, screenshot=https://i.loli.net/2020/08/21/3PmGLCKicnfow1x.png, avatar=https://i.loli.net/2020/02/09/PN7I5RJfFtA93r2.png, description=这是一段关于这个网站的描述文字 %}
 {% endsitegroup %}
 
-## 上述示例的源码
+## Source code of the above example
 
 ```md example:
 {% sitegroup %}

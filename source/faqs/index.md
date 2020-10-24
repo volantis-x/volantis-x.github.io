@@ -1,69 +1,69 @@
 ---
 layout: page
-title: 常见问题
+title: FAQ
 pid: faq
 body: [article, comments]
 cover: true
 sidebar: []
 ---
 
-通常来说，一个全新的工程全部使用默认配置是<green>正常</green>没有故障的。如果无法使用或者效果与示例有较大区别，可以使用 Hexo 官方提供的用于单元测试的博客应用本主题查看样式是否正常，对比 `_config.yml` 文件排查问题。
+Generally speaking, a brand new project using the default configuration is <green>normal</green> without failure. If it is not available or the effect is quite different from the example, you can use the official Hexo blog for unit testing to apply this topic to check whether the style is normal, and compare the `_config.yml` file to troubleshoot problems.
 
-{% note warning yellow, Hexo 官方的单元测试项目： [https://github.com/hexojs/hexo-theme-unit-test](https://github.com/hexojs/hexo-theme-unit-test) %}
+{% note warning yellow, Hexo official unit test project: [https://github.com/hexojs/hexo-theme-unit-test](https://github.com/hexojs/hexo-theme-unit-test ) %}
 
-<br>{% btn solid large center, 向开发者反馈问题, https://github.com/volantis-x/hexo-theme-volantis/issues/ , fas fa-paper-plane %}
+<br>{% btn solid large center, feedback issues to developers, https://github.com/volantis-x/hexo-theme-volantis/issues/, fas fa-paper-plane %}
 
 <!-- more -->
 
-## 如何更新主题
+## How to update the theme
 
-使用主题的时候，尽量 fork 主题到自己的 GitHub，然后进行修改并使用。这样做的好处是：当主题进行重要更新的时候可以根据需要拉取合并代码，使自己 DIY 的主题能够通过更新获取 BUG 修复或者新特性。
+When using themes, try to fork the theme to your GitHub, then modify and use it. The advantage of this is that when the theme undergoes an important update, you can pull and merge the code as needed, so that your DIY theme can get BUG fixes or new features through the update.
 
-如果不懂请自行搜索关键词：<u>fork 更新</u>
+If you don’t understand, please search for keywords yourself: <u>fork update</u>
 
-{% noteblock idea, 实用小技巧 %}
+{% noteblock idea, practical tips %}
 
-所有需要写在主题配置文件中的配置都可以写在站点配置文件的 `theme_config:` 中，在 {% u Hexo 5.0 %} 后，还可以写在 `_config.volantis.yml` 文件中，详见 Hexo 官方文档：
-{% link 覆盖主题配置, https://hexo.io/zh-cn/docs/configuration#%E8%A6%86%E7%9B%96%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE %}
+All the configuration that needs to be written in the theme configuration file can be written in the `theme_config:` of the site configuration file, after {% u Hexo 5.0 %}, it can also be written in the file `_config.volantis.yml`, see details Hexo official documents:
+{% link covers theme configuration, https://hexo.io/docs/configuration#%E8%A6%86%E7%9B%96%E4%B8%BB%E9%A2%98%E9% 85%8D%E7%BD%AE %}
 
-也可以直接查看本站源码中站点配置文件的写法：[_config.volantis.yml](https://github.com/volantis-x/volantis-docs/blob/master/_config.volantis.yml)
+You can also directly view the wording of the site configuration file in the source code of this site: [_config.volantis.yml](https://github.com/volantis-x/volantis-x.github.io/blob/master/_config.volantis.yml)
 
 {% endnoteblock %}
 
-## 无法成功运行本地预览
+## Unable to run local preview successfully
 
-- 可能是没有安装依赖，请按照「开始」页面中的步骤进行安装，并安装所需依赖。
-- 如果开启了某些第三方服务，请查看文档中是否要求安装插件。
-- 如果报错信息有 `lastIndex`，你可以尝试把博客根目录配置文件中找到 `highlight`，并将 `auto_detect` 设置为 `false`。
+-There may be no installation dependencies. Please follow the steps on the "Start" page to install and install the required dependencies.
+-If some third-party services are enabled, please check whether the installation of plug-ins is required in the documentation.
+-If the error message has `lastIndex`, you can try to find `highlight` in the blog root directory configuration file and set ʻauto_detect` to `false`.
 
 
-## 主题配置修改没有生效
+## Theme configuration modification does not take effect
 
-请确认文档中要求修改的是博客主目录的配置文件 `blog/_config.yml` 还是主题的配置文件 `blog/_config.volantis.yml`。
+Please confirm whether the document requires modification to the configuration file `blog/_config.yml` of the blog home directory or the theme configuration file `blog/_config.volantis.yml`.
 
-## 主题样式修改没有生效
+## Theme style modification does not take effect
 
-如果主题配置文件中开启了 cdn 服务，那么修改本地的样式是不会生效的，需要关闭 cdn 服务。
+If the cdn service is enabled in the theme configuration file, then the modification of the local style will not take effect, and the cdn service needs to be disabled.
 
-## 修改什么都没有生效
+## The modification did not take effect
 
-需要 `hexo clean` 然后重新 `hexo s`
+Requires `hexo clean` and then restarts `hexo s`
 
-如果安装了「相关文章推荐」插件后，每次修改 md 文件后都需要重新 `hexo s`
+If you install the "Related Article Recommendations" plugin, you need to re-`hexo s` every time you modify the md file
 
-## 关掉 CDN 之后样式错乱
+## The style is messy after turning off the CDN
 
-- 请前往文档「开始」页面，检查是否安装了必要的依赖包。
+-Please go to the "Start" page of the document to check whether the necessary dependencies are installed.
 
-## 搜索无法使用
+## Search is not available
 
-- 请前往文档「开始」页面，检查是否安装了必要的依赖包。
-- 检查根目录配置文件是否有 `search` 字段冲突。
-- 如果以上两步都无法找到问题，请下载示例源码进行对比。
+-Please go to the "Start" page of the document to check whether the necessary dependencies are installed.
+-Check the root directory configuration file for conflicts with `search` fields.
+-If the problem cannot be found in the above two steps, please download the sample source code for comparison.
 
-## 搜索结果链接不正确
+## The search result link is incorrect
 
-请检查根目录配置文件中的链接是否正确，如：
+Please check whether the link in the root directory configuration file is correct, such as:
 
 ```yaml blog/_config.yml
 url: https://xaoxuu.com
@@ -72,11 +72,11 @@ root: /
 
 <br><br>
 
-{% folding open, 教程与指南 %}
+{% folding open, tutorials and guides %}
 
-[Hexo 官方文档](https://hexo.io) | [Valine 官方文档](https://valine.js.org)
+[Hexo official document](https://hexo.io) | [Valine official document](https://valine.js.org)
 
-请一定要阅读官方文档！
+Please be sure to read the official documentation!
 
 {% image https://cdn.jsdelivr.net/npm/alus@latest/8080.png, width=800px %}
 

@@ -3,148 +3,148 @@ layout: docs
 group: docs-volantis-latest
 order: 522
 short_title: false
-title: 'tag-plugins: button'
+title:'tag-plugins: button'
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
 ---
 
-{% note warning, 这个页面的标签将会在不久后重构 %}
+{% note warning, the label of this page will be refactored soon %}
 
-## 基础按钮
+## Basic button
 
-请将您的 Volantis 升级至 <u>2.4</u> 版本以上使用。
+Please upgrade your Volantis to version <u>2.4</u> and above.
 
 {% tabs btn, 4 %}
 
-<!-- tab 语法格式 -->
+<!-- tab syntax format -->
 
 ```
-{% btn 样式参数（可选）, 标题, 链接, 图标（可选） %}
+{% btn style parameters (optional), title, link, icon (optional) %}
 ```
 
-{% note warning, 可选的参数可以省略，但是前后顺序不能乱。 %}
+{% note warning, optional parameters can be omitted, but the order cannot be disordered. %}
 
 <!-- endtab -->
 
-<!-- tab 参数列表 -->
+<!-- tab parameter list -->
 
-{% p subtitle, 样式参数 %}
+{% p subtitle, style parameter %}
 
 ```
 regular, large, center
 ```
 
-{% p subtitle, 图标 %}
+{% p subtitle, icon %}
 
-第1个或者第2个参数包含 `fa-` 的那个被识别为图标。
+The one with `fa-` in the first or second parameter is recognized as an icon.
 
 
 <!-- endtab -->
 
-<!-- tab 示例写法 -->
+<!-- Tab example writing -->
 
 ```md example.md:
-不设置任何参数的 {% btn 按钮, / %} 适合融入段落中。
+The {% btn button, / %} without any parameters is suitable for integration into the paragraph.
 
-regular 按钮适合独立于段落之外：
+The regular button is suitable for being independent of the paragraph:
 
-{% btn regular, 示例博客, https://xaoxuu.com, fas fa-play-circle %}
+{% btn regular, sample blog, https://xaoxuu.com, fas fa-play-circle %}
 
-large 按钮更具有强调作用，建议搭配 center 使用：
+The large button is more emphasized, it is recommended to use it with center:
 
-{% btn center large, 开始使用, https://volantis.js.org/v3/getting-started/, fas fa-download %}
+{% btn center large, get started, https://volantis.js.org/v3/getting-started/, fas fa-download %}
 ```
 
 <!-- endtab -->
 
-<!-- tab 示例效果 -->
+<!-- tab sample effect -->
 
-{% p subtitle, 行内按钮 %}
+{% p subtitle, inline button %}
 
-不设置任何参数的 {% btn 按钮, / %} 适合融入段落中。
+{% btn button, / %} without any parameters is suitable to be integrated into the paragraph.
 
-{% p subtitle, 空心按钮 %}
+{% p subtitle, hollow button %}
 
-{% btn regular, 示例博客, /, fas fa-rss %} {% btn regular, 示例博客, , fas fa-rss %}
+{% btn regular, sample blog, /, fas fa-rss %} {% btn regular, sample blog,, fas fa-rss %}
 
-{% btn regular large, 示例博客, /, fas fa-rss %} {% btn regular large, 示例博客, , fas fa-rss %}
+{% btn regular large, sample blog, /, fas fa-rss %} {% btn regular large, sample blog,, fas fa-rss %}
 
-居中：
+Centered:
 
-{% btn center large, 开始使用, https://volantis.js.org/v3/getting-started/, fas fa-download %}
+{% btn center large, get started, https://volantis.js.org/v3/getting-started/, fas fa-download %}
 
-{% p subtitle, 实心按钮 %}
+{% p subtitle, solid button %}
 
-{% btn solid, 示例博客, /, fas fa-rss %} {% btn solid, 示例博客, , fas fa-rss %}
+{% btn solid, sample blog, /, fas fa-rss %} {% btn solid, sample blog,, fas fa-rss %}
 
-{% btn solid large, 示例博客, /, fas fa-rss %} {% btn solid large, 示例博客, , fas fa-rss %}
+{% btn solid large, sample blog, /, fas fa-rss %} {% btn solid large, sample blog,, fas fa-rss %}
 
-居中：
+Centered:
 
-{% btn solid center large, 开始使用, https://volantis.js.org/v3/getting-started/, fas fa-download %}
+{% btn solid center large, get started, https://volantis.js.org/v3/getting-started/, fas fa-download %}
 
 <!-- endtab -->
 
 {% endtabs %}
 
 
-## 富文本按钮
+## Rich Text Button
 
-请将您的 Volantis 升级至 <u>2.3</u> 版本以上使用。
+Please upgrade your Volantis to version <u>2.3</u> and above.
 
 {% tabs btns, 4 %}
 
-<!-- tab 语法格式 -->
+<!-- tab syntax format -->
 
 ```
-{% btns 样式参数 %}
-{% cell 标题, 链接, 图片或者图标 %}
-{% cell 标题, 链接, 图片或者图标 %}
+{% btns style parameter %}
+{% cell title, link, picture or icon %}
+{% cell title, link, picture or icon %}
 {% endbtns %}
 ```
 
 <!-- endtab -->
 
-<!-- tab 参数列表 -->
+<!-- tab parameter list -->
 
-样式参数位置可以写图片样式、布局方式，多个样式参数用空格隔开。
+The style parameter position can write the picture style, layout method, multiple style parameters are separated by spaces.
 
-{% p subtitle, 圆角样式 %}
+{% p subtitle, rounded corner style %}
 
-默认为方形
+The default is square
 
 ```
 rounded, circle
 ```
 
 
-{% p subtitle, 布局方式 %}
+{% p subtitle, layout method %}
 
-默认为自动宽度，适合视野内只有一两个的情况。
+The default is automatic width, which is suitable for situations where there is only one or two in the field of view.
 
 {% table %}
-| 参数 | 含义 |
+| Parameters | Meaning |
 | :-- | :-- |
-| wide | 宽一点的按钮 |
-| fill | 填充布局，自动铺满至少一行，多了会换行。 |
-| center | 居中，按钮之间是固定间距。 |
-| around | 居中分散 |
-| grid2 | 等宽最多2列，屏幕变窄会适当减少列数。 |
-| grid3 | 等宽最多3列，屏幕变窄会适当减少列数。 |
-| grid4 | 等宽最多4列，屏幕变窄会适当减少列数。 |
-| grid5 | 等宽最多5列，屏幕变窄会适当减少列数。 |
+| wide | Wider buttons |
+| fill | Fill the layout, automatically fill at least one line, and will wrap if there is more. |
+| center | Centered, with fixed spacing between buttons. |
+| around | Centered and scattered |
+| grid2 | The same width is up to 2 columns, and the narrower screen will reduce the number of columns appropriately. |
+| grid3 | The same width is up to 3 columns, and the narrower screen will reduce the number of columns appropriately. |
+| grid4 | Up to 4 columns with equal width, narrower screen will reduce the number of columns appropriately. |
+| grid5 | The same width is up to 5 columns. The narrower screen will reduce the number of columns appropriately. |
 {% endtable %}
 
-{% p subtitle, 增加文字样式 %}
+{% p subtitle, add text style %}
 
-可以在容器内增加 `<b>标题</b>` 和 `<p>描述文字</p>`
+You can add `<b>title</b>` and `<p>description text</p>` in the container
 
 <!-- endtab -->
 
-<!-- tab 示例写法 -->
+<!-- Tab example writing -->
 
-如果需要显示类似「团队成员」之类的一组含有头像的链接：
+If you need to display a group of links containing avatars like "team members":
 
 ```md example.md:
 {% btns circle grid5 %}
@@ -156,29 +156,29 @@ rounded, circle
 {% endbtns %}
 ```
 
-或者含有图标的按钮：
+Or buttons with icons:
 
 ```md example.md:
 {% btns rounded grid5 %}
-{% cell 下载源码, /, fas fa-download %}
-{% cell 查看文档, /, fas fa-book-open %}
+{% cell download source code, /, fas fa-download %}
+{% cell view document, /, fas fa-book-open %}
 {% endbtns %}
 ```
 
-圆形图标 + 标题 + 描述 + 图片 + 网格5列 + 居中
+Circular icon + title + description + picture + grid 5 columns + center
 
 ```md example.md:
 {% btns circle center grid5 %}
 <a href='https://apps.apple.com/cn/app/heart-mate-pro-hrm-utility/id1463348922?ls=1'>
   <i class='fab fa-apple'></i>
-  <b>心率管家</b>
-  {% p red, 专业版 %}
+  <b>Heart Rate Manager</b>
+  {% p red, professional edition %}
   <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/qrcode/heartmate_pro.png'>
 </a>
 <a href='https://apps.apple.com/cn/app/heart-mate-lite-hrm-utility/id1475747930?ls=1'>
   <i class='fab fa-apple'></i>
-  <b>心率管家</b>
-  {% p green, 免费版 %}
+  <b>Heart Rate Manager</b>
+  {% p green, free version %}
   <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/qrcode/heartmate_lite.png'>
 </a>
 {% endbtns %}
@@ -186,9 +186,9 @@ rounded, circle
 
 <!-- endtab -->
 
-<!-- tab 示例效果 -->
+<!-- tab example effect -->
 
-如果需要显示类似「团队成员」之类的一组含有头像的链接：
+If you need to display a group of links containing avatars like "team members":
 {% btns circle grid5 %}
 {% cell xaoxuu, https://xaoxuu.com, https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png %}
 {% cell xaoxuu, https://xaoxuu.com, https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png %}
@@ -197,25 +197,25 @@ rounded, circle
 {% cell xaoxuu, https://xaoxuu.com, https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png %}
 {% endbtns %}
 
-或者含有图标的按钮：
+Or buttons with icons:
 {% btns rounded grid5 %}
-{% cell 下载源码, /, fas fa-download %}
-{% cell 查看文档, /, fas fa-book-open %}
+{% cell download source code, /, fas fa-download %}
+{% cell view document, /, fas fa-book-open %}
 {% endbtns %}
 
 
-圆形图标 + 标题 + 描述 + 图片 + 网格5列 + 居中
+Circular icon + title + description + picture + grid 5 columns + center
 {% btns circle center grid5 %}
 <a href='https://apps.apple.com/cn/app/heart-mate-pro-hrm-utility/id1463348922?ls=1'>
   <i class='fab fa-apple'></i>
-  <b>心率管家</b>
-  {% p red, 专业版 %}
+  <b>Heart Rate Manager</b>
+  {% p red, professional edition %}
   <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/qrcode/heartmate_pro.png'>
 </a>
 <a href='https://apps.apple.com/cn/app/heart-mate-lite-hrm-utility/id1475747930?ls=1'>
   <i class='fab fa-apple'></i>
-  <b>心率管家</b>
-  {% p green, 免费版 %}
+  <b>Heart Rate Manager</b>
+  {% p green, free version %}
   <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/qrcode/heartmate_lite.png'>
 </a>
 {% endbtns %}

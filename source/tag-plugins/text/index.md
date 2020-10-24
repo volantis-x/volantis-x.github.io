@@ -3,44 +3,44 @@ layout: docs
 group: docs-volantis-latest
 order: 511
 short_title: false
-title: 'tag-plugins: text'
+title:'tag-plugins: text'
 sidebar: [docs-volantis-latest, toc]
 disqus:
-  path: /wiki/volantis/
+   path: /wiki/volantis/
 ---
 
-这是一些文本样式标签：
+Here are some text style tags:
 
 <br>
 
-带 {% u 下划线 %} 的文本
+Text with {% u underline %}
 ```md example.md:
-带 {% u 下划线 %} 的文本
+Text with {% u underline %}
 ```
 
-带 {% emp 着重号 %} 的文本
+Text with {% emp emphasis %}
 ```md example.md:
-带 {% emp 着重号 %} 的文本
-```
-
-
-带 {% wavy 波浪线 %} 的文本
-```md example.md:
-带 {% wavy 波浪线 %} 的文本
+Text with {% emp emphasis %}
 ```
 
 
-带 {% del 删除线 %} 的文本
+Text with {% wavy %}
 ```md example.md:
-带 {% del 删除线 %} 的文本
+Text with {% wavy %}
 ```
 
-键盘样式的文本 {% kbd command %} + {% kbd D %}
+
+Text with {% del strikethrough %}
 ```md example.md:
-键盘样式的文本 {% kbd command %} + {% kbd D %}
+Text with {% del strikethrough %}
 ```
 
-密码样式的文本：{% psw 这里没有验证码 %}
+Keyboard style text {% kbd command %} + {% kbd D %}
 ```md example.md:
-密码样式的文本：{% psw 这里没有验证码 %}
+Keyboard style text {% kbd command %} + {% kbd D %}
+```
+
+Password style text: {% psw There is no verification code here %}
+```md example.md:
+Password style text: {% psw There is no verification code here %}
 ```

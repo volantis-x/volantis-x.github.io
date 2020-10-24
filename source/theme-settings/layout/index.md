@@ -1,9 +1,9 @@
 ---
 layout: docs
-title: 文章布局配置
+title: Article layout configuration
 group: docs-volantis-latest
 order: 306
-short_title: 3-6 文章布局配置
+short_title: 3-6 article layout configuration
 sidebar: [docs-volantis-latest, toc]
 disqus:
   path: /wiki/volantis/
@@ -11,9 +11,9 @@ disqus:
 
 
 ```yaml
-# 文章布局
+# Article layout
 article:
-  # 文章列表页面的文章卡片布局方案
+  # Article card layout scheme of the article list page
   preview:
     scheme: landscape # landscape
     # pin icon for post
@@ -26,99 +26,99 @@ article:
     line_style: solid # hidden, solid, dashed, dotted
     # show readmore button
     readmore: auto # auto, always
-  # 文章详情页面的文章卡片本体布局方案
+  # The layout scheme of the article card body on the article details page
   body:
-    # 文章顶部信息
-    # 从 meta_library 中取
+    # Top of article information
+    # Take from meta_library
     top_meta: [author, category, date, counter]
     # ----------------
-    # 文章页脚组件
+    # Article footer component
     footer_widget:
       # ----------------
-      # 参考资料、相关资料等 (for layout: post/docs)
+      # Reference materials, related materials, etc. (for layout: post/docs)
       references:
-        title: 参考资料
+        title: Reference
         icon: fas fa-quote-left
-        # 在 front-matter 中:
-        #   references:
-        #     - title: 某篇文章
-        #       url: https://
-        # 即可显示此组件。
+        # In front-matter:
+        # references:
+        #-title: an article
+        # url: https://
+        # To display this component.
       # ----------------
-      # 相关文章，需要安装插件 (for layout: post)
+      # Related articles, plug-ins need to be installed (for layout: post)
       # npm i hexo-related-popular-posts
       related_posts:
         enable: false
-        title: 相关文章
+        title: Related articles
         icon: fas fa-bookmark
         max_count: 5
-        # 设为空则不使用文章头图
+        # Set to empty to not use the article header
         placeholder_img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/046.jpg
       # ----------------
-      # 版权声明组件 (for layout: post/docs)
+      # Copyright notice component (for layout: post/docs)
       copyright:
         enable: true
-        permalink: '本文永久链接是：'
+        permalink:'The permanent link to this article is:'
         content:
-          - '博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议'
-          - permalink
+          -'The content of the blog follows the attribution-non-commercial use-share in the same way 4.0 International (CC BY-NC-SA 4.0) agreement'
+          -permalink
       # ----------------
-      # 打赏组件 (for layout: post/docs)
+      # Reward component (for layout: post/docs)
       donate:
         enable: false
         images:
-          - https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
-          - https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
-    # 文章底部信息
-    # 从 meta_library 中取
+          -https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
+          -https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
+    # Information at the bottom of the article
+    # Take from meta_library
     bottom_meta: [updated, tags, share]
     # meta library
     meta_library:
-      # 默认文章作者（可在 front-matter 中覆盖）
+      # Default article author (can be overridden in front-matter)
       author:
         avatar:
-        name: 请设置文章作者
+        name: Please set the author of the article
         url: /
-      # 文章创建日期
+      # Article creation date
       date:
         icon: fas fa-calendar-alt
-        title: '发布于：'
-        format: 'll' # 日期格式 http://momentjs.com/docs/
-      # 文章更新日期
+        title:'Posted on:'
+        format:'ll' # Date format http://momentjs.com/docs/
+      # Article update date
       updated:
         icon: fas fa-edit
-        title: '更新于：'
-        format: 'll' # 日期格式 http://momentjs.com/docs/
-      # 文章分类
+        title:'Updated at:'
+        format:'ll' # Date format http://momentjs.com/docs/
+      # Article classification
       category:
         icon: fas fa-folder-open
-      # 文章浏览计数
+      # Article view count
       counter:
         icon: fas fa-eye
-        unit: '次浏览'
-      # 文章评论数量：只支持 valine
+        unit:'Views'
+      # Number of article comments: only valine is supported
       valinecount:
         icon: fas fa-comment-dots
-        desc: '' # 条评论
-      # 文章字数和阅读时长
+        desc:'' # comments
+      # Article word count and reading time
       wordcount:
         icon_wordcount: fas fa-keyboard
         icon_duration: fas fa-hourglass-half
-      # 文章标签
+      # Article tags
       tags:
         icon: fas fa-hashtag
-      # 分享
+      # share it
       share:
-        - id: qq
+        -id: qq
           img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qq.png
-        - id: qzone
+        -id: qzone
           img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/qzone.png
-        - id: weibo
+        -id: weibo
           img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/weibo.png
-        - id: # qrcode # 当id为qrcode时需要安装插件  npm i hexo-helper-qrcode
+        -id: # qrcode # When id is qrcode, plug-in needs to be installed npm i hexo-helper-qrcode
           img: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/wechat.png
-        - id: # telegram
+        -id: # telegram
           img: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png
 
 ```
-其中 `top_meta` 和 `bottom_meta` 部分的取值自 `meta_library` 库。
+The values ​​of `top_meta` and `bottom_meta` are taken from the `meta_library` library.
