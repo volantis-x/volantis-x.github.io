@@ -82,7 +82,7 @@ The `labels=active` parameter in the above example can control the default issue
 This is the data of the "Sample Blog" page of the theme's official website:
 
 ```
-{% issues sites | api=https://api.github.com/repos/volantis-x/examples/issues?sort=updated&state=open&page=1&per_page=100 | group=version: version: ^4.0, version: ^3.0 ,Version: ^2.0 %}
+{% issues sites | api=https://api.github.com/repos/volantis-x/examples/issues?sort=updated&state=open&page=1&per_page=100 | group=version:版本：^4.0,版本：^3.0,版本：^2.0 %}
 ```
 
 The warehouse link corresponding to the above example:

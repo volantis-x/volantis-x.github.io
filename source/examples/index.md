@@ -24,8 +24,7 @@ sidebar: []
 
 <br>
 
-{% issues sites | api=https://api.github.com/repos/volantis-x/examples/issues?sort=updated&state=open&page=1&per_page=100 | group=version:version：^4.0,version：^3.0,version：^2.0 %}
-
+{% issues sites | api=https://api.github.com/repos/volantis-x/examples/issues?sort=updated&state=open&page=1&per_page=100 | group=version:版本：^4.0,版本：^3.0,版本：^2.0 %}
 <br>
 
 
@@ -44,7 +43,7 @@ sidebar: []
      "screenshot": "",
      "url": "",
      "avatar": "",
-     "version": "Version: ^4.0"
+     "version": "版本：^4.0"
 }
 ```
 
