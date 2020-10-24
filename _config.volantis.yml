@@ -18,7 +18,7 @@ navbar:
       icon: fad fa-fan fa-spin
       url: contributors/
 
-    - name: Set up
+    - name: Configuration
       icon: fad fa-cog
       rows:
         - name: Dark mode
@@ -277,6 +277,9 @@ site_footer:
       url: /
     - img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/006-youtube.svg
       url: /
+  analytics: >
+    <span id="lc-sv">The total number of visits to this site is <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> times</span>
+    <span id="lc-uv">The number of visitors is <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span>
 
 
 tag_plugins:
