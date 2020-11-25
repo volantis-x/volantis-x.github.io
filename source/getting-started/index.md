@@ -134,7 +134,7 @@ git clone https://github.com/volantis-x/hexo-theme-volantis themes/volantis
 If you cannot access GitHub, you can use the domestic mirror source:
 
 ```
-git clone https://e.coding.net/volantis/volantis/volantis.git themes/volantis
+git clone https://e.coding.net/volantis-x/p/hexo-theme-volantis.git themes/volantis
 ```
 
 {% endtimenode %}
