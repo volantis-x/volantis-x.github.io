@@ -262,8 +262,8 @@ sidebar:
 
 
 site_footer:
-  layout: [aplayer, social, source, analytics, copyright]
-  copyright: '[Copyright © 2017-2020 Volantis Team](https://github.com/volantis-x/)'
+  layout: [aplayer, social, copyright]
+  copyright: '[Copyright © 2017-2021 Volantis Team](https://github.com/volantis-x/)'
   social:
     - img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg
       url: atom.xml

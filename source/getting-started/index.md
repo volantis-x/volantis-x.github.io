@@ -204,4 +204,4 @@ The software and all copies of the software must include a copyright notice and 
 
 ## Configuration and use
 
-{% link Configuration and use, /wiki/volantis/site-settings/configuration/, https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/2439351-arrows/005-arrows .svg %}
+{% link Configuration and use, /site-settings/configuration/, https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/2439351-arrows/005-arrows.svg %}
