@@ -313,12 +313,7 @@ plugins:
   darkmodejs:
     enable: true
 
-analytics:
-  busuanzi: #https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js
-  leancloud:
-    app_id: GCYDRKI6XRkyC7EuEhJv90ia-MdYXbMMI
-    app_key: 4xKBXGBj6BgecU62vff5rJHs
-    custom_api_server: 
+analytics: false
 
 style:
   font_smoothing: true
