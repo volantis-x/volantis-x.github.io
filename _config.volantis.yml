@@ -312,8 +312,6 @@ plugins:
     id: 5062959861 # TOP 30
   darkmodejs:
     enable: true
-  scrollreveal:
-    enable: true
 
 analytics: false
 
