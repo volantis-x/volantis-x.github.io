@@ -1,7 +1,7 @@
 use_cdn: false
 navbar:
   menu:
-    - name: Documentation
+    - name: Docs
       icon: fad fa-book faa-tada
       url: /getting-started/
       target: _self
@@ -50,14 +50,15 @@ navbar:
 
 cover:
   # height_scheme: full # full, half
+  layout_scheme: search # blank (留白), search (搜索), dock (坞), featured (精选), focus (焦点)
   title: 'Volantis'
   subtitle: 'Test Site For Development'
   background: ''
   features:
-    - name: Article
+    - name: Blogs
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg
       url: /
-    - name: Documentation
+    - name: Docs
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg
       url: /getting-started/
       target: _self
@@ -391,6 +392,8 @@ analytics: false
 
 style:
   font_smoothing: true
+  navbar:
+    effect: [shadow, floatable, blur] # [shadow, floatable, blur]
   sidebar:
     effect: [shadow, floatable, blur] # [shadow, floatable, blur]
   body:
