@@ -53,7 +53,7 @@ cover:
   layout_scheme: search # blank (留白), search (搜索), dock (坞), featured (精选), focus (焦点)
   title: 'Volantis'
   subtitle: 'Test Site For Development'
-  background: ''
+  background: 'https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/003.jpg'
   features:
     - name: Blogs
       img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg
@@ -120,7 +120,7 @@ article:
 comments:
   title: <i class='fas fa-comments'></i> User Exchange Area
   subtitle: This is only for communication between users. If you have any questions, please go to GitHub to submit an issue. Asking questions in the comment area will not receive any response from the developer!
-  service: disqus
+  service: utterances
   disqus:
     shortname: volantis
     path: /
@@ -128,7 +128,8 @@ comments:
     appId: FIKAgh6n0pUM08JXxhJHChVQ-MdYXbMMI
     appKey: RJGiOYFc1fBvfox4frBPpRzU
     path: /
-
+  utterances:
+    repo: xaoxuu/utteranc
 
 sidebar:
   for_page: [post, category, tagcloud]
