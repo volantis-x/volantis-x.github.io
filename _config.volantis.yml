@@ -353,21 +353,21 @@ plugins:
       - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/054.jpg
       - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/055.jpg
       - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/city_illustration_2-wallpaper-1920x1080.jpg
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/city_sunset_illustration-wallpaper-1920x1080.jpg
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/firewatch_flat_landscape-wallpaper-1920x1080.jpg
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/Late%20night%20bridge.png
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/love_nature_4-wallpaper-1920x1080.jpg
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/material-wallpaper-1920x1080.jpg
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/nice_illustration-wallpaper-1920x1080.jpg
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/purple_mountain-wallpaper-1920x1080.jpg
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/space_colonization-wallpaper-1920x1080.jpg
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/train_travel_illustration-wallpaper-1920x1080.jpg
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/USjTcy41nvs8qeW.jpg
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/vector_landscape_1.svg
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/vector_landscape_2.svg
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/vector_landscape_3.svg
-      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/wolf_howling_at_the_moon-wallpaper-1920x1080.jpg
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/city_illustration_2-wallpaper-1920x1080.jpg
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/city_sunset_illustration-wallpaper-1920x1080.jpg
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/firewatch_flat_landscape-wallpaper-1920x1080.jpg
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/Late%20night%20bridge.png
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/love_nature_4-wallpaper-1920x1080.jpg
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/material-wallpaper-1920x1080.jpg
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/nice_illustration-wallpaper-1920x1080.jpg
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/purple_mountain-wallpaper-1920x1080.jpg
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/space_colonization-wallpaper-1920x1080.jpg
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/train_travel_illustration-wallpaper-1920x1080.jpg
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/USjTcy41nvs8qeW.jpg
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/vector_landscape_1.svg
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/vector_landscape_2.svg
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/vector_landscape_3.svg
+      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/wolf_howling_at_the_moon-wallpaper-1920x1080.jpg
 
   aplayer:
     enable: true
