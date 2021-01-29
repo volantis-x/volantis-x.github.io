@@ -132,6 +132,7 @@ comments:
     repo: xaoxuu/utteranc
 
 sidebar:
+  position: left # left right
   for_page: [post, category, tagcloud]
   for_post: [toc]
   widget_library:
