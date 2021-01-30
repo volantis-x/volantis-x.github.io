@@ -404,7 +404,7 @@ style:
 rightmenu:
   enable: true
   # hr: dividing line, music: music controller
-  layout: [home, help, examples, contributors, hr, source_docs, source_theme, hr, print, hr, dark_mode, hr, music]
+  layout: [home, help, examples, contributors, hr, source_docs, source_theme, hr, print, hr, darkmode, hr, music]
   # Optional function item
   print:
     name: print page
@@ -431,7 +431,8 @@ rightmenu:
     name: theme source code
     icon: fa fa-code-branch
     url: https://github.com/volantis-x/hexo-theme-volantis/
-  dark_mode:
+  darkmode:
     name: Dark mode
-    icon: fas fa-moon
+    white: fal fa-sun
+    dark: fal fa-moon
     toggle: darkmode
