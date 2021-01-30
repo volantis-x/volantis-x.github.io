@@ -2,8 +2,10 @@
 oldversion:
   title: Expired document
   message: This document is too old. If you are using a new version of the theme, please check the new version of the document.
+  position: bottom
   theme: warning # default, warning
-  action:
+  #cache: true
+  buttons:
     - title: View the latest version of the document
       url: /getting-started/
       dismiss: false # 点击了是否关闭底部横幅
