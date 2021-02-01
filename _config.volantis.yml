@@ -132,7 +132,7 @@ comments:
     repo: xaoxuu/utteranc
 
 sidebar:
-  position: left # left right
+  position: right # left right
   for_page: [post, category, tagcloud]
   for_post: [toc]
   widget_library:
@@ -292,11 +292,8 @@ plugins:
     enable: true
   fontawesome: https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css
   backstretch:
-    enable: #true
-    position: cover       # cover: sticky on the cover.   fixed: Fixed as background for the site.
-
-  parallax:
     enable: true
+    position: fixed       # cover: sticky on the cover.   fixed: Fixed as background for the site.
     images:               # For personal use only. At your own risk if used for commercial purposes !!!
       # 尺寸一致图片测试
       - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg
@@ -356,24 +353,28 @@ plugins:
       - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/055.jpg
       - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/056.jpg
       # 尺寸不一致图片测试
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/city_illustration_2-wallpaper-1920x1080.jpg
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/city_sunset_illustration-wallpaper-1920x1080.jpg
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/firewatch_flat_landscape-wallpaper-1920x1080.jpg
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/Late%20night%20bridge.png
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/love_nature_4-wallpaper-1920x1080.jpg
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/material-wallpaper-1920x1080.jpg
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/nice_illustration-wallpaper-1920x1080.jpg
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/purple_mountain-wallpaper-1920x1080.jpg
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/space_colonization-wallpaper-1920x1080.jpg
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/train_travel_illustration-wallpaper-1920x1080.jpg
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/USjTcy41nvs8qeW.jpg
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/vector_landscape_1.svg
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/vector_landscape_2.svg
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/vector_landscape_3.svg
-      # - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/wolf_howling_at_the_moon-wallpaper-1920x1080.jpg
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/city_illustration_2-wallpaper-1920x1080.jpg
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/city_sunset_illustration-wallpaper-1920x1080.jpg
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/firewatch_flat_landscape-wallpaper-1920x1080.jpg
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/Late%20night%20bridge.png
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/love_nature_4-wallpaper-1920x1080.jpg
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/material-wallpaper-1920x1080.jpg
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/nice_illustration-wallpaper-1920x1080.jpg
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/purple_mountain-wallpaper-1920x1080.jpg
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/space_colonization-wallpaper-1920x1080.jpg
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/train_travel_illustration-wallpaper-1920x1080.jpg
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/USjTcy41nvs8qeW.jpg
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/vector_landscape_1.svg
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/vector_landscape_2.svg
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/vector_landscape_3.svg
+      - https://cdn.jsdelivr.net/gh/Linhk1606/md-wallpaper@0.0.1/wolf_howling_at_the_moon-wallpaper-1920x1080.jpg
 
+
+  parallax:
+    enable: #true
   aplayer:
     enable: true
+    message: true
     autoplay: true
     volume: 0.4
     order: random

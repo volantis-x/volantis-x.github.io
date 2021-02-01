@@ -2,9 +2,9 @@
 oldversion:
   title: Expired document
   message: This document is too old. If you are using a new version of the theme, please check the new version of the document.
-  position: bottom
-  theme: warning # default, warning
-  #cache: true
+  position: right # bottom (底部通知), right (右侧通知，会自动消失)
+  theme: warning # success, error, info, warning
+  cache: false # 是否记住选项（下次不再弹出）
   buttons:
     - title: View the latest version of the document
       url: /getting-started/
