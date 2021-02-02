@@ -374,7 +374,6 @@ plugins:
     enable: #true
   aplayer:
     enable: true
-    message: true
     autoplay: true
     volume: 0.4
     order: random
@@ -411,6 +410,10 @@ rightmenu:
     name: print page
     icon: fa fa-print
     onclick: document.execCommand('print')
+  darkmode:
+    name: Dark mode
+    white: fal fa-sun
+    dark: fal fa-moon
   # The format of the custom menu is as follows
   help:
     name: FAQ
@@ -432,8 +435,3 @@ rightmenu:
     name: theme source code
     icon: fa fa-code-branch
     url: https://github.com/volantis-x/hexo-theme-volantis/
-  darkmode:
-    name: Dark mode
-    white: fal fa-sun
-    dark: fal fa-moon
-    toggle: darkmode

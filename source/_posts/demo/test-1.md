@@ -2,6 +2,7 @@
 title: Lorem ipsum dolor sit amet
 date: 2021-01-26
 categories: [Demo]
+description: Lorem ipsum dolor sit amet
 ---
 
 ## Lorem ipsum dolor sit amet
