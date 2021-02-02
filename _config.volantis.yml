@@ -129,7 +129,8 @@ comments:
     appKey: RJGiOYFc1fBvfox4frBPpRzU
     path: /
   utterances:
-    repo: xaoxuu/utteranc
+    repo: utterance/utterances
+    issue-number: 1
 
 sidebar:
   position: right # left right
