@@ -120,7 +120,7 @@ article:
 comments:
   title: <i class='fas fa-comments'></i> User Exchange Area
   subtitle: This is only for communication between users. If you have any questions, please go to GitHub to submit an issue. Asking questions in the comment area will not receive any response from the developer!
-  service: utterances
+  service: disqus
   disqus:
     shortname: volantis
     path: /
