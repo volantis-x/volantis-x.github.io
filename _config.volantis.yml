@@ -404,6 +404,7 @@ style:
 # Customize the right-click menu
 rightmenu:
   enable: true
+  faicon: fa
   # hr: dividing line, music: music controller
   layout: [home, help, examples, contributors, hr, source_docs, source_theme, hr, print, hr, darkmode, hr, music]
   # Optional function item
