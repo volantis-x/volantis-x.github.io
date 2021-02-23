@@ -410,11 +410,10 @@ rightmenu:
   print:
     name: print page
     icon: fa fa-print
-    onclick: document.execCommand('print')
   darkmode:
     name: Dark mode
-    white: fal fa-sun
-    dark: fal fa-moon
+    white: fa fa-sun
+    dark: fa fa-moon
   # The format of the custom menu is as follows
   help:
     name: FAQ
