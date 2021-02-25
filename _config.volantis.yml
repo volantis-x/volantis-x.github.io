@@ -412,10 +412,10 @@ rightmenu:
     name: print page
     icon: fa fa-print
     js:
-      - $("article#comments").remove();
-      - $(".backstretch").remove();
-      - $("article").css({"boxShadow": "none"});
-      - $("body").css({"backgroundColor": "#fff"});
+      - '$("article#comments").remove();'
+      - '$(".backstretch").remove();'
+      - '$("article").css({"boxShadow": "none"});'
+      - '$("body").css({"backgroundColor": "#fff"});'
   darkmode:
     name: Dark mode
     white: fa fa-sun
