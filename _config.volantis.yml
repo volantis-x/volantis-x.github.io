@@ -1,4 +1,5 @@
-use_cdn: false
+cdn:
+  enable: false
 navbar:
   menu:
     - name: Docs
