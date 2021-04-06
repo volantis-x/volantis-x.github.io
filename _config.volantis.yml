@@ -288,8 +288,6 @@ tag_plugins:
     iconfont: 'Font Awesome 5 Pro'
 
 plugins:
-  issues:
-    enable: true
   clipboard:
     enable: true
   fontawesome: https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css
@@ -387,7 +385,7 @@ plugins:
   darkmodejs:
     enable: true
   scrollreveal:
-    enable: true
+    enable: #true
   comment_typing:
     enable: true
 
