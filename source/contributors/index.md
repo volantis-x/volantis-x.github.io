@@ -113,7 +113,7 @@ Developers of open source projects are disgusted that others do not use the corr
 | Channel | Method | Use |
 | :-- | :-- | :-- |
 | Forum | [@volantis-x/forum](https://github.com/volantis-x/forum/issues/) | Slow, relatively formal, easy to retrieve, and can be referenced by other users |
-| QQ Group | 1146399464 (Verification code: <psw>vlts-2020</psw>) | Informal, instant messaging, easy to fight pictures; not conducive to other users' reference |
+| QQ Group | 1146399464 (Verification code: <psw>vlts-2021</psw>) | Informal, instant messaging, easy to fight pictures; not conducive to other users' reference |
 {% endtable %}
 
 {% p subtitle, Buddhist interaction %}
