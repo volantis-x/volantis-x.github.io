@@ -288,6 +288,8 @@ tag_plugins:
     iconfont: 'Font Awesome 5 Pro'
 
 plugins:
+  nodewaves:
+    enable: true
   clipboard:
     enable: true
   fontawesome: https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css
@@ -382,12 +384,17 @@ plugins:
     # id: 76244489 # vol white
     id: 5135845906 # for Volantis 3.0
     # id: 5062959861 # TOP 30
+    message: true
   darkmodejs:
     enable: true
   scrollreveal:
-    enable: #true
+    enable: true
   comment_typing:
     enable: true
+
+  pjax:
+    enable: true
+    animation: nprogress # false, nprogress, circle
 
 analytics: false
 
