@@ -57,9 +57,6 @@ The function of this parameter is to filter out the data that contains `"version
 {% issues timeline | api=https://gitee.com/api/v5/repos/xaoxuu/timeline/issues?state=open&creator=xaoxuu&sort=created&direction=desc&page=1&per_page=100 %}
 ```
 
-display effect:
-
-{% issues timeline | api=https://gitee.com/api/v5/repos/xaoxuu/timeline/issues?state=open&creator=xaoxuu&sort=created&direction=desc&page=1&per_page=100 %}
 
 Corresponding warehouse link:
 

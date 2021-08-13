@@ -59,10 +59,6 @@ group=version:v4,v3,v2
 {% issues timeline | api=https://gitee.com/api/v5/repos/xaoxuu/timeline/issues?state=open&creator=xaoxuu&sort=created&direction=desc&page=1&per_page=100 %}
 ```
 
-显示效果：
-
-{% issues timeline | api=https://gitee.com/api/v5/repos/xaoxuu/timeline/issues?state=open&creator=xaoxuu&sort=created&direction=desc&page=1&per_page=100 %}
-
 对应的仓库链接：
 
 {% link Gitee: xaoxuu/timeline, https://gitee.com/xaoxuu/timeline/issues %}
