@@ -382,7 +382,7 @@ plugins:
     id: 5135845906 # for Volantis 3.0
     # id: 5062959861 # TOP 30
 
-  darkmodejs:
+  darkmode:
     enable: true
   scrollreveal:
     enable: true
