@@ -293,8 +293,7 @@ plugins:
   clipboard:
     enable: true
   fontawesome: https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css
-  prismjs:
-    enable: true
+  code_highlight: prismjs # highlightjs or prismjs
   parallax:
     enable: true
     images:               # For personal use only. At your own risk if used for commercial purposes !!!
