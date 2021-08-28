@@ -1,14 +1,12 @@
 ---
-robots: noindex,nofollow
-sitemap: false
-layout: page
+layout: docs
 group: docs-v4
-meta:
-  header: [centertitle]
-sidebar: [docs-v4, toc, repos]
 order: 601
 title: 进阶设定
-short_title: 6-1 进阶设定
+short_title: 6. 进阶设定
+sidebar: [docs-v4, toc]
+disqus:
+  path: /
 ---
 
 
@@ -39,7 +37,7 @@ article:
         url: /
 ```
 
-Volantis 支持多作者，其他作者信息需要写在数据文件中，例如：
+Volantis 支持多个作者在一个站点发布文章，其他作者信息需要写在数据文件中，例如：
 
 ```yaml blog/source/_data/author.yml
 Jon:
@@ -79,6 +77,9 @@ author: Jon
 
 - 访问具有动态特效背景（如雪花、粒子等）的网站时，手机很快会发烫变卡，笔记本很快会风扇狂转并且浏览器提示建议关闭此页面。如果你希望网站有好的使用体验请尽量不要安装这类插件。
 
+<!--
+- 强烈推荐安装 [hexo-offline](https://github.com/JLHwung/hexo-offline) 插件，初次加载速度不变，后期切换页面和刷新网页速度越来越快。
+-->
 
 
 ## 优化 SEO
@@ -115,44 +116,30 @@ seo:
 
 对于大部分将博客 deploy 到 GitHub 的用户来说，直接加载本地资源速度比较慢，可以使用 jsdelivr 为开源项目提供的 CDN 服务。
 
-对于`4.1.4+`版本，JS文件默认使用 https://cdn.jsdelivr.net/npm/hexo-theme-volantis/source/js/ 的CDN压缩版本文件。
-
-例如: `https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.1.4/source/js/app.min.js`
-
 ### 开启方法
 
 ```yaml blog/_config.volantis.yml
+# use_cdn: /source/js/* 中的JS文件(JS Only)使用jsdelivr的min版本加速
+# 默认使用 https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/js/*.min.js 的CDN压缩版本(min.js)，注意版本号对应关系！！可以通过修改以下配置项覆盖
+# 开发者注意 use_cdn 设置为 false
 use_cdn: true
-```
-
-重要说明：
-
-1. 开发者注意 `use_cdn` 设置为 `false`。
-2. 注意CDN文件的版本号:
-```yaml blog/_config.volantis.yml
 info:
-  theme_version: '4.1.4' # This is theme's version.
-```
-3. 仅JS文件默认提供CDN。
-4. 关于CSS文件CDN：
-```yaml blog/_config.volantis.yml
-info:
-  theme_name: Volantis # This is theme's name.
-  theme_version: '4.1.4' # This is theme's version.
-  theme_docs: https://volantis.js.org/ # This is theme's URL.
-  theme_repo: https://github.com/volantis-x/hexo-theme-volantis
+  theme_version: 'x.x.x' # This is theme's version.
   cdn:
-    js: # 默认为 https://cdn.jsdelivr.net/npm/hexo-theme-volantis@4.1.4/source/js/app.min.js
+    js: # https://cdn.jsdelivr.net/npm/hexo-theme-volantis@<%- theme.info.theme_version %>/source/js/app.min.js # 注意版本!!!
     css:
-      first: # 默认不提供CDN，first.css 中为首屏渲染的样式，内含 cover navbar search 的样式。
-      style: # 默认不提供CDN，style.css 为延迟加载的样式。
+      first: # /css/first.css (默认不提供CDN，first.css 中为首屏渲染的样式，内含 cover navbar search 的样式。)
+      style: # /css/style.css (默认不提供CDN，style.css 为异步延迟加载的样式。)
 ```
 
 {% note info, 如果你需要对样式进行 DIY，可以只关闭 style 文件的 CDN。 %}
 
+{% note warning up, 如果你需要对样式进行 DIY，请注意首屏渲染和异步延迟加载的差异。 %}
+
 ### 自定义 CDN
 
 如果你把对应的文件上传到自己的 CDN 服务器，可以把对应的链接改为自己的 CDN 链接。
+
 
 ## 尝试使用 Terser 压缩 ES6
 
@@ -160,12 +147,7 @@ info:
 
 ```shell
 npm install -g gulp
-npm install --save gulp
-npm install --save gulp-html-minifier-terser
-npm install --save gulp-htmlclean
-npm install --save gulp-htmlmin
-npm install --save gulp-minify-css
-npm install gulp-terser --save-dev
+npm install --save-dev gulp gulp-html-minifier-terser gulp-htmlclean gulp-htmlmin gulp-minify-css gulp-terser
 ```
 
 ### gulp 配置文件
@@ -276,7 +258,7 @@ precaching.cleanupOutdatedCaches();
  * Precache
  * - Static Assets
  */
-precaching.precacheAndRoute( // 极端重要 定义首次缓存的静态文件
+precaching.precacheAndRoute( // 极端重要 定义首次缓存的静态文件 如果开启CDN需要修改为CDN链接
     [
         { url: '/css/first.css', revision: null },
         { url: '/css/style.css', revision: null },
@@ -378,8 +360,6 @@ routing.setDefaultHandler(
 );
 
 ```
-
-{% note info, 修改静态文件后发布网页一定要修改缓存版本号。 %}
 
 ## 安装「相关文章」插件
 

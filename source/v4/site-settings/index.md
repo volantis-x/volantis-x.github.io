@@ -1,14 +1,12 @@
 ---
-robots: noindex,nofollow
-sitemap: false
-layout: page
+layout: docs
 group: docs-v4
-meta:
-  header: [centertitle]
-sidebar: [docs-v4, toc, repos]
 order: 201
-title: 修改站点配置文件
-short_title: 2-1 修改站点配置文件
+title: 站点配置
+short_title: 2. 站点配置
+sidebar: [docs-v4, toc]
+disqus:
+  path: /
 ---
 
 博客根目录下的 `_config.yml` 文件通常负责站点相关配置、第三方 npm 插件相关的配置。

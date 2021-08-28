@@ -9,9 +9,10 @@ short_title: 3. 主题配置
 meta:
   header: [title, author, updated]
 sidebar: [docs-v2, repos, toc]
-snackbar: oldversion
+plugins:
+  - snackbar: oldversion
 ---
- 
+
 如无特殊说明，本页面的配置信息写在 <u>**主题**</u> 的 `config.yml` 文件中。
 
 {% noteblock idea green %}
@@ -656,7 +657,7 @@ sidebar: [group-1, toc]
 
 「group-1」卡片将会以列表的形式显示所有设置了 `group: group-1` 的文章，顺序按照 `order` 从小到大排列。
 
-{% note play, 效果见： https://xaoxuu.com/wiki/ios/ %}
+{% note play, 效果见： https://xaoxuu.com/wiki/git/ %}
 
 ### 通用网格部件
 ```yaml blog/themes/volantis/_config.yml
@@ -715,7 +716,7 @@ footer:
       url: https://github.com/xaoxuu
     - icon: fas fa-headphones-alt
       url: https://music.163.com/#/user/home?id=63035382
-  copyright: '[Copyright © 2017-2020 Mr. X](https://xaoxuu.com)'
+  copyright: '[Copyright © 2017-2021 XXX](/)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   br: '<br>'
 ```
@@ -921,7 +922,7 @@ valine:
 ```yaml front-matter
 ---
 valine:
-  path: /wiki/volantis/
+  path: /
 ---
 ```
 

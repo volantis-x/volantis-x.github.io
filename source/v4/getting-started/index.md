@@ -1,19 +1,15 @@
 ---
-robots: noindex,nofollow
-sitemap: false
-layout: page
+layout: docs
+seo_title: 开始使用
+short_title: 1. 开始使用
 group: docs-v4
-seo_title: 一个功能丰富、高度模块化的 Hexo 博客主题。支持多人协作、wiki文档等复杂系统，支持大量的标签插件。
-short_title: 1-1 安装与版本更新
-order: 100
-cover: true
-meta:
-  header: []
-sidebar: [docs-v4, toc, repos]
+order: 1
+sidebar: [docs-v4, toc]
+description: Volantis 是一个功能丰富、高度模块化的 Hexo 博客主题。得益于其强大的模块化特性，您可以轻松搭建一个极简风格的博客，也可以仿照官网搭建一个多人协作的、包含文档模块的大体量综合型博客。
 ---
 
 <p>
-{% span logo center large, Volantis %}
+{% span logo center large, <sup>&ensp;</sup>Volantis<sup>4</sup> %}
 {% span center small logo, A Wonderful Theme for Hexo %}
 </p>
 <br>
@@ -138,7 +134,7 @@ git clone https://github.com/volantis-x/hexo-theme-volantis themes/volantis
 如果您无法访问 GitHub 可以使用国内镜像源：
 
 ```
-git clone https://e.coding.net/volantis/volantis/volantis.git themes/volantis
+git clone https://e.coding.net/volantis-x/p/hexo-theme-volantis.git themes/volantis
 ```
 
 {% endtimenode %}
@@ -165,11 +161,48 @@ npm i hexo-renderer-stylus
 
 
 
-## 版本更新
+## 版本更新注意事项
+
+使用主题的时候，尽量 fork 主题到自己的 GitHub，然后进行修改并使用。这样做的好处是：当主题进行重要更新的时候可以根据需要拉取合并代码，使自己 DIY 的主题能够通过更新获取 BUG 修复或者新特性。
+
+如果不懂请自行搜索关键词：<u>fork 更新</u>
+
+{% noteblock idea, 实用小技巧 %}
+
+所有需要写在主题配置文件中的配置都可以写在站点配置文件的 `theme_config:` 中，在 {% u Hexo 5.0 %} 后，还可以写在 `_config.volantis.yml` 文件中，详见 Hexo 官方文档：
+{% link 覆盖主题配置, https://hexo.io/zh-cn/docs/configuration#%E8%A6%86%E7%9B%96%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE %}
+
+也可以直接查看本站源码中站点配置文件的写法：[_config.volantis.yml](https://github.com/volantis-x/volantis-docs/blob/master/_config.volantis.yml)
+
+{% endnoteblock %}
+
 
 请对照 {% btn, 更新日志, https://github.com/volantis-x/hexo-theme-volantis/releases %} 进行更新，下面是更新之后需要注意的事项：
 
 {% timeline %}
+
+{% timenode 2021-01-15 [4.2.0 -> 4.3.0](https://github.com/volantis-x/hexo-theme-volantis/releases/tag/4.3.0) %}
+
+{% u 更多关于Volantis的小版本更新请点击上方`更新日志`按钮 %}
+
+1. 增加 `disqusjs` 评论系统；
+
+2. 增加 `waline` 评论系统；
+
+3. 增加 [旧版 Internet Explorer 淘汰行动](https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support) ；
+
+4. 增加 Tidio聊天功能；
+
+5. 增加 twitoo waline valine minivaline 文章阅读量统计；
+
+6. 增加 bbtalk.js；
+7. 修复[#514](https://github.com/volantis-x/hexo-theme-volantis/issues/514) [#538](https://github.com/volantis-x/hexo-theme-volantis/issues/538) [#567](https://github.com/volantis-x/hexo-theme-volantis/pull/567) [#431](https://github.com/volantis-x/hexo-theme-volantis/issues/431) [#468](https://github.com/volantis-x/hexo-theme-volantis/issues/468)；
+
+8. 修复关闭 pjax 时 cover样式失效 和 报错 的问题 。
+
+{% endtimenode %}
+
+
 
 {% timenode 2020-09-26 [3.0.0 -> 4.0.0](https://github.com/volantis-x/hexo-theme-volantis/releases/tag/4.0.0) %}
 
@@ -185,7 +218,7 @@ npm i hexo-renderer-stylus
 8. 如果想要关闭评论，需要改为 `comments: false` 。
 9. 如果要隐藏文章顶部或者底部的 meta 标签，需设置 `top_meta: false` 或者 `bottom_meta: false` 。
 10. 如果需要同时隐藏标题和顶部的 meta 标签也可以把 `title: xxx` 改为 `seo_title: xxx` 。
-11. 多作者的信息使用数据文件进行定义，文章中只需要写 `author: xxx` 而不需要重复写作者的信息了。
+11. 作者的信息使用数据文件进行定义，文章中只需要写 `author: xxx` 而不需要重复写作者的信息了。
 12. 现在只有 gallery 标签的图片支持放大。
 13. 友链页面 `layout: links` 改为 `layout: friends`。
 
@@ -208,4 +241,4 @@ npm i hexo-renderer-stylus
 
 ## 配置与使用
 
-{% link 配置与使用, /site-settings/configuration/, https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/2439351-arrows/005-arrows.svg %}
+{% link 配置与使用, /v4/site-settings/, https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/2439351-arrows/005-arrows.svg %}
