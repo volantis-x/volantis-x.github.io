@@ -296,6 +296,7 @@ plugins:
   code_highlight: prismjs # highlightjs or prismjs
   parallax:
     enable: true
+    position: fixed
     images:               # For personal use only. At your own risk if used for commercial purposes !!!
       # 尺寸一致图片测试
       - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/001.jpg
