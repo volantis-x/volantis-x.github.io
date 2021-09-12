@@ -96,7 +96,6 @@ article:
         title: related articles
         icon: fas fa-bookmark
         max_count: 5
-        placeholder_img: data:image/png;base64,666
       copyright:
         enable: true
         permalink: 'The permanent link to this article is:'
@@ -135,9 +134,12 @@ comments:
 
 sidebar:
   position: right # left right
-  for_page: [post, category, tagcloud]
-  for_post: [toc]
+  for_page: [post, category, tagcloud, music]
+  for_post: [toc, music]
   widget_library:
+    music:
+      class: music
+      display: [desktop, mobile] # [desktop, mobile]
     toc:
       class: toc
       display: [desktop, mobile] # [desktop, mobile]
