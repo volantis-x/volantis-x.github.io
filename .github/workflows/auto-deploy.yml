@@ -9,7 +9,7 @@ jobs:
     name: A job to deploy blog.
     steps:
     - name: Checkout # step1 获取源码
-      uses: actions/checkout@v1 # 使用 actions/checkout@v1
+      uses: actions/checkout@v2.3.4 # 使用 actions/checkout@v2.3.4
       with: # 条件
         submodules: true # Checkout private submodules(themes or something else). 当有子模块时切换分支？
     - name: Setup Node.js 10.x
