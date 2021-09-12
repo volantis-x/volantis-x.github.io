@@ -4,6 +4,8 @@ date: 2021-01-26
 categories: [Demo]
 description: Lorem ipsum dolor sit amet
 cover: true
+plugins:
+  - indent
 ---
 
 ## Lorem ipsum dolor sit amet1
