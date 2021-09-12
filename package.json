@@ -36,6 +36,6 @@
     "hexo-server": "^1.0.0"
   },
   "devDependencies": {
-    "gulp-terser": "^1.4.0"
+    "gulp-terser": "^2.0.1"
   }
 }
