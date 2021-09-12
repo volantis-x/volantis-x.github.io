@@ -135,7 +135,7 @@ comments:
 sidebar:
   position: right # left right
   for_page: [post, category, tagcloud, music]
-  for_post: [toc, music]
+  for_post: [music, toc]
   widget_library:
     music:
       class: music
