@@ -4,32 +4,32 @@ cdn:
 navbar:
   menu:
     - name: Docs
-      icon: fad fa-book faa-tada
+      icon: fa-duotone fa-book faa-tada
       url: /getting-started/
       target: _self
 
     - name: Example
-      icon: fad fa-play-circle faa-tada
+      icon: fa-duotone fa-play-circle faa-tada
       url: examples/
 
     - name: Help
-      icon: fad fa-question-circle faa-tada
+      icon: fa-duotone fa-question-circle faa-tada
       url: faqs/
 
     - name: Community
-      icon: fad fa-fan fa-spin
+      icon: fa-duotone fa-fan fa-spin
       url: contributors/
 
     - name: Box
-      icon: fad fa-cog
+      icon: fa-duotone fa-cog
       rows:
         - name: Dark mode
-          icon: fas fa-moon
+          icon: fa-solid fa-moon
           toggle: darkmode
         - name: Music
-          icon: fad fa-compact-disc fa-spin
+          icon: fa-duotone fa-compact-disc fa-spin
     - name: More
-      icon: fad fa-ellipsis-v
+      icon: fa-duotone fa-ellipsis-v
       rows:
         - name: Site source code
           url: https://github.com/volantis-x/volantis-x.github.io
@@ -91,11 +91,11 @@ article:
     footer_widget:
       references:
         title: Reference
-        icon: fas fa-quote-left
+        icon: fa-solid fa-quote-left
       related_posts:
         enable: false
         title: related articles
-        icon: fas fa-bookmark
+        icon: fa-solid fa-bookmark
         max_count: 5
       copyright:
         enable: true
@@ -109,17 +109,17 @@ article:
         name: Volantis Team
         url: https://github.com/volantis-x/
       date:
-        icon: fas fa-calendar-alt
+        icon: fa-solid fa-calendar-alt
         title: 'posted on:'
         format: 'll'
       updated:
         title: 'The document on this page was last updated at:'
       counter:
-        icon: fas fa-eye
+        icon: fa-solid fa-eye
         unit: 'views'
 
 comments:
-  title: <i class='fas fa-comments'></i> User Exchange Area
+  title: <i class='fa-solid fa-comments'></i> User Exchange Area
   subtitle: This is only for communication between users. If you have any questions, please go to GitHub to submit an issue. Asking questions in the comment area will not receive any response from the developer!
   service: disqus
   disqus:
@@ -145,7 +145,7 @@ sidebar:
       class: toc
       display: [desktop, mobile] # [desktop, mobile]
       header:
-        icon: fas fa-list
+        icon: fa-solid fa-list
         title: Table of Contents
       list_number: false
       min_depth: 2
@@ -154,7 +154,7 @@ sidebar:
       class: text
       display: [desktop, mobile] # [desktop, mobile]
       header:
-        icon: fas fa-plus
+        icon: fa-solid fa-plus
         title: Community Activity
         url: /contributors/
       content:
@@ -164,29 +164,29 @@ sidebar:
       class: grid
       display: [desktop, mobile] # [desktop, mobile]
       header:
-        icon: fas fa-map-signs
+        icon: fa-solid fa-map-signs
         title: Category Navigation
       fixed: true # fixed width
       rows:
         - name: FAQ
-          icon: fas fa-question-circle
+          icon: fa-solid fa-question-circle
           url: faqs/
         - name: sample blog
-          icon: fas fa-play-circle
+          icon: fa-solid fa-play-circle
           url: examples/
         - name: special thanks
-          icon: fas fa-handshake
+          icon: fa-solid fa-handshake
           url: contributors/
         - name: test blog post
-          icon: fas fa-file-alt
+          icon: fa-solid fa-file-alt
           url: archives/
         - name: theme source code
-          icon: fas fa-file-code
+          icon: fa-solid fa-file-code
           url: https://github.com/volantis-x/hexo-theme-volantis/
           rel: external nofollow noopener noreferrer
           target: _blank
         - name: update log
-          icon: fas fa-tags
+          icon: fa-solid fa-tags
           url: https://github.com/volantis-x/hexo-theme-volantis/releases/
           rel: external nofollow noopener noreferrer
           target: _blank
@@ -204,7 +204,7 @@ sidebar:
       class: qrcode
       display: [desktop] # [desktop, mobile]
       header:
-        icon: fas fa-mobile
+        icon: fa-solid fa-mobile
         title: Mobile watch
       height: #64px  # Automatic height if not set
       fancybox: #true
@@ -215,7 +215,7 @@ sidebar:
       class: page
       display: [desktop, mobile]
       header:
-        icon: fas fa-headset
+        icon: fa-solid fa-headset
         title: Help
       pid: faq
       content: excerpt # excerpt, more, content
@@ -224,42 +224,42 @@ sidebar:
       class: list
       display: [desktop, mobile] # [desktop, mobile]
       header:
-        icon: fas fa-exclamation-triangle
+        icon: fa-solid fa-exclamation-triangle
         title: Recent announcement
       rows:
         - name: Updates on themes and documents
-          icon: fas fa-info-circle
+          icon: fa-solid fa-info-circle
           url: https://github.com/volantis-x/hexo-theme-volantis/issues/215
         - name: Upgrade Assistant
-          icon: fas fa-angle-double-up
+          icon: fa-solid fa-angle-double-up
           url: /getting-started/#new-version-update
 
     docs-v2:
       class: group
       display: [desktop, mobile] # [desktop, mobile]
       header:
-        icon: fad fa-list-alt
+        icon: fa-duotone fa-list-alt
         title: Document navigation v2
 
     docs-v3:
       class: group
       display: [desktop, mobile] # [desktop, mobile]
       header:
-        icon: fad fa-list-alt
+        icon: fa-duotone fa-list-alt
         title: Document navigation v3
 
     docs-v4:
       class: group
       display: [desktop, mobile] # [desktop, mobile]
       header:
-        icon: fad fa-list-alt
+        icon: fa-duotone fa-list-alt
         title: Document navigation v4
 
     docs-latest:
       class: group
       display: [desktop, mobile] # [desktop, mobile]
       header:
-        icon: fad fa-book
+        icon: fa-duotone fa-book
         title: Document navigation v5.0
 
 
@@ -281,21 +281,21 @@ site_footer:
     - img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/006-youtube.svg
       url: /
   analytics: >
-    <span id="lc-sv">The total number of visits to this site is <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> times</span>
-    <span id="lc-uv">The number of visitors is <span id='number'><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span>
+    <span id="lc-sv">The total number of visits to this site is <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span> times</span>
+    <span id="lc-uv">The number of visitors is <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span></span>
 
 
 tag_plugins:
   # {% note text %}
   note: # style for default note:
-    iconfont: 'Font Awesome 5 Pro'
+    iconfont: 'Font Awesome 6 Pro'
 
 plugins:
   nodewaves:
     enable: true
   clipboard:
     enable: true
-  fontawesome: https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css
+  fontawesome: /libs/@fortawesome/fontawesome-pro/css/all.min.css
   code_highlight: prismjs # highlightjs or prismjs
   parallax:
     enable: true
