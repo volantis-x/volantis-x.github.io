@@ -1,13 +1,16 @@
 var gulp = require('gulp');
-var minifycss = require('gulp-minify-css');
+const cleanCSS = require('gulp-clean-css');
 var htmlmin = require('gulp-html-minifier-terser');
 var htmlclean = require('gulp-htmlclean');
 var terser = require('gulp-terser');
+var sourcemaps = require('gulp-sourcemaps');
 
 // 压缩css文件
 const minify_css = () => (
     gulp.src(['./public/**/*.css','!./public/{lib,lib/**}','!./public/{libs,libs/**}','!./public/{media,media/**}'])
-        .pipe(minifycss())
+        .pipe(sourcemaps.init())
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./public'))
 );
 
@@ -27,15 +30,12 @@ const minify_html = () => (
 // 压缩js文件
 const minify_js = () => (
     gulp.src(['./public/**/*.js', '!./public/**/*.min.js','!./public/{lib,lib/**}','!./public/{libs,libs/**}','!./public/{media,media/**}'])
+        .pipe(sourcemaps.init())
         .pipe(terser())
+        .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest('./public'))
 )
 
-module.exports = {
-    minify_html: minify_html,
-    minify_css: minify_css,
-    minify_js: minify_js
-};
 gulp.task('one', gulp.parallel(
     minify_html,
     minify_css,
