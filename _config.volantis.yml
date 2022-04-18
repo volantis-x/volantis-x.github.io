@@ -408,9 +408,6 @@ style:
   body:
     effect: [shadow, floatable, blur] # [shadow, floatable, blur]
 
-# Customize the right-click menu
-rightmenu:
-  enable: true
 
 custom_css:
   cursor:
