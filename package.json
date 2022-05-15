@@ -15,7 +15,8 @@
   "overrides": {
     "nib": {
       "stylus": "0.54.8"
-    }
+    },
+    "glob": "7.2.0"
   },
   "dependencies": {
     "hexo": "^6.1.0",
