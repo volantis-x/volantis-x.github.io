@@ -71,9 +71,7 @@ http.createServer((req, res) => {
 
 Note: Theme's style should support `.highlight.line.marked` (recommend to use the selection or current line color).
 
-### Gist
 
-{% gist 996818 %}
 
 ### jsFiddle
 
