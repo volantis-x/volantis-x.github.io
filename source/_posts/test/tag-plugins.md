@@ -73,9 +73,6 @@ Note: Theme's style should support `.highlight.line.marked` (recommend to use th
 
 
 
-### jsFiddle
-
-{% jsfiddle ccWP7 %}
 
 ## Pullquote
 
