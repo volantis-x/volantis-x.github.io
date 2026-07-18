@@ -26,7 +26,7 @@ jobs:
         npm install hexo-cli -g
         npm run start
     - name: Deploy Github
-      uses: peaceiris/actions-gh-pages@main
+      uses: peaceiris/actions-gh-pages@latest
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public 
