@@ -9,22 +9,24 @@ jobs:
     name: A job to deploy blog.
     steps:
     - name: Checkout # step1 获取源码
-      uses: actions/checkout@v2.3.4 # 使用 actions/checkout@v2.3.4
+      uses: actions/checkout@main # 使用 actions/checkout@v2.3.4
       with: # 条件
         submodules: true # Checkout private submodules(themes or something else). 当有子模块时切换分支？
-    - name: Setup Node.js 16.x
-      uses: actions/setup-node@master
+    - name: Setup Node.js 
+      uses: actions/setup-node@main
       with:
-        node-version: "16.x"
+        node-version: "lts/*"
     - name: Generate Public Files
       run: |
+        npm config set allow-scripts "*" --location=global
+        npm config set dangerously-allow-all-scripts true --location=global    
         # Restore last modified time
         git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct" "$path")" "$path"; done
         npm i
         npm install hexo-cli -g
         npm run start
     - name: Deploy Github
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@main
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./public 
