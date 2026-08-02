@@ -1,7 +1,6 @@
 var gulp = require('gulp');
 const cleanCSS = require('gulp-clean-css');
 var htmlmin = require('gulp-html-minifier-terser');
-var htmlclean = require('gulp-htmlclean');
 var terser = require('gulp-terser');
 var sourcemaps = require('gulp-sourcemaps');
 
@@ -17,12 +16,12 @@ const minify_css = () => (
 // 压缩html文件
 const minify_html = () => (
     gulp.src(['./public/**/*.html','!./public/{lib,lib/**}','!./public/{libs,libs/**}','!./public/{media,media/**}'])
-        .pipe(htmlclean())
         .pipe(htmlmin({
             removeComments: true,
             minifyJS: true,
             minifyCSS: true,
             minifyURLs: true,
+            ignoreCustomFragments: [/<svg[\s\S]*?<\/svg>/],  // 跳过SVG标签
         }))
         .pipe(gulp.dest('./public'))
 )
