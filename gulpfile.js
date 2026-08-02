@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 const cleanCSS = require('gulp-clean-css');
 var htmlmin = require('gulp-html-minifier-terser');
+const htmlclean = require('gulp-htmlclean');
 var terser = require('gulp-terser');
 var sourcemaps = require('gulp-sourcemaps');
 
@@ -16,6 +17,7 @@ const minify_css = () => (
 // 压缩html文件
 const minify_html = () => (
     gulp.src(['./public/**/*.html','!./public/{lib,lib/**}','!./public/{libs,libs/**}','!./public/{media,media/**}'])
+        .pipe(htmlclean()) 
         .pipe(htmlmin({
             removeComments: true,
             minifyJS: true,
