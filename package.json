@@ -12,11 +12,6 @@
   "hexo": {
     "version": "0.0.0"
   },
-  "overrides": {
-    "glob": "*",
-    "rimraf": "*",
-    "tar": "*"
-  },
   "dependencies": {
     "hexo": "*",
     "hexo-autonofollow": "*",
